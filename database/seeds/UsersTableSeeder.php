@@ -14,24 +14,54 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'Alan Espejo',
-            'email' => 'alan@gmail.com',
+            'email' => 'alan@admin.com',
             'email_verified_at' => now(),
+            'role_id' => '1',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('users')->insert([
             'name' => 'Elizabeth Payllo',
-            'email' => 'elizabeth@gmail.com',
+            'email' => 'elizabeth@admin.com',
             'email_verified_at' => now(),
+            'role_id' => '1',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
         ]);
         DB::table('users')->insert([
             'name' => 'Jose Luis Espinal',
-            'email' => 'jose@gmail.com',
+            'email' => 'jose@admin.com',
             'email_verified_at' => now(),
+            'role_id' => '1',
+            'password' => Hash::make('123456'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Alan Espejo',
+            'email' => 'alan@vend.com',
+            'email_verified_at' => now(),
+            'role_id' => '2',
+            'password' => Hash::make('123456'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Elizabeth Payllo',
+            'email' => 'elizabeth@vend.com',
+            'email_verified_at' => now(),
+            'role_id' => '2',
+            'password' => Hash::make('123456'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Jose Luis Espinal',
+            'email' => 'jose@vend.com',
+            'email_verified_at' => now(),
+            'role_id' => '2',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()

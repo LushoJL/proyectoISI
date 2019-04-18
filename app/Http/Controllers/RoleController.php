@@ -12,9 +12,15 @@ class RoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function lista()
+    {
+        return view('roles.index');
+
+    }
     public function index()
     {
-        //
+        $roles=Role::get();
+        return $roles;
     }
 
     /**
@@ -24,7 +30,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('roles.create');
     }
 
     /**
@@ -33,9 +39,12 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,Role $model)
     {
-        //
+        $model->create($request->all());
+
+        return redirect()->route('role.index')->withStatus(__('User successfully created.'));
+
     }
 
     /**
@@ -57,7 +66,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        //
+        return view('roles.edit', compact('role'));
     }
 
     /**
@@ -69,7 +78,10 @@ class RoleController extends Controller
      */
     public function update(Request $request, Role $role)
     {
-        //
+        $role->update($request->all());
+
+        return redirect()->route('role.index')->withStatus(__('User successfully updated.'));
+
     }
 
     /**
@@ -80,6 +92,9 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+        $role->delete();
+
+        return redirect()->route('role.index')->withStatus(__('User successfully deleted.'));
+
     }
 }
