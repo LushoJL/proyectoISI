@@ -58,9 +58,10 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\View\View
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        return view('users.edit', compact('user'));
+        $users = User::findOrFail($id);
+        return $users;
     }
 
     /**
@@ -77,7 +78,7 @@ class UserController extends Controller
                 ->except([$request->get('password') ? '' : 'password']
         ));
 
-        return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
+        return;
     }
 
     /**
