@@ -14,9 +14,18 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\View\View
      */
-    public function index(User $model)
+    public function lista()
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        //muestra la vista de lista de usuarios
+        return view('users.index');
+
+    }
+    public function index()
+    {
+        //manda datos del modelo user
+        $users=User::get();
+        return $users;
+
     }
 
     /**

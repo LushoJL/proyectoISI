@@ -1,7 +1,7 @@
 @extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('User Management')])
 
 @section('content')
-  <div class="content">
+  <div class="content" id="usurol">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -32,37 +32,40 @@
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
-                          {{ __('Name') }}
+                         Nombre
                       </th>
                       <th>
-                        {{ __('Email') }}
+                        Correo Electronico
                       </th>
                       <th>
-                        {{ __('Creation date') }}
+                          Rol
+                      </th>
+                      <th>
+                        Fecha de Creacion
                       </th>
                       <th class="text-right">
-                        {{ __('Actions') }}
+                        Accion
                       </th>
                     </thead>
                     <tbody>
-                      @foreach($users as $user)
-                        <tr>
+
+                        <tr v-for="user in users">
                           <td>
-                            {{ $user->name }}
+                            @{{ user.name }}
                           </td>
                           <td>
-                            {{ $user->email }}
+                            @{{ user.email }}
                           </td>
+                            <td v-for="role in roles" v-if="role.id===user.role_id">
+                                @{{ role.name }}
+                            </td>
                           <td>
-                            {{ $user->created_at->format('Y-m-d') }}
+                            @{{ user.created_at }}
                           </td>
                           <td class="td-actions text-right">
-                            @if ($user->id != auth()->id())
-                              <form action="{{ route('user.destroy', $user) }}" method="post">
-                                  @csrf
-                                  @method('delete')
-                              
-                                  <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('user.edit', $user) }}" data-original-title="" title="">
+
+
+                                  <a rel="tooltip" class="btn btn-success btn-link" href="#" data-original-title="" title="">
                                     <i class="material-icons">edit</i>
                                     <div class="ripple-container"></div>
                                   </a>
@@ -70,16 +73,11 @@
                                       <i class="material-icons">close</i>
                                       <div class="ripple-container"></div>
                                   </button>
-                              </form>
-                            @else
-                              <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('profile.edit') }}" data-original-title="" title="">
-                                <i class="material-icons">edit</i>
-                                <div class="ripple-container"></div>
-                              </a>
-                            @endif
+
+
                           </td>
                         </tr>
-                      @endforeach
+
                     </tbody>
                   </table>
                 </div>
