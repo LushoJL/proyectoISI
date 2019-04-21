@@ -29121,6 +29121,7 @@ new Vue({
 
         //roles
         roles:[],
+        errors: '',
     },
     methods: {
         getUsers: function () {
@@ -29150,8 +29151,11 @@ new Vue({
                 this.errors = [];
                 $('#edit').modal('hide');
                 toastr.success('Usuario actualizada con exito ');
+
             }).catch(error=>{
-                this.errors = error.response.data
+
+                this.errors = error.response.data.errors;
+
             });
         },
 

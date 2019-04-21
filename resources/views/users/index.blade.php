@@ -43,9 +43,10 @@
                       <th>
                         Fecha de Creacion
                       </th>
-                      <th class="text-right">
-                        Accion
+                      <th class="text-center" colspan="3">
+                        Acciones
                       </th>
+
                     </thead>
                     <tbody>
 
@@ -63,21 +64,28 @@
                             @{{ user.created_at }}
                           </td>
                           <td class="td-actions text-right">
+                            <a rel="tooltip" class="btn btn-info btn-link" href="#">
+                              <i class="material-icons">remove_red_eye</i>
+                              <div class="ripple-container"></div>
+                            </a>
+                          </td>
+                          <td class="td-actions text-right">
 
 
-                                  <a rel="tooltip" class="btn btn-success btn-link" href="#" v-on:click.prevent="editUser(user)">
+                                  <a class="btn btn-success btn-link" href="#" v-on:click.prevent="editUser(user)">
                                     <i class="material-icons">edit</i>
                                     <div class="ripple-container"></div>
                                   </a>
-                                  <button type="button" class="btn btn-danger btn-link" data-original-title="" >
-                                      <i class="material-icons">close</i>
-                                      <div class="ripple-container"></div>
-                                  </button>
+                          </td>
+                          <td class="td-actions text-right">
 
+                            <button type="button" class="btn btn-danger btn-link" data-original-title=""  v-if="user.id!={{auth()->user()->id}}">
+                              <i class="material-icons">delete</i>
+                              <div class="ripple-container"></div>
+                            </button>
 
                           </td>
                         </tr>
-
                     </tbody>
                   </table>
                 </div>

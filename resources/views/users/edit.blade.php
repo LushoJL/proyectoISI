@@ -2,6 +2,7 @@
 
 
 <form method="post" v-on:submit.prevent="updateUser(fillUser.id)">
+
   <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -33,7 +34,7 @@
               <select name="role_id"  v-model="fillUser.role_id"  class="form-control form-control-alternative">
                 <option v-for="role in roles" v-bind:value="role.id">@{{ role.name }}</option>
               </select>
-              <span v-for="error in errors" class="text-danger">  @{{ error }}</span>
+              <span v-for="error in errors" class="text-danger">  @{{ email}}</span>
             </div>
 
           </div>
@@ -43,6 +44,12 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
           <button type="submit" class="btn btn-primary">{{ __('GUARDAR') }}</button>
         </div>
+        <div class="">
+		<pre>
+			@{{ $data.errors }}
+		</pre>
+        </div>
+
       </div>
     </div>
   </div>
