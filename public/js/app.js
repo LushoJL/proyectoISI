@@ -29121,6 +29121,12 @@ new Vue({
 
         //roles
         roles:[],
+        newRole:{
+            'name': '',
+            'slug': '',
+            'description': '',
+            permissions:[]
+        },
         errors: '',
     },
     methods: {
@@ -29165,6 +29171,28 @@ new Vue({
             var urlRoles = 'role';
             axios.get(urlRoles).then(response => {
                 this.roles=response.data
+            });
+        },
+        CreateRole:function(){
+            toastr.info("crear nuevo rol");
+            $('#create').modal('show');
+        },
+
+        storeRole: function() {
+            var url = 'role';
+            axios.post(url, {
+                'name': this.newRole.name.toUpperCase(),
+                'slug': this.newRole.slug.toUpperCase(),
+                'description': this.newRole.description,
+                'permissions': this.newRole.permissions
+            }).then(response => {
+                this.getRoles();
+                this.newRole = '';
+                this.errors = [];
+                $('#create').modal('hide');
+                toastr.success('Nuevo Rol creada con éxito');
+            }).catch(error => {
+                this.errors = 'Corrija para poder crear con éxito'
             });
         },
     },

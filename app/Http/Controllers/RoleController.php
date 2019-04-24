@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Role;
 use Illuminate\Http\Request;
+use Caffeinated\Shinobi\Models\Role;
+use Caffeinated\Shinobi\Models\Permission;
 
 class RoleController extends Controller
 {
@@ -12,15 +13,22 @@ class RoleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function lista()
     {
-        return view('roles.index');
+        //muestra la vista de lista de roles
+
+        $permisos=Permission::get();
+
+        return view('roles.index', compact('permisos'));
 
     }
     public function index()
     {
+        //manda datos del modelo user
         $roles=Role::get();
         return $roles;
+
     }
 
     /**
@@ -30,7 +38,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('roles.create');
+        //
     }
 
     /**
@@ -39,21 +47,22 @@ class RoleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,Role $model)
+    public function store(Request $request)
     {
-        $model->create($request->all());
+        $role = Role::create($request->all());
 
-        return redirect()->route('role.index')->withStatus(__('User successfully created.'));
+        $role->permissions()->sync($request->get('permissions'));
 
-    }
+        return;
+          }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Role  $role
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Role $role)
+    public function show($id)
     {
         //
     }
@@ -61,40 +70,34 @@ class RoleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Role  $role
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $role)
+    public function edit($id)
     {
-        return view('roles.edit', compact('role'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Role  $role
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(Request $request, $id)
     {
-        $role->update($request->all());
-
-        return redirect()->route('role.index')->withStatus(__('User successfully updated.'));
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Role  $role
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $role)
+    public function destroy($id)
     {
-        $role->delete();
-
-        return redirect()->route('role.index')->withStatus(__('User successfully deleted.'));
-
+        //
     }
 }

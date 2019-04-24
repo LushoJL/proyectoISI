@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
+use Caffeinated\Shinobi\Models\Role;
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -12,11 +12,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+  /*      DB::table('users')->insert([
             'name' => 'Alan Espejo',
             'email' => 'alan@admin.com',
             'email_verified_at' => now(),
-            'role_id' => '1',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
@@ -25,25 +24,22 @@ class UsersTableSeeder extends Seeder
             'name' => 'Elizabeth Payllo',
             'email' => 'elizabeth@admin.com',
             'email_verified_at' => now(),
-            'role_id' => '1',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
-        ]);
+        ]);*/
         DB::table('users')->insert([
-            'name' => 'Jose Luis Espinal',
-            'email' => 'jose@admin.com',
+            'name' => 'ROOT',
+            'email' => 'root@admin.com',
             'email_verified_at' => now(),
-            'role_id' => '1',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        DB::table('users')->insert([
+    /*    DB::table('users')->insert([
             'name' => 'Alan Espejo',
             'email' => 'alan@vend.com',
             'email_verified_at' => now(),
-            'role_id' => '2',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
@@ -52,7 +48,6 @@ class UsersTableSeeder extends Seeder
             'name' => 'Elizabeth Payllo',
             'email' => 'elizabeth@vend.com',
             'email_verified_at' => now(),
-            'role_id' => '2',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
@@ -61,10 +56,18 @@ class UsersTableSeeder extends Seeder
             'name' => 'Jose Luis Espinal',
             'email' => 'jose@vend.com',
             'email_verified_at' => now(),
-            'role_id' => '2',
             'password' => Hash::make('123456'),
             'created_at' => now(),
             'updated_at' => now()
+        ]);*/
+        Role::create([
+            'name'      =>'ROOT',
+            'slug'      =>'root',
+            'special'   =>'all-access'
+        ]);
+        DB::table('role_user')->insert([
+            'role_id' =>'1',
+            'user_id' =>'1'
         ]);
     }
 }

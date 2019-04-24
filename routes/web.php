@@ -48,9 +48,16 @@ Route::group(['middleware' => 'auth'], function () {
 	})->name('upgrade');
 });
 
-Route::group(['middleware' => 'auth'], function () {
 
+
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('lista-roles',function (){
+        return view('roles.index');
+    })->name('role');
     Route::get('lista-usuarios','UserController@lista')->name('listaU');
+    Route::get('lista-roles','RoleController@lista')->name('listaR');
 	Route::resource('user', 'UserController', ['except' => ['show']]);
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);

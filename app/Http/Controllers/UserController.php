@@ -14,6 +14,18 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\View\View
      */
+
+    public function __construct()
+    {
+        $this->middleware('permission:users.create')->only('create', 'store');
+        $this->middleware('permission:listaU')->only('lista');
+        $this->middleware('permission:users.edit')->only('edit','update');
+        $this->middleware('permission:users.show')->only('show');
+        $this->middleware('permission:users.destroy')->only('destroy');
+
+    }
+
+
     public function lista()
     {
         //muestra la vista de lista de usuarios
