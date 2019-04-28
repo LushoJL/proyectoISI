@@ -73,7 +73,7 @@
                                         </td>
                                         <td class="td-actions text-right">
 
-                                            <button type="button" class="btn btn-danger btn-link" data-original-title="">
+                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteRole(role)">
                                                 <i class="material-icons">delete</i>
                                                 <div class="ripple-container"></div>
                                             </button>
@@ -90,5 +90,6 @@
 
     @include('roles.create')
 
+    </div>
     </div>
 @endsection

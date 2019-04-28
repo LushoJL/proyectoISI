@@ -1,8 +1,29 @@
+$(document).ready(function() {
+    $('#datatables').fadeIn(1100);
+    $('#datatables').DataTable({
+        "pagingType": "full_numbers",
+        "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "All"]
+        ],
+        responsive: true,
+        language: {
+            search: "_INPUT_",
+            searchPlaceholder: "Search users",
+        },
+        "columnDefs": [
+            { "orderable": false, "targets": 5 },
+        ],
+    });
+});
+
+
 new Vue({
     el:'#usurol',
     created: function () {
         this.getUsers();
         this.getRoles();
+        this.getUserRole();
     },
     data: {
         users:[],
@@ -85,5 +106,19 @@ new Vue({
                 this.errors = 'Corrija para poder crear con éxito'
             });
         },
+        deleteRole: function (role) {
+                var url ='role/'+ role.id;
+                axios.delete(url).then(response => {
+                    this.getRoles();
+                    toastr.success('Rol eliminado Correctamente');
+                });
+        },
+        getUserRole: function () {
+            var url = 'roldelusuarioenvujsmmm';
+            axios.get(url).then(response => {
+                this.users=response.data
+            });
+        },
+
     },
 });

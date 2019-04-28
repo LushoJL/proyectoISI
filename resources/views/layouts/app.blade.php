@@ -11,10 +11,10 @@
     <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('material')}}/fonts/googlefonts.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('material')}}/fonts/font-awesome.min.css">
     <!-- CSS Files -->
-    <link href="{{ asset('material') }}/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    <link href="{{ asset('material') }}/css/material-dashboard2.css" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
     </head>
@@ -28,51 +28,59 @@
         @guest()
             @include('layouts.page_templates.guest')
         @endguest
-
+        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         <!--   Core JS Files   -->
-        <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
-        <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
-        <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="{{ asset('material') }}/js/core/popper2.min.js"></script>
+        <script src="{{ asset('material') }}/js/core/bootstrap-material-design2.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar2.jquery.min.js"></script>
         <!-- Plugin for the momentJs  -->
-        <script src="{{ asset('material') }}/js/plugins/moment.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/moment2.min.js"></script>
         <!--  Plugin for Sweet Alert -->
-        <script src="{{ asset('material') }}/js/plugins/sweetalert2.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/sweetalert22.js"></script>
         <!-- Forms Validations Plugin -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.validate.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/jquery.validate2.min.js"></script>
         <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.bootstrap-wizard.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/jquery.bootstrap-wizard2.js"></script>
         <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker2.js"></script>
         <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker.min.js"></script>
-        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker2.min.js"></script>
+
         <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput2.js"></script>
         <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-        <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/jasny-bootstrap2.min.js"></script>
         <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-        <script src="{{ asset('material') }}/js/plugins/fullcalendar.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/fullcalendar2.min.js"></script>
         <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-        <script src="{{ asset('material') }}/js/plugins/jquery-jvectormap.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/jquery-jvectormap2.js"></script>
         <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-        <script src="{{ asset('material') }}/js/plugins/nouislider.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/nouislider2.min.js"></script>
         <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+        <script src="{{ asset('material') }}/js/nose2.js"></script>
         <!-- Library for adding dinamically elements -->
-        <script src="{{ asset('material') }}/js/plugins/arrive.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/arrive2.min.js"></script>
         <!--  Google Maps Plugin    -->
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'"></script>
         <!-- Chartist JS -->
-        <script src="{{ asset('material') }}/js/plugins/chartist.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/chartist2.min.js"></script>
         <!--  Notifications Plugin    -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-notify.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-notify2.js"></script>
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="{{ asset('material') }}/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+        <script src="{{ asset('material') }}/js/material-dashboard2.js" type="text/javascript"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-        <script src="{{ asset('material') }}/demo/demo.js"></script>
+        <script src="{{ asset('material') }}/demo/demo2.js"></script>
         <script src="{{ asset('material') }}/js/settings.js"></script>
+        <script src="{{ asset('material') }}/js/application2.js"></script>
+
+        <script src="{{ asset('material') }}/js/jquery.sharrre2.js"></script>
         @stack('js')
+
+        <script>
+
+        </script>
+
     </body>
 </html>

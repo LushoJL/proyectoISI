@@ -51,7 +51,10 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
+Route::get('/prueba', function (){
+    return view('profile.show');
 
+});
 Route::group(['middleware' => 'auth'], function () {
     Route::get('lista-roles',function (){
         return view('roles.index');
@@ -63,5 +66,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+	Route::get('/roldelusuarioenvujsmmm','EspicialController@userRole')->name('user_role');
 });
 
