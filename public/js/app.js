@@ -29104,24 +29104,6 @@ return jQuery;
 });
 ;
 //# sourceMappingURL=axios.map
-$(document).ready(function() {
-    $('#datatables').fadeIn(1100);
-    $('#datatables').DataTable({
-        "pagingType": "full_numbers",
-        "lengthMenu": [
-            [10, 25, 50, -1],
-            [10, 25, 50, "All"]
-        ],
-        responsive: true,
-        language: {
-            search: "_INPUT_",
-            searchPlaceholder: "Search users",
-        },
-        "columnDefs": [
-            { "orderable": false, "targets": 5 },
-        ],
-    });
-});
 
 
 new Vue({
@@ -29133,6 +29115,14 @@ new Vue({
     },
     data: {
         users:[],
+        pagination:{
+            'total'         :0,
+            'current_page'  :0,
+            'per_page'      :0,
+            'last_page'     :0,
+            'from'          :0,
+            'to'            :0
+        },
         fillUser: {
             'id': '',
             'name': '',
@@ -29149,12 +29139,39 @@ new Vue({
             permissions:[]
         },
         errors: '',
+        offset:3
+    },
+    computed:{
+        isActived: function () {
+            return this.pagination.current_page;
+        } ,
+        pagesNumber: function () {
+            if (!this.pagination.to){
+                return[];
+            }
+            var from = this.pagination.current_page - this.offset; //TODO OFSSET
+            if (from<1){
+                from =1;
+            }
+            var to=from +(this.offset*2);//TODO
+
+            if (to >=this.pagination.last_page){
+                to=this.pagination.last_page;
+            }
+            var pagesArray=[];
+            while(from<=to){
+                pagesArray.push(from);
+                from++;
+            }
+            return pagesArray;
+        }
     },
     methods: {
-        getUsers: function () {
-            var urlUsers = 'user';
+        getUsers: function (page) {
+            var urlUsers = 'user?page='+page;
             axios.get(urlUsers).then(response => {
-                this.users=response.data
+                this.users=response.data.users.data,
+                    this.pagination=response.data.pagination
             });
         },
 
@@ -29225,6 +29242,9 @@ new Vue({
                 this.users=response.data
             });
         },
-
+    changePage: function (page) {
+        this.pagination.current_page=page;
+        this.getUsers(page)
+    }
     },
 });

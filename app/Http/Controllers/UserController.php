@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 
@@ -32,11 +33,21 @@ class UserController extends Controller
         return view('users.index');
 
     }
-    public function index()
+    public function index(Request $request)
     {
         //manda datos del modelo user
-        $users=User::get();
-        return $users;
+        $users=User::orderBy('id','DESC')->paginate(10);
+        return [
+            'pagination'=>[
+                'total'         =>$users->total(),
+                'current_page'  =>$users->currentPage(),
+                'per_page'      =>$users->perPage(),
+                'last_page'     =>$users->lastPage(),
+                'from'          =>$users->firstItem(),
+                'to'            =>$users->lastPage(),
+            ],
+            'users'=>$users
+        ];
 
     }
 
@@ -73,9 +84,13 @@ class UserController extends Controller
     public function edit($id)
     {
         $users = User::findOrFail($id);
-        return $users;
+        return view('users.edit', compact('users'));
     }
-
+    public function show($id)
+    {
+        $users = User::findOrFail($id);
+        return view('profile.show');
+    }
     /**
      * Update the specified user in storage
      *

@@ -78,9 +78,5 @@
         <script src="{{ asset('material') }}/js/jquery.sharrre2.js"></script>
         @stack('js')
 
-        <script>
-
-        </script>
-
     </body>
 </html>

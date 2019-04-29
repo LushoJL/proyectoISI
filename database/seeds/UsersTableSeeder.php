@@ -1,5 +1,5 @@
 <?php
-
+use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Caffeinated\Shinobi\Models\Role;
@@ -36,6 +36,8 @@ class UsersTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+        factory(User::class, 2000)->create();
+
     /*    DB::table('users')->insert([
             'name' => 'Alan Espejo',
             'email' => 'alan@vend.com',

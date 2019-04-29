@@ -61,9 +61,10 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('role');
     Route::get('lista-usuarios','UserController@lista')->name('listaU');
     Route::get('lista-roles','RoleController@lista')->name('listaR');
-	Route::resource('user', 'UserController', ['except' => ['show']]);
+	Route::resource('user', 'UserController');
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+    Route::get('profile/miperfil', 'ProfileController@show')->name('profile.show');
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 	Route::get('/roldelusuarioenvujsmmm','EspicialController@userRole')->name('user_role');

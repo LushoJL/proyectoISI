@@ -1,57 +1,69 @@
-<!-- Modal -->
+@extends('layouts.app', ['activePage' => 'profile', 'titlePage' => __('User Profile')])
 
+@section('content')
 
-<form method="post" v-on:submit.prevent="updateUser(fillUser.id)">
-
-  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog " role="document" >
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <h6 class="heading-small text-muted mb-4">{{ __('Editar Usuario') }}</h6>
-          <div class="pl-lg-4">
-
-
-            <div class="form-group">
-              <label for="user">Nombre</label>
-              <input type="text" name="namess" class="form-control form-control-alternative" placeholder="{{ __('Nombre') }}" v-model="fillUser.name">
-              <span v-for="error in errors" class="text-danger">  @{{ error }}</span>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-icon card-header-rose">
+              <div class="card-icon">
+                <i class="material-icons">perm_identity</i>
+              </div>
+              <h4 class="card-title">Edit Profile
+              </h4>
             </div>
-            <div class="form-group">
-              <label for="user">Correo Electronico</label>
-              <input type="text" name="email" class="form-control form-control-alternative" placeholder="{{ __('Email') }}" v-model="fillUser.email">
-              <span v-for="error in errors" class="text-danger">  @{{ error }}</span>
-            </div>
-            <div class="form-group">
-              <label for="user">Rol</label>
-              <select name="role_id"  v-model="fillUser.role_id"  class="form-control form-control-alternative">
-                <option v-for="role in roles" v-bind:value="role.id">@{{ role.name }}</option>
-              </select>
-              <span v-for="error in errors" class="text-danger">  @{{ email}}</span>
-            </div>
+            <div class="card-body">
 
+
+              <form method="post" enctype="multipart/form-data" action="https://material-dashboard-pro-laravel.creative-tim.com/profile" autocomplete="off" class="form-horizontal">
+                <input type="hidden" name="_token" value="y6LyeppLFdhXvcYxUVVzm7KGjndhYPBQjJsviukK">              <input type="hidden" name="_method" value="put">
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">Profile photo</label>
+                  <div class="col-sm-7">
+                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                      <div class="fileinput-new thumbnail img-circle">
+                        <img src="https://material-dashboard-pro-laravel.creative-tim.com/material/img/placeholder.jpg" alt="...">
+                      </div>
+                      <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+                      <div>
+                      <span class="btn btn-rose btn-file">
+                        <span class="fileinput-new">Select image</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input type="file" name="photo" id="input-picture">
+                      </span>
+                        <a href="#pablo" class="btn btn-danger fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">Nombre</label>
+                  <div class="col-sm-7">
+                    <div class="form-group bmd-form-group is-filled">
+                      <input class="form-control" name="name"  type="text"  value="{{$users->name}}" required="true" aria-required="true">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-sm-2 col-form-label">Correo electronico</label>
+                  <div class="col-sm-7">
+                    <div class="form-group bmd-form-group is-filled">
+                      <input class="form-control" name="email" type="email" value="{{$users->email}}" required="">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
           </div>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>
-          <button type="submit" class="btn btn-primary">{{ __('GUARDAR') }}</button>
-        </div>
-        <div class="">
-		<pre>
-			@{{ $data.errors }}
-		</pre>
+
         </div>
 
       </div>
     </div>
   </div>
-
-</form>
+@endsection

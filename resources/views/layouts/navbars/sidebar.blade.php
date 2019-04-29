@@ -27,19 +27,21 @@
       <div class="photo">
         <img src="http://i.pravatar.cc/200">
       </div>
+
+
       <div class="user-info">
         <a data-toggle="collapse" href="#collapseExample" class="username collapsed" aria-expanded="false">
           <span>
-            Admin
+            {{Auth()->user()->name}}
             <b class="caret"></b>
           </span>
         </a>
         <div class="collapse" id="collapseExample" style="">
           <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="https://material-dashboard-pro-laravel.creative-tim.com/profile">
+            <li class="nav-item {{ $activePage == 'myperfil' ? ' active' : '' }}  ">
+              <a class="nav-link" href="{{route('profile.show')}}">
                 <span class="sidebar-mini"> MP </span>
-                <span class="sidebar-normal"> My Profile </span>
+                <span class="sidebar-normal"> Mi perfil </span>
               </a>
             </li>
             <li class="nav-item">
