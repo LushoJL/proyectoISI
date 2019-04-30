@@ -50,6 +50,15 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'ci' => ['required', 'string', 'max:10'],
+            'birthdate' => ['required', 'string', 'max:10'],
+            'address' => ['required', 'string', 'max:255'],
+            'phone' => ['integer', 'max:8'],
+            'gender' => ['required'],
+            'civil_status' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:255'],
+            'nationality' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -63,8 +72,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $concatenar=substr($data['last_name'],0,3);
         return User::create([
             'name' => $data['name'],
+            'last_name' => $data['last_name'],
+            'ci' => $data['ci'],
+            'birthdate' => $data['birthdate'],
+            'address' => $data['address'],
+            'nick'=> $concatenar.$data['ci'],
+            'phone' => $data['phone'],
+            'gender' => $data['gender'],
+            'civil_status' => $data['civil_status'],
+            'country' => $data['country'],
+            'nationality' => $data['nationality'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

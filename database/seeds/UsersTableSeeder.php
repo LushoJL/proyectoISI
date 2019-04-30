@@ -30,6 +30,16 @@ class UsersTableSeeder extends Seeder
         ]);*/
         DB::table('users')->insert([
             'name' => 'ROOT',
+            'last_name'=>'ROOT',
+            'ci'=>'123456',
+            'birthdate'=>now(),
+            'address'=>'ROOT',
+            'nick'=>'root',
+            'phone'=>'12345678',
+            'gender'=>'ROOT',
+            'civil_status'=>'ROOT',
+            'country'=>'ROOT',
+            'nationality'=>'ROOT',
             'email' => 'root@admin.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),

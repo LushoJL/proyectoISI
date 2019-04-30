@@ -16,17 +16,25 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('last_name');
+            $table->string('ci');
+            $table->date('birthdate');
+            $table->string('address');
+            $table->string('nick');
+            $table->string('photo')->nullable();;
+            $table->integer('phone');
+            $table->string('gender');
+            $table->string('civil_status');
+            $table->string('country');
+            $table->string('nationality');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->boolean('state')->default('1');
             $table->rememberToken();
             $table->timestamps();
-
         });
-
     }
-
     /**
      * Reverse the migrations.
      *

@@ -36,7 +36,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         //manda datos del modelo user
-        $users=User::orderBy('id','DESC')->paginate(10);
+        $users=User::orderBy('id','ASC')->paginate(10);
         return [
             'pagination'=>[
                 'total'         =>$users->total(),

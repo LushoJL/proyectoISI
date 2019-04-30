@@ -34,11 +34,11 @@
                     <i class="material-icons">email</i>
                   </span>
                 </div>
-                <input type="email" name="email" class="form-control" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
+                <input type="text" name="login" class="form-control" placeholder="{{ __('introduce tu email o tu nick...') }}" value="{{ old('login') }}" required>
               </div>
-              @if ($errors->has('email'))
-                <div id="email-error" class="error text-danger pl-3" for="email" style="display: block;">
-                  <strong>{{ $errors->first('email') }}</strong>
+              @if ($errors->has('login'))
+                <div id="login-error" class="error text-danger pl-3" for="login" style="display: block;">
+                  <strong>{{ $errors->first('login') }}</strong>
                 </div>
               @endif
             </div>
