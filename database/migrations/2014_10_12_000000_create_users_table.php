@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->date('birthdate');
             $table->string('address');
             $table->string('nick');
-            $table->string('photo')->nullable();;
+            $table->string('photo')->default('default.png');
             $table->integer('phone');
             $table->string('gender');
             $table->string('civil_status');
