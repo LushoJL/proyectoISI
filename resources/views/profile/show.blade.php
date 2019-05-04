@@ -23,7 +23,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <label class="col-sm-2 col-form-label">Genero</label>
+                                <label class="col-sm-2 col-form-label">Genero:</label>
                                 <div class="col-sm-4">
                                     <div class="form-group bmd-form-group is-filled">
                                         <label class="col-form-label text-dark" >
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
+                            <label class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                     <label class="col-form-label text-dark" >
@@ -41,7 +41,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <label class="col-sm-2 col-form-label">Pais de nacimiento</label>
+                            <label class="col-sm-2 col-form-label">Pais de nacimiento:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Nacionalidad</label>
+                            <label class="col-sm-2 col-form-label">Nacionalidad:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -59,7 +59,7 @@
                                         </label>
                                 </div>
                             </div>
-                            <label class="col-sm-2 col-form-label">stado civil</label>
+                            <label class="col-sm-2 col-form-label">stado civil:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -70,7 +70,7 @@
                         </div>
 
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Correo electronico</label>
+                            <label class="col-sm-2 col-form-label">Correo electronico:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -78,7 +78,7 @@
                                         </label>
                                 </div>
                             </div>
-                            <label class="col-sm-2 col-form-label">Nick</label>
+                            <label class="col-sm-2 col-form-label">Nick:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Telefono</label>
+                            <label class="col-sm-2 col-form-label">Telefono:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >
@@ -96,7 +96,7 @@
                                         </label>
                                 </div>
                             </div>
-                            <label class="col-sm-2 col-form-label">Fecha de Registro</label>
+                            <label class="col-sm-2 col-form-label">Fecha de Registro:</label>
                             <div class="col-sm-4">
                                 <div class="form-group bmd-form-group is-filled">
                                      <label class="col-form-label text-dark" >

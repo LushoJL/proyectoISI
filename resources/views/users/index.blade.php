@@ -70,7 +70,7 @@
                                     <tr v-for="user in users" role="row" class="even">
                                       <td  class="sorting_1">
                                         <div class="avatar avatar-sm rounded-circle img-circle" style="width:100px; height:100px;overflow: hidden;">
-                                          <img src="http://i.pravatar.cc/200" alt="" style="max-width: 100px;">
+                                          <img v-bind:src="'/storage/'+user.photo" alt="" style="max-width: 100px;">
                                         </div>
                                       </td>
                                       <td >
