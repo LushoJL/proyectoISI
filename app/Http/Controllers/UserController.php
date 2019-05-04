@@ -36,7 +36,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         //manda datos del modelo user
-        $users=User::orderBy('id','ASC')->paginate(10);
+        $users=User::orderBy('id','DESC')->paginate(10);
         return [
             'pagination'=>[
                 'total'         =>$users->total(),
@@ -98,14 +98,22 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
+    public function photo(Request $request, $id){
+       $user =User::findOrFail($id);
+       $user->photo= $request->file('photo')->store('public');
+       $user->update();
+
+        return back();
+    }
     public function update(UserRequest $request, User  $user)
     {
+
         $user->update(
             $request->merge(['password' => Hash::make($request->get('password'))])
                 ->except([$request->get('password') ? '' : 'password']
         ));
 
-        return;
+        return ;
     }
 
     /**

@@ -42,11 +42,11 @@ class UsersTableSeeder extends Seeder
             'nationality'=>'ROOT',
             'email' => 'root@admin.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('123456'),
+            'password' =>  Hash::make('12345678'),
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        factory(User::class, 2000)->create();
+        factory(User::class, 5)->create();
 
     /*    DB::table('users')->insert([
             'name' => 'Alan Espejo',

@@ -62,6 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('lista-usuarios','UserController@lista')->name('listaU');
     Route::get('lista-roles','RoleController@lista')->name('listaR');
 	Route::resource('user', 'UserController');
+	Route::put('photo/{user}','UserController@photo')->name('user.photo');
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::get('profile/miperfil', 'ProfileController@show')->name('profile.show');
