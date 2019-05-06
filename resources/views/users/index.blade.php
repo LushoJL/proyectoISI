@@ -21,26 +21,20 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-12 text-right">
-                  <a href="#" class="btn btn-sm btn-rose">
+                  <a href="{{route('user.create')}}" class="btn btn-sm btn-rose">
                     Add user</a>
                 </div>
               </div>
               <div class="table-responsive">
                 <div id="datatables_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-
-
                   <div class="row">
                     <div class="col-sm-12">
                       <div id="datatables_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-
                         <div class="row">
                           <div class="col-sm-12">
                             <div class="dataTables_wrapper dt-bootstrap4 no-footer">
                               <div class="row">
                                 <div class="col-sm-12">
-
-
-
                                   <table class="table table-striped table-no-bordered table-hover dataTable no-footer dtr-inline" style="width: 100%;">
                                     <thead class="text-primary">
                                     <tr role="row">

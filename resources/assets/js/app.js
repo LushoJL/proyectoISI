@@ -127,7 +127,8 @@ new Vue({
                 var url ='role/'+ role.id;
                 axios.delete(url).then(response => {
                     this.getRoles();
-                    toastr.success('Rol eliminado Correctamente');
+                    md.showNotification('top','left','El rol se elimino Correctamente','danger')
+                   // toastr.success('Rol eliminado Correctamente');
                 });
         },
         getUserRole: function () {

@@ -14,14 +14,6 @@
     </a>
   </div>
 
-
-
-
-
-
-
-
-
   <div class="sidebar-wrapper">
     <div class="user">
       <div class="photo">
@@ -45,15 +37,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://material-dashboard-pro-laravel.creative-tim.com/profile">
+              <a class="nav-link" href="{{route('profile.edit',Auth()->user()->id)}}">
                 <span class="sidebar-mini"> EP </span>
                 <span class="sidebar-normal"> Edit Profile </span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                 <span class="sidebar-mini"> S </span>
-                <span class="sidebar-normal"> Settings </span>
+                <span class="sidebar-normal"> Salir </span>
               </a>
             </li>
           </ul>
@@ -79,14 +71,9 @@
             <b class="caret"></b>
           </p>
         </a>
-        <div class="collapse {{$activePage == 'profile' || $activePage == 'user-management' || $activePage == 'roles' ? ' show' : ''}}" id="laravelExample">
+        <div class="collapse {{$activePage == 'user-management' || $activePage == 'roles' ? ' show' : ''}}" id="laravelExample">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
-              </a>
-            </li>
+
             @can('listaU')
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('listaU') }}">
@@ -96,12 +83,12 @@
             </li>
               @endcan
             @can('listaU')
-              <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
-                <a class="nav-link" href="{{route('listaR')}}">
-                  <span class="sidebar-mini"> UM </span>
-                  <span class="sidebar-normal"> {{ __('Roles') }}  </span>
-                </a>
-              </li>
+                <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
+                  <a class="nav-link" href="{{ route('listaR') }}">
+                    <span class="sidebar-mini"> UM </span>
+                    <span class="sidebar-normal"> {{ __('Roles') }} </span>
+                  </a>
+                </li>
             @endcan
           </ul>
         </div>
