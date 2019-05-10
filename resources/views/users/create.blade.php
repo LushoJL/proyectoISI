@@ -35,7 +35,7 @@
                   <label class="col-sm-2 col-form-label">{{ __('Apellidos') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('last_name') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" type="text" placeholder="{{ __('ejemple@ejemplo.com') }}" value="{{ old('last_name') }}" required="true" aria-required="true"/>
+                      <input class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" type="text" placeholder="{{ __('Perez') }}" value="{{ old('last_name') }}" required="true" aria-required="true"/>
                       @if ($errors->has('last_name'))
                         <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('last_name') }}</span>
                       @endif
@@ -54,7 +54,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <label class="col-sm-2 col-form-label">{{ __('Apellidos') }}</label>
+                  <label class="col-sm-2 col-form-label">{{ __('Fecha de nacimiento') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('birthdate') ? ' has-danger' : '' }}">
                       <input class="form-control{{ $errors->has('birthdate') ? ' is-invalid' : '' }}" name="birthdate" type="date" value="{{ old('birthdate') }}" required="true" aria-required="true"/>

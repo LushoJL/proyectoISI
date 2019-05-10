@@ -1,19 +1,3 @@
-/*!
-
- =========================================================
- * Material Dashboard Pro - v2.1.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/material-dashboard-pro
- * Copyright 2018 Creative Tim (http://www.creative-tim.com)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
-/*     brand Colors              */
 
 .card {
   font-size: .875rem;
@@ -149,7 +133,6 @@ sup {
   line-height: 0;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -.25em;
 }
@@ -5498,7 +5481,7 @@ button.close {
 
 .modal {
   position: fixed;
-  top: 0;
+    top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -5519,6 +5502,7 @@ button.close {
   margin: 0.5rem;
   pointer-events: none;
 }
+
 
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
@@ -13766,6 +13750,7 @@ h2.title {
   padding: 0 15px;
 }
 
+
 .nav-tabs .nav-item .nav-link {
   position: relative;
   color: #fff;
@@ -14005,175 +13990,6 @@ h2.title {
   color: #555;
 }
 
-.modal-dialog .modal-content {
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
-  border-radius: 6px;
-  border: none;
-}
-
-.modal-dialog .modal-content .card-signup {
-  margin: 0;
-}
-
-.modal-dialog .modal-content .card-signup .modal-header {
-  padding-top: 0;
-}
-
-.modal-dialog .close:focus {
-  outline: none;
-}
-
-.modal-dialog .modal-header {
-  border-bottom: none;
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 0;
-  padding-left: 24px;
-}
-
-.modal-dialog .modal-header .modal-title {
-  text-align: center;
-  width: 100%;
-}
-
-.modal-dialog .modal-header .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
-
-.modal-dialog .modal-body {
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 16px;
-  padding-left: 24px;
-}
-
-.modal-dialog .modal-footer {
-  border-top: none;
-  padding: 24px;
-}
-
-.modal-dialog .modal-footer.text-center {
-  text-align: center;
-}
-
-.modal-dialog .modal-footer button {
-  margin: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  width: auto;
-}
-
-.modal-dialog .modal-footer button.pull-left {
-  padding-left: 5px;
-  padding-right: 5px;
-  position: relative;
-  left: -5px;
-}
-
-.modal-dialog .modal-body+.modal-footer {
-  padding-top: 0;
-}
-
-.modal-backdrop {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.modal .modal-dialog {
-  margin-top: 100px;
-}
-
-.modal .modal-dialog.modal-login {
-  width: 360px;
-}
-
-.modal .modal-dialog.modal-login .modal-header .close {
-  color: #fff;
-  text-shadow: none;
-  position: absolute;
-}
-
-.modal .modal-dialog.modal-login .modal-footer {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.modal .modal-dialog.modal-login .modal-body {
-  padding-left: 4px;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.modal .modal-dialog.modal-login .card-signup {
-  margin-bottom: 0;
-}
-
-.modal .modal-dialog.modal-signup {
-  max-width: 900px;
-}
-
-.modal .modal-dialog.modal-signup .info-horizontal {
-  padding: 0px 0px 20px;
-}
-
-.modal .modal-dialog.modal-signup .modal-title {
-  text-align: center;
-  width: 100%;
-}
-
-.modal .modal-dialog.modal-signup .modal-footer {
-  padding: 0 5px;
-}
-
-.modal .modal-dialog.modal-signup .modal-header {
-  padding-top: 0;
-}
-
-.modal .modal-dialog.modal-signup .card-signup {
-  padding: 40px 0;
-  margin-bottom: 0;
-}
-
-.modal .modal-dialog.modal-signup .modal-body {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.modal .modal-header .close {
-  color: #999999;
-}
-
-.modal .modal-header .close:hover,
-.modal .modal-header .close:focus {
-  opacity: 1;
-}
-
-.modal .modal-header .close i {
-  font-size: 16px;
-}
-
-.modal-notice .instruction {
-  margin-bottom: 25px;
-}
-
-.modal-notice .picture {
-  max-width: 150px;
-}
-
-.modal-notice .modal-content .btn-raised {
-  margin-bottom: 15px;
-}
-
-.modal-small {
-  width: 300px;
-  margin: 0 auto;
-}
-
-.modal-small .modal-body {
-  margin-top: 20px;
-}
-
 body {
   background-color: #eee;
   color: #3C4858;
@@ -14223,8 +14039,6 @@ label {
   color: #AAAAAA;
   font-weight: 400;
 }
-
-/*           Animations              */
 
 .animation-transition-general,
 .sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a span,

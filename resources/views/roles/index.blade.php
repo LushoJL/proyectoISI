@@ -1,7 +1,9 @@
 @extends('layouts.app', ['activePage' => 'roles', 'titlePage' => __('roles')])
 
 @section('content')
+
     <div class="content" id="usurol">
+        @include('roles.create')
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -88,7 +90,7 @@
                 </div>
             </div>
 
-    @include('roles.create')
+
 
     </div>
     </div>

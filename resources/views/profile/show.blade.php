@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class=" card-profile">
+                    <div class="card-profile">
                         <div class="card-avatar " >
                             <img src="{{Storage::url(Auth()->user()->photo)}}" >
                         </div>

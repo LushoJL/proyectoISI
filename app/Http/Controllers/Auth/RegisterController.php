@@ -59,7 +59,7 @@ class RegisterController extends Controller
             'ci' => ['required', 'string', 'max:10'],
             'birthdate' => ['required', 'string', 'max:10'],
             'address' => ['required', 'string', 'max:255'],
-            'phone' => ['integer', 'max:8'],
+            'phone' => ['integer', 'max:99999999'],
             'gender' => ['required'],
             'civil_status' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
@@ -110,8 +110,7 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
 
 
-        return $this->registered($request, $user)
-            ?: redirect($this->redirectPath());
+        return view('users.index');
     }
 
     /**

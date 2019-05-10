@@ -3,8 +3,10 @@
 
 <form method="post" v-on:submit.prevent="storeRole()">
 
-  <div class="modal fade" id="create" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg " role="document">
+          <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+
+
       <div class="modal-content">
 
         <div class="modal-header">
@@ -13,10 +15,10 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
+
         <div class="modal-body">
           <div class="pl-lg-4">
-
-
             <div class="form-group">
               <label for="user">Nombre del rol</label>
               <input type="text" name="name" class="form-control form-control-alternative" v-model="newRole.name">

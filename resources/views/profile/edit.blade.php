@@ -25,12 +25,12 @@
                 <div class="row">
                   <label class="col-sm-2 col-form-label">Profile photo</label>
                   <div class="col-sm-7">
-                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                    <div class="fileinput fileinput-new text-center  card-avatar" data-provides="fileinput">
                       <div class="fileinput-new thumbnail img-circle">
-                        <img src="https://material-dashboard-pro-laravel.creative-tim.com/material/img/placeholder.jpg" alt="...">
+                        <img src="{{asset('material')}}/img/edit.jpg" width="100px">
                       </div>
                       <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
-                      <div>
+                      <div >
                       <span class="btn btn-rose btn-file">
                         <span class="fileinput-new">Select image</span>
                         <span class="fileinput-exists">Change</span>
