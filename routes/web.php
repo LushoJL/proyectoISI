@@ -55,3 +55,74 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/leches', function () {
+    return view('inicio.leches');
+})->name('refrescos.leches');
+
+
+
+Route::get('/aceite', function () {
+    return view('inicio.aceite');
+})->name('refrescos.aceite');

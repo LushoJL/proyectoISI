@@ -1,119 +1,7 @@
 @extends('inicio/app')
 @section('content')
-	<!-- HOT DEAL SECTION -->
-		<div id="hot-deal" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="hot-deal">
-							<ul class="hot-deal-countdown">
-								<li>
-									<div>
-										<h3>02</h3>
-										<span>Days</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>10</h3>
-										<span>Hours</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>34</h3>
-										<span>Mins</span>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h3>60</h3>
-										<span>Secs</span>
-									</div>
-								</li>
-							</ul>
-							<h2 class="text-uppercase">hot deal this week</h2>
-							<p>New Collection Up to 50% OFF</p>
-							<a class="primary-btn cta-btn" href="{{asset('estilos')}}/#">Shop now</a>
-						</div>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /HOT DEAL SECTION -->
 
-		<!-- SECTION -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<!-- shop -->
-					<div class="col-md-3 col-xs-4">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="{{asset('estilos')}}/./img/prod1.jpg" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Chocapic<br>Cereales Nestlé</h3>
-								<a href="{{asset('estilos')}}/#" class="cta-btn">COMPRA Y AHORRA <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-3 col-xs-4">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="{{asset('estilos')}}/./img/prod3.jpg" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Fideo<br> La Estrella</h3>
-								<a href="{{asset('estilos')}}/#" class="cta-btn">COMPRA Y AHORA <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-
-					<!-- shop -->
-					<div class="col-md-3 col-xs-4">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="{{asset('estilos')}}/./img/prod4.jpg" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Azucar<br>Guabira Extra Fina 2kg</h3>
-								<a href="{{asset('estilos')}}/#" class="cta-btn">COMPRA Y AHORRA  <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-					<!-- shop -->
-					<div class="col-md-3 col-xs-4">
-						<div class="shop">
-							<div class="shop-img">
-								<img src="{{asset('estilos')}}/./img/prod5.jpg" alt="">
-							</div>
-							<div class="shop-body">
-								<h3>Arroz<br>Urupe 1kg</h3>
-								<a href="{{asset('estilos')}}/#" class="cta-btn">COMPRA Y AHORRA  <i class="fa fa-arrow-circle-right"></i></a>
-							</div>
-						</div>
-					</div>
-					<!-- /shop -->
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
-
-		<!-- SECTION -->
+	<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
 			<div class="container">
@@ -123,13 +11,10 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">NUEVOS PRODUCTOS</h3>
+							<h3 class="title">LECHES LÍQUIDAS</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="{{asset('estilos')}}/#tab1"><h5>ABARROTES</h5></a></li>
-									<li><a data-toggle="tab" href="{{asset('estilos')}}/#tab1"><h5>CARNE Y<br> PESCADO</h5></a></li>
-									<li><a data-toggle="tab" href="{{asset('estilos')}}/#tab1"><h5>CHOCOLATES<br>GOLOSINAS</h5></a></li>
-									<li><a data-toggle="tab" href="{{asset('estilos')}}/#tab1"><h5>BEBIDAS LICORES<br>Y TABACO</h5></a></li>
+									
 								</ul>
 							</div>
 						</div>
@@ -146,7 +31,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="{{asset('estilos')}}/./img/prod2.jpg" alt="">
+												<img src="{{asset('estilos')}}/./img/liqui1.jpg" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
 													<span class="new">Aceite</span>
@@ -301,5 +186,5 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
+
 @endsection
-	
