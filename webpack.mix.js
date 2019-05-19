@@ -19,6 +19,7 @@ mix.scripts([
     'resources/assets/js/vue.js',
     'resources/assets/js/axios.js',
     'resources/assets/js/app.js',
+
 ], 'public/js/app.js')
     .styles([
         'resources/assets/css/bootstrap.css',

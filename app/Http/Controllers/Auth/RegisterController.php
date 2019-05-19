@@ -110,7 +110,7 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
 
 
-        return view('users.index');
+        return;
     }
 
     /**

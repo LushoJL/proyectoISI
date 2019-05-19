@@ -22,7 +22,7 @@
                     <i class="material-icons">email</i>
                   </span>
                 </div>
-                <input type="text" name="login" class="form-control" placeholder="{{ __('introduce tu email o tu nick...') }}" value="{{ old('login') }}" required>
+                <input type="text" name="login" class="form-control2" placeholder="{{ __('introduce tu email o tu nick...') }}" value="{{ old('login') }}" required>
               </div>
               @if ($errors->has('login'))
                 <div id="login-error" class="error text-danger pl-3" for="login" style="display: block;">
@@ -37,7 +37,7 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}" value="{{$errors->has('password')}}" required>
+                <input type="password" name="password" id="password" class="form-control2" placeholder="{{ __('Password...') }}" value="{{$errors->has('password')}}" required>
               </div>
               @if ($errors->has('password'))
                 <div id="password-error" class="error text-danger pl-3" for="password" style="display: block;">

@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ __('Material Dashboard Laravel - Free Frontend Preset for Laravel') }}</title>
         <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -15,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('material')}}/fonts/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{ asset('material') }}/css/material-dashboard2.css" rel="stylesheet" />
+
+        <script src="{{ asset('material') }}/css/bootstrap-vue.min.css"></script>
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
 
@@ -29,9 +32,13 @@
         @guest()
             @include('layouts.page_templates.guest')
         @endguest
+
         <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>
+{{--        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>--}}
+
         <script src="{{ asset('js/app.js') }}"></script>
+
+        <script src="{{ asset('material') }}/js/bootstrap-vue.min.js"></script>
         <!--   Core JS Files   -->
         <script src="{{ asset('material') }}/js/core/popper2.min.js"></script>
         <script src="{{ asset('material') }}/js/core/bootstrap-material-design2.min.js"></script>
@@ -77,6 +84,7 @@
         <script src="{{ asset('material') }}/js/application2.js"></script>
 
         <script src="{{ asset('material') }}/js/jquery.sharrre2.js"></script>
+
         @stack('js')
 
     </body>

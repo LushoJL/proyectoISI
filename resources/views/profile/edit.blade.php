@@ -46,7 +46,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Nombre') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{Auth()->user()->name }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" id="input-name" type="text" placeholder="{{ __('Name') }}" value="{{Auth()->user()->name }}" required="true" aria-required="true"/>
                             @if ($errors->has('name'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('name') }}</span>
                             @endif
@@ -57,7 +57,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Apellidos') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('last_name') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" type="text" placeholder="{{ __('ejemple@ejemplo.com') }}" value="{{ Auth()->user()->last_name }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('last_name') ? ' is-invalid' : '' }}" name="last_name" type="text" placeholder="{{ __('ejemple@ejemplo.com') }}" value="{{ Auth()->user()->last_name }}" required="true" aria-required="true"/>
                             @if ($errors->has('last_name'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('last_name') }}</span>
                             @endif
@@ -68,7 +68,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('C. de identidad') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('ci') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('ci') ? ' is-invalid' : '' }}" name="ci" type="text" placeholder="{{ __('12345678') }}" value="{{ Auth()->user()->ci  }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('ci') ? ' is-invalid' : '' }}" name="ci" type="text" placeholder="{{ __('12345678') }}" value="{{ Auth()->user()->ci  }}" required="true" aria-required="true"/>
                             @if ($errors->has('ci'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('ci') }}</span>
                             @endif
@@ -79,7 +79,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Apellidos') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('birthdate') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('birthdate') ? ' is-invalid' : '' }}" name="birthdate" type="date" value="{{ old('birthdate') }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('birthdate') ? ' is-invalid' : '' }}" name="birthdate" type="date" value="{{ old('birthdate') }}" required="true" aria-required="true"/>
                             @if ($errors->has('birthdate'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('birthdate') }}</span>
                             @endif
@@ -90,7 +90,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Pais de Nacimiento') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('country') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" type="text" placeholder="{{ __('BOLIVIA') }}" value="{{ Auth()->user()->country   }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" type="text" placeholder="{{ __('BOLIVIA') }}" value="{{ Auth()->user()->country   }}" required="true" aria-required="true"/>
                             @if ($errors->has('country'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('country') }}</span>
                             @endif
@@ -101,7 +101,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Direccion') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('address') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" type="text" placeholder="{{ __('av. siempre vivas c. ayacucho n. 2024') }}" value="{{ Auth()->user()->address  }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" type="text" placeholder="{{ __('av. siempre vivas c. ayacucho n. 2024') }}" value="{{ Auth()->user()->address  }}" required="true" aria-required="true"/>
                             @if ($errors->has('address'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('address') }}</span>
                             @endif
@@ -112,7 +112,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Telefono') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('phone') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" type="text" placeholder="{{ __('1234567') }}" value="{{ Auth()->user()->phone  }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" type="text" placeholder="{{ __('1234567') }}" value="{{ Auth()->user()->phone  }}" required="true" aria-required="true"/>
                             @if ($errors->has('phone'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('phone') }}</span>
                             @endif
@@ -135,7 +135,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Estado civil') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('civil_status') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('civil_status') ? ' is-invalid' : '' }}" name="civil_status" type="text" placeholder="{{ __('soltero') }}" value="{{ Auth()->user()->civil_status  }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('civil_status') ? ' is-invalid' : '' }}" name="civil_status" type="text" placeholder="{{ __('soltero') }}" value="{{ Auth()->user()->civil_status  }}" required="true" aria-required="true"/>
                             @if ($errors->has('civil_status'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('civil_status') }}</span>
                             @endif
@@ -147,7 +147,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Nacionalidad') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('nationality') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('nationality') ? ' is-invalid' : '' }}" name="nationality" type="text" placeholder="{{ __('Boliviana') }}" value="{{ Auth()->user()->nationality  }}" required="true" aria-required="true"/>
+                            <input class="form-control2{{ $errors->has('nationality') ? ' is-invalid' : '' }}" name="nationality" type="text" placeholder="{{ __('Boliviana') }}" value="{{ Auth()->user()->nationality  }}" required="true" aria-required="true"/>
                             @if ($errors->has('nationality'))
                               <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('nationality') }}</span>
                             @endif
@@ -158,7 +158,7 @@
                         <label class="col-sm-2 col-form-label">{{ __('Email') }}</label>
                         <div class="col-sm-7">
                           <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                            <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}" value="{{ Auth()->user()->email   }}" required />
+                            <input class="form-control2{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" id="input-email" type="email" placeholder="{{ __('Email') }}" value="{{ Auth()->user()->email   }}" required />
                             @if ($errors->has('email'))
                               <span id="email-error" class="error text-danger" for="input-email">{{ $errors->first('email') }}</span>
                             @endif
@@ -212,7 +212,7 @@
                   <label class="col-sm-2 col-form-label" for="input-current-password">{{ __('Current Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />
+                      <input class="form-control2{{ $errors->has('old_password') ? ' is-invalid' : '' }}" input type="password" name="old_password" id="input-current-password" placeholder="{{ __('Current Password') }}" value="" required />
                       @if ($errors->has('old_password'))
                         <span id="name-error" class="error text-danger" for="input-name">{{ $errors->first('old_password') }}</span>
                       @endif
@@ -223,7 +223,7 @@
                   <label class="col-sm-2 col-form-label" for="input-password">{{ __('New Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                      <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
+                      <input class="form-control2{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="input-password" type="password" placeholder="{{ __('New Password') }}" value="" required />
                       @if ($errors->has('password'))
                         <span id="password-error" class="error text-danger" for="input-password">{{ $errors->first('password') }}</span>
                       @endif
@@ -234,7 +234,7 @@
                   <label class="col-sm-2 col-form-label" for="input-password-confirmation">{{ __('Confirm New Password') }}</label>
                   <div class="col-sm-7">
                     <div class="form-group">
-                      <input class="form-control" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
+                      <input class="form-control2" name="password_confirmation" id="input-password-confirmation" type="password" placeholder="{{ __('Confirm New Password') }}" value="" required />
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
@@ -30,25 +31,15 @@ class UserController extends Controller
     public function lista()
     {
         //muestra la vista de lista de usuarios
-        return view('users.index');
+        $roles=Role::get();
+        return view('users.index',compact('roles'));
 
     }
-    public function index(Request $request)
+    public function index()
     {
         //manda datos del modelo user
-        $users=User::orderBy('id','DESC')->paginate(10);
-        return [
-            'pagination'=>[
-                'total'         =>$users->total(),
-                'current_page'  =>$users->currentPage(),
-                'per_page'      =>$users->perPage(),
-                'last_page'     =>$users->lastPage(),
-                'from'          =>$users->firstItem(),
-                'to'            =>$users->lastPage(),
-            ],
-            'users'=>$users
-        ];
-
+        $users=User::get();
+        return $users;
     }
 
     /**

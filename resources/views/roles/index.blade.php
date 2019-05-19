@@ -1,3 +1,4 @@
+
 @extends('layouts.app', ['activePage' => 'roles', 'titlePage' => __('roles')])
 
 @section('content')
@@ -25,6 +26,8 @@
                                     </div>
                                 </div>
                             @endif
+
+
                             <div class="row">
                                 <div class="col-12 text-right">
                                     <button type="button" class="btn btn-success btn-link"  data-toggle="modal" data-target="#create">
@@ -89,9 +92,6 @@
                     </div>
                 </div>
             </div>
-
-
-
     </div>
     </div>
 @endsection

@@ -29105,16 +29105,16 @@ return jQuery;
 ;
 //# sourceMappingURL=axios.map
 
-
 new Vue({
     el:'#usurol',
-    created: function () {
-        this.getUsers();
+    created() {
+
         this.getRoles();
+        this.getusuarios();
         this.getUserRole();
     },
     data: {
-        users:[],
+
         pagination:{
             'total'         :0,
             'current_page'  :0,
@@ -29123,13 +29123,30 @@ new Vue({
             'from'          :0,
             'to'            :0
         },
+        newUser:{
+            'name':'',
+            'last_name':'',
+            'ci':'',
+            'birthdate':'',
+            'address':'',
+            'photo':'',
+            'phone':'',
+            'gender':'',
+            'civil_status':'',
+            'country':'',
+            'nationality':'',
+            'email':'',
+            'password':'',
+            'password_confirmation':'',
+            'role_id':''
+        },
         fillUser: {
             'id': '',
             'name': '',
             'email': '',
             'role_id': ''
         },
-
+        usuarios:[],
         //roles
         roles:[],
         newRole:{
@@ -29139,13 +29156,14 @@ new Vue({
             permissions:[]
         },
         errors: '',
-        offset:3
+        offset:3,
+        userId: ''
     },
     computed:{
-        isActived: function () {
+        isActived() {
             return this.pagination.current_page;
         } ,
-        pagesNumber: function () {
+        pagesNumber () {
             if (!this.pagination.to){
                 return[];
             }
@@ -29164,17 +29182,73 @@ new Vue({
                 from++;
             }
             return pagesArray;
+        },
+        validation() {
+            if (/^([a-zA-Z])*$/.test(this.userId))
+                return true;
+            return false;
+
+          //  return !/^([0-9])*$/.test(this.userId)
+          //  return this.userId.length > 4 && this.userId.length < 13
         }
     },
     methods: {
-        getUsers: function (page) {
-            var urlUsers = 'user?page='+page;
-            axios.get(urlUsers).then(response => {
-                this.users=response.data.users.data,
-                    this.pagination=response.data.pagination
-            });
+
+
+        storeUser (){
+            var url ='register';
+            axios.post(url, {
+                'name':this.newUser.name,
+                'last_name':this.newUser.last_name,
+                'ci':this.newUser.ci,
+                'birthdate':this.newUser.birthdate,
+                'address':this.newUser.address,
+                'photo':this.newUser.photo,
+                'phone':this.newUser.phone,
+                'gender':this.newUser.gender,
+                'civil_status':this.newUser.civil_status,
+                'country':this.newUser.country,
+                'nationality':this.newUser.nationality,
+                'email':this.newUser.email,
+                'password':this.newUser.password,
+                'password_confirmation':this.newUser.password_confirmation,
+                'role_id':this.newUser.role_id
+            }).then(response =>{
+                this.getUsers();
+                this.newUser='';
+                this.errors=[];
+                $('#createUser').modal('hide');
+                toastr.success('Nuevo Usuario creada con éxito');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+
+            })
         },
 
+        storeRole: function() {
+            var url = 'role';
+
+            axios.post(url, {
+                'name': this.newRole.name.toUpperCase(),
+                'slug': this.newRole.slug.toUpperCase(),
+                'description': this.newRole.description,
+                'permissions': this.newRole.permissions
+            }).then(response => {
+                this.getRoles();
+                this.newRole = '';
+                this.errors = [];
+                $('#create').modal('hide');
+                Swal.fire(
+                    'Creado!',
+                    'Usuario se creo exitosamente.',
+                    'success'
+                )
+            }).catch(error => {
+                this.errors = error.response.data.errors;
+            });
+
+
+        },
         editUser:function(user){
             this.fillUser.id=user.id;
             this.fillUser.name=user.name;
@@ -29212,30 +29286,49 @@ new Vue({
             });
         },
 
-        storeRole: function() {
-            var url = 'role';
-            axios.post(url, {
-                'name': this.newRole.name.toUpperCase(),
-                'slug': this.newRole.slug.toUpperCase(),
-                'description': this.newRole.description,
-                'permissions': this.newRole.permissions
-            }).then(response => {
-                this.getRoles();
-                this.newRole = '';
-                this.errors = [];
-                $('#create').modal('hide');
-                toastr.success('Nuevo Rol creada con éxito');
-            }).catch(error => {
-                this.errors = 'Corrija para poder crear con éxito'
+        getusuarios() {
+            var urlUsers = 'user';
+            axios.get(urlUsers).then(response => {
+                this.usuarios=response.data
             });
         },
-        deleteRole: function (role) {
+
+        deleteRole(role) {
                 var url ='role/'+ role.id;
-                axios.delete(url).then(response => {
-                    this.getRoles();
-                    md.showNotification('top','left','El rol se elimino Correctamente','danger')
-                   // toastr.success('Rol eliminado Correctamente');
-                });
+
+
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: '¡No podrás revertir esto.!',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Sí, bórralo!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.value) {
+                    axios.delete(url).then(response => {
+                        this.getRoles();
+                        Swal.fire(
+                            'Borrado!',
+                            'El rol se borro exitosamente.',
+                            'success'
+                        )
+                    });
+
+                }
+            })
+
+
+
+
+
+
+
+
+
+
         },
         getUserRole: function () {
             var url = 'roldelusuarioenvujsmmm';
