@@ -12,9 +12,14 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function lista(){
+        return view('products.index');
+    }
     public function index()
     {
-        //
+      $product=Product::get();
+      return $product;
     }
 
     /**
@@ -35,7 +40,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product=Product::create($request->all());
+        return;
     }
 
     /**

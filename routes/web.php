@@ -61,7 +61,14 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('role');
     Route::get('lista-usuarios','UserController@lista')->name('listaU');
     Route::get('lista-roles','RoleController@lista')->name('listaR');
+    Route::get('lista-productos','ProductController@lista')->name('listaP');
+    Route::get('lista-proveedor','ProviderController@lista')->name('listaPR');
+
 	Route::resource('user', 'UserController');
+    Route::resource('brand', 'BrandController');
+    Route::resource('category', 'CategoryController');
+    Route::resource('product', 'ProductController');
+    Route::resource('provider', 'ProviderController');
 	Route::put('photo/{user}','UserController@photo')->name('user.photo');
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);

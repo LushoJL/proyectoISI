@@ -12,9 +12,13 @@ class ProviderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function lista(){
+        return view('providers.index');
+    }
     public function index()
     {
-        //
+        $providers=Provider::get();
+        return $providers;
     }
 
     /**
@@ -35,7 +39,8 @@ class ProviderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $provider=Provider::create($request->all());
+        return;
     }
 
     /**

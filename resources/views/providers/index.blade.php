@@ -1,17 +1,17 @@
-@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Usuarios')])
+
+@extends('layouts.app', ['activePage' => 'providers', 'titlePage' => __('proveedores')])
 
 @section('content')
 
-
     <div class="content" id="usurol">
-        @include('users.create')
+        @include('providers.create')
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h4 class="card-title ">{{ __('Lista de Roles') }}</h4>
-                            <p class="card-category"> {{ __('Aquí puedes gestionar usuarios.') }}</p>
+                            <h4 class="card-title ">{{ __('Lista de Proveedores') }}</h4>
+                            <p class="card-category"> {{ __('Aquí puedes gestionar proveedor.') }}</p>
                         </div>
                         <div class="card-body">
                             @if (session('status'))
@@ -30,8 +30,8 @@
 
                             <div class="row">
                                 <div class="col-12 text-right">
-                                    <button type="button" class="btn btn-success btn-link"  data-toggle="modal" data-target="#createUser">
-                                        Agregar nuevo rol
+                                    <button type="button" class="btn btn-success btn-link"  data-toggle="modal" data-target="#createProvider">
+                                        Agregar nuevo proveedor
                                         <div class="ripple-container"></div>
                                     </button>
 
@@ -41,12 +41,23 @@
                                 <table class="table">
                                     <thead class=" text-primary">
                                     <th>
-                                        id
-                                    </th>
-                                    <th>
                                         Nombre
                                     </th>
-
+                                    <th>
+                                        Telefono
+                                    </th>
+                                    <th>
+                                        Celular
+                                    </th>
+                                    <th>
+                                        email
+                                    </th>
+                                    <th>
+                                        direccion
+                                    </th>
+                                    <th>
+                                        observacion
+                                    </th>
                                     <th class="text-center" colspan="3">
                                         Acciones
                                     </th>
@@ -54,12 +65,24 @@
                                     </thead>
                                     <tbody>
 
-                                    <tr v-for="usuario in usuarios">
+                                    <tr v-for="provider in providers">
                                         <td>
-                                            @{{ usuario.id }}
+                                            @{{ provider.name }}
                                         </td>
                                         <td>
-                                            @{{ usuario.name }}
+                                            @{{ provider.phone }}
+                                        </td>
+                                        <td>
+                                            @{{ provider.mobile }}
+                                        </td>
+                                        <td>
+                                            @{{ provider.email }}
+                                        </td>
+                                        <td>
+                                            @{{ provider.address }}
+                                        </td>
+                                        <td>
+                                            @{{ provider.observation }}
                                         </td>
 
                                         <td class="td-actions text-right">
@@ -78,7 +101,7 @@
                                         </td>
                                         <td class="td-actions text-right">
 
-                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteRole(usuario)">
+                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteRole(provider)">
                                                 <i class="material-icons">delete</i>
                                                 <div class="ripple-container"></div>
                                             </button>

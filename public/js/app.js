@@ -29112,6 +29112,10 @@ new Vue({
         this.getRoles();
         this.getusuarios();
         this.getUserRole();
+        this.getBrands();
+        this.getCategories();
+        this.getProducts();
+        this.getProviders();
     },
     data: {
 
@@ -29140,6 +29144,10 @@ new Vue({
             'password_confirmation':'',
             'role_id':''
         },
+        newBrand:{
+            'name':'',
+        },
+        roles:[],
         fillUser: {
             'id': '',
             'name': '',
@@ -29148,16 +29156,50 @@ new Vue({
         },
         usuarios:[],
         //roles
-        roles:[],
+        brands:[],
+        categories:[],
+        newCategory:{
+            'name':'',
+        },
         newRole:{
             'name': '',
             'slug': '',
             'description': '',
             permissions:[]
         },
+        products:[],
+        newProduct:{
+            'barcode':'',
+            'name':'',
+            'description':'',
+            'price':'',
+           // 'photo':'',
+            'brand_id':'',
+            'category_id':'',
+            'maximum':'',
+            'minimum':'',
+
+            'date_purchase':'',
+            'expiration_date':'',
+            'stock':'',
+
+
+
+        },
+        providers:[],
+        newProvider:{
+            'name':'',
+            'phone':'',
+            'mobile':'',
+            'email':'',
+            'observation':'',
+            'address':'',
+            'web_page':'',
+        },
         errors: '',
         offset:3,
-        userId: ''
+        userId: '',
+
     },
     computed:{
         isActived() {
@@ -29193,8 +29235,108 @@ new Vue({
         }
     },
     methods: {
+        getProducts(){
+            var url ='product';
+            axios.get(url).then(response=>{
+                this.products=response.data
+            });
+        },
+        getProviders(){
+          var url ='provider';
+          axios.get(url).then(response=>{
+              this.providers=response.data
+          })
+        },
+        storeProvider(){
+            var url ='provider';
+            axios.post(url,{
+                'name':this.newProvider.name,
+                'phone':this.newProvider.phone,
+                'mobile':this.newProvider.mobile,
+                'email':this.newProvider.email,
+                'observation':this.newProvider.observation,
+                'address':this.newProvider.address,
+                'web_page':this.newProvider.web_page
+            }).then(response=>{
+                this.getProviders();
+                this.newProvider='';
+                $('#createProvider').modal('hide');
+                toastr.success('Nuevo Proveedor creado');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+                toastr.success('algo salio mal');
+            })
+        },
+        storeProduct(){
+            var url='product';
+            axios.post(url,{
+                'barcode':this.newProduct.barcode,
+                'name':this.newProduct.name,
+                'description':this.newProduct.description,
+                'price':this.newProduct.price,
+              //  'photo':this.newProduct.photo,
+                'brand_id':this.newProduct.brand_id,
+                'category_id':this.newProduct.category_id,
+                'maximum':this.newProduct.maximum,
+                'minimum':this.newProduct.minimum,
 
+                'date_purchase':this.newProduct.date_purchase,
+                'expiration_date':this.newProduct.expiration_date,
+                'stock':this.newProduct.stock,
+            }).then(reponse=>{
+                this.getProducts();
+                this.newProduct='';
+                $('#createCategory').modal('hide');
+                toastr.success('Nueva marca creada');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+                toastr.success('algo salio mal');
+            })
+        },
+        storeBrand(){
+            var url = 'brand';
+            axios.post(url,{
+                'name':this.newBrand.name,
+            }).then(response =>{
+                this.getBrands();
+                this.newBrand='';
+                this.errors=[];
+                $('#createBrand').modal('hide');
+                toastr.success('Nueva marca creada');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+                toastr.success('algo salio mal');
 
+            })
+
+        },
+        storeCategory(){
+            var url = 'category';
+            axios.post(url,{
+                'name':this.newCategory.name,
+            }).then(response=>{
+                this.getCategories();
+                this.newCategory='';
+                this.errors=[];
+                $('#createCategory').modal('hide');
+                toastr.success('Nueva categoria creada');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+                toastr.success('algo salio mal');
+            })
+        },
+        getCategories(){
+            var url='category';
+            axios.get(url).then(response=>{
+                this.categories=response.data
+            });
+        },
+        getBrands() {
+            var urlBrands = 'brand';
+            axios.get(urlBrands).then(response => {
+                this.brands=response.data
+            });
+        },
         storeUser (){
             var url ='register';
             axios.post(url, {
@@ -29276,7 +29418,6 @@ new Vue({
 
             });
         },
-
 
         //roles
         getRoles: function () {

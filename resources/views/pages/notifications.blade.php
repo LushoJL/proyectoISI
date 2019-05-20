@@ -76,10 +76,18 @@ data-backdrop="static" data-keyboard="false">
     </div>
 </div>
 </div>
-          <div class="form-group2">
-              <label class="label-control">Datetime Picker</label>
-              <input type="text" class="form-control2 datetimepicker" value="21/06/2018"/>
+          <div class="row">
+              <div class='col-sm-6'>
+                  <input type='text' class="form-control" id='datetimepicker4' />
+              </div>
+
           </div>
+
+          <select class="selectpicker">
+              <option title="Combo 1">Hot Dog, Fries and a Soda</option>
+              <option title="Combo 2">Burger, Shake and a Smile</option>
+              <option title="Combo 3">Sugar, Spice and all things nice</option>
+          </select>
 
           <button class="btn btn-primary btn-fill" onclick='
    Swal.fire({
@@ -119,8 +127,20 @@ data-backdrop="static" data-keyboard="false">
           <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
               Tooltip on left
           </button>
+
+
+
+          <div class="dropdown bootstrap-select show"><select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select" tabindex="-98"><option class="bs-title-option" value=""></option>
+                  <option disabled="" selected="">Single Option</option>
+                  <option value="2">Foobar</option>
+                  <option value="3">Is great</option>
+                  <option value="4">Is bum</option>
+                  <option value="5">Is wow</option>
+                  <option value="6">boom</option>
+              </select><button type="button" class="dropdown-toggle btn btn-primary btn-round" data-toggle="dropdown" role="button" title="Single Option" aria-expanded="true"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Single Option</div></div> </div><div class="ripple-container"></div></button><div class="dropdown-menu show" role="combobox" style="overflow: hidden; position: absolute; top: 46px; left: 1px; will-change: top, left;" x-placement="bottom-start"><div class="inner show" role="listbox" aria-expanded="true" tabindex="-1" style="overflow-y: auto;"><ul class="dropdown-menu inner show"><li class="disabled selected active"><a role="option" class="dropdown-item disabled selected active" aria-disabled="true" tabindex="-1" aria-selected="true"><span class=" bs-ok-default check-mark"></span><span class="text">Single Option</span></a></li><li><a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false"><span class=" bs-ok-default check-mark"></span><span class="text">Foobar</span></a></li><li><a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false"><span class=" bs-ok-default check-mark"></span><span class="text">Is great</span></a></li><li><a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false"><span class=" bs-ok-default check-mark"></span><span class="text">Is bum</span></a></li><li><a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false"><span class=" bs-ok-default check-mark"></span><span class="text">Is wow</span></a></li><li><a role="option" class="dropdown-item" aria-disabled="false" tabindex="0" aria-selected="false"><span class=" bs-ok-default check-mark"></span><span class="text">boom</span></a></li></ul></div></div></div>
       </div>
     </div>
+
 
 
 @endsection

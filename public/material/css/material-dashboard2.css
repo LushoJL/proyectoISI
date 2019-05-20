@@ -2125,7 +2125,7 @@ pre code {
     border: 0;
 }
 
-.form-control2 {
+.form-control {
     display: block;
     width: 100%;
     padding: 0.4375rem 0;
@@ -2140,12 +2140,12 @@ pre code {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.form-control2::-ms-expand {
+.form-control::-ms-expand {
     background-color: transparent;
     border: 0;
 }
 
-.form-control2:focus {
+.form-control:focus {
     color: #495057;
     background-color: rgba(0, 0, 0, 0);
     border-color: #9acffa;
@@ -2153,28 +2153,28 @@ pre code {
     box-shadow: none, 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
 }
 
-.form-control2::placeholder {
+.form-control::placeholder {
     color: #6c757d;
     opacity: 1;
 }
 
-.form-control2:disabled,
-.form-control2[readonly] {
+.form-control:disabled,
+.form-control[readonly] {
     background-color: #e9ecef;
     opacity: 1;
 }
 
-select.form-control2:not([size]):not([multiple]) {
+select.form-control:not([size]):not([multiple]) {
     height: calc(2.4375rem + 2px);
 }
 
-select.form-control2:focus::-ms-value {
+select.form-control:focus::-ms-value {
     color: #495057;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.form-control2-file,
-.form-control2-range {
+.form-control-file,
+.form-control-range {
     display: block;
     width: 100%;
 }
@@ -2201,7 +2201,7 @@ select.form-control2:focus::-ms-value {
     line-height: 1.5;
 }
 
-.form-control2-plaintext {
+.form-control-plaintext {
     display: block;
     width: 100%;
     padding-top: 0.4375rem;
@@ -2213,24 +2213,24 @@ select.form-control2:focus::-ms-value {
     border-width: 1px 0;
 }
 
-.form-control2-plaintext.form-control2-sm,
-.input-group-sm>.form-control2-plaintext.form-control2,
-.input-group-sm>.input-group-prepend>.form-control2-plaintext.input-group-text,
-.input-group-sm>.input-group-append>.form-control2-plaintext.input-group-text,
-.input-group-sm>.input-group-prepend>.form-control2-plaintext.btn,
-.input-group-sm>.input-group-append>.form-control2-plaintext.btn,
-.form-control2-plaintext.form-control2-lg,
-.input-group-lg>.form-control2-plaintext.form-control2,
-.input-group-lg>.input-group-prepend>.form-control2-plaintext.input-group-text,
-.input-group-lg>.input-group-append>.form-control2-plaintext.input-group-text,
-.input-group-lg>.input-group-prepend>.form-control2-plaintext.btn,
-.input-group-lg>.input-group-append>.form-control2-plaintext.btn {
+.form-control-plaintext.form-control-sm,
+.input-group-sm>.form-control-plaintext.form-control,
+.input-group-sm>.input-group-prepend>.form-control-plaintext.input-group-text,
+.input-group-sm>.input-group-append>.form-control-plaintext.input-group-text,
+.input-group-sm>.input-group-prepend>.form-control-plaintext.btn,
+.input-group-sm>.input-group-append>.form-control-plaintext.btn,
+.form-control-plaintext.form-control-lg,
+.input-group-lg>.form-control-plaintext.form-control,
+.input-group-lg>.input-group-prepend>.form-control-plaintext.input-group-text,
+.input-group-lg>.input-group-append>.form-control-plaintext.input-group-text,
+.input-group-lg>.input-group-prepend>.form-control-plaintext.btn,
+.input-group-lg>.input-group-append>.form-control-plaintext.btn {
     padding-right: 0;
     padding-left: 0;
 }
 
-.form-control2-sm,
-.input-group-sm>.form-control2,
+.form-control-sm,
+.input-group-sm>.form-control,
 .input-group-sm>.input-group-prepend>.input-group-text,
 .input-group-sm>.input-group-append>.input-group-text,
 .input-group-sm>.input-group-prepend>.btn,
@@ -2241,8 +2241,8 @@ select.form-control2:focus::-ms-value {
     border-radius: 0.2rem;
 }
 
-select.form-control2-sm:not([size]):not([multiple]),
-.input-group-sm>select.form-control2:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]),
+.input-group-sm>select.form-control:not([size]):not([multiple]),
 .input-group-sm>.input-group-prepend>select.input-group-text:not([size]):not([multiple]),
 .input-group-sm>.input-group-append>select.input-group-text:not([size]):not([multiple]),
 .input-group-sm>.input-group-prepend>select.btn:not([size]):not([multiple]),
@@ -2250,8 +2250,8 @@ select.form-control2-sm:not([size]):not([multiple]),
     height: calc(2.125rem + 2px);
 }
 
-.form-control2-lg,
-.input-group-lg>.form-control2,
+.form-control-lg,
+.input-group-lg>.form-control,
 .input-group-lg>.input-group-prepend>.input-group-text,
 .input-group-lg>.input-group-append>.input-group-text,
 .input-group-lg>.input-group-prepend>.btn,
@@ -2262,8 +2262,8 @@ select.form-control2-sm:not([size]):not([multiple]),
     border-radius: 0.3rem;
 }
 
-select.form-control2-lg:not([size]):not([multiple]),
-.input-group-lg>select.form-control2:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]),
+.input-group-lg>select.form-control:not([size]):not([multiple]),
 .input-group-lg>.input-group-prepend>select.input-group-text:not([size]):not([multiple]),
 .input-group-lg>.input-group-append>select.input-group-text:not([size]):not([multiple]),
 .input-group-lg>.input-group-prepend>select.btn:not([size]):not([multiple]),
@@ -2350,25 +2350,25 @@ select.form-control2-lg:not([size]):not([multiple]),
     border-radius: .2rem;
 }
 
-.was-validated .form-control2:valid,
-.form-control2.is-valid,
+.was-validated .form-control:valid,
+.form-control.is-valid,
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
     border-color: #4caf50;
 }
 
-.was-validated .form-control2:valid:focus,
-.form-control2.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus,
 .was-validated .custom-select:valid:focus,
 .custom-select.is-valid:focus {
     border-color: #4caf50;
     box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
 }
 
-.was-validated .form-control2:valid~.valid-feedback,
-.was-validated .form-control2:valid~.valid-tooltip,
-.form-control2.is-valid~.valid-feedback,
-.form-control2.is-valid~.valid-tooltip,
+.was-validated .form-control:valid~.valid-feedback,
+.was-validated .form-control:valid~.valid-tooltip,
+.form-control.is-valid~.valid-feedback,
+.form-control.is-valid~.valid-tooltip,
 .was-validated .custom-select:valid~.valid-feedback,
 .was-validated .custom-select:valid~.valid-tooltip,
 .custom-select.is-valid~.valid-feedback,
@@ -2460,25 +2460,25 @@ select.form-control2-lg:not([size]):not([multiple]),
     border-radius: .2rem;
 }
 
-.was-validated .form-control2:invalid,
-.form-control2.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
     border-color: #f44336;
 }
 
-.was-validated .form-control2:invalid:focus,
-.form-control2.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus,
 .was-validated .custom-select:invalid:focus,
 .custom-select.is-invalid:focus {
     border-color: #f44336;
     box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
 }
 
-.was-validated .form-control2:invalid~.invalid-feedback,
-.was-validated .form-control2:invalid~.invalid-tooltip,
-.form-control2.is-invalid~.invalid-feedback,
-.form-control2.is-invalid~.invalid-tooltip,
+.was-validated .form-control:invalid~.invalid-feedback,
+.was-validated .form-control:invalid~.invalid-tooltip,
+.form-control.is-invalid~.invalid-feedback,
+.form-control.is-invalid~.invalid-tooltip,
 .was-validated .custom-select:invalid~.invalid-feedback,
 .was-validated .custom-select:invalid~.invalid-tooltip,
 .custom-select.is-invalid~.invalid-feedback,
@@ -2571,12 +2571,12 @@ select.form-control2-lg:not([size]):not([multiple]),
         align-items: center;
         margin-bottom: 0;
     }
-    .form-inline .form-control2 {
+    .form-inline .form-control {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
-    .form-inline .form-control2-plaintext {
+    .form-inline .form-control-plaintext {
         display: inline-block;
     }
     .form-inline .input-group {
@@ -3687,7 +3687,7 @@ tbody.collapse.show {
     width: 100%;
 }
 
-.input-group>.form-control2,
+.input-group>.form-control,
 .input-group>.custom-select,
 .input-group>.custom-file {
     position: relative;
@@ -3696,31 +3696,31 @@ tbody.collapse.show {
     margin-bottom: 0;
 }
 
-.input-group>.form-control2:focus,
+.input-group>.form-control:focus,
 .input-group>.custom-select:focus,
 .input-group>.custom-file:focus {
     z-index: 3;
 }
 
-.input-group>.form-control2+.form-control2,
-.input-group>.form-control2+.custom-select,
-.input-group>.form-control2+.custom-file,
-.input-group>.custom-select+.form-control2,
+.input-group>.form-control+.form-control,
+.input-group>.form-control+.custom-select,
+.input-group>.form-control+.custom-file,
+.input-group>.custom-select+.form-control,
 .input-group>.custom-select+.custom-select,
 .input-group>.custom-select+.custom-file,
-.input-group>.custom-file+.form-control2,
+.input-group>.custom-file+.form-control,
 .input-group>.custom-file+.custom-select,
 .input-group>.custom-file+.custom-file {
     margin-left: -1px;
 }
 
-.input-group>.form-control2:not(:last-child),
+.input-group>.form-control:not(:last-child),
 .input-group>.custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.input-group>.form-control2:not(:first-child),
+.input-group>.form-control:not(:first-child),
 .input-group>.custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -11268,7 +11268,7 @@ form {
     margin-bottom: 0;
 }
 
-.form-control2 {
+.form-control {
     background: no-repeat center bottom, center calc(100% - 1px);
     background-size: 0 100%, 100% 100%;
     border: 0;
@@ -11280,40 +11280,40 @@ form {
     font-size: 14px;
 }
 
-.form-control2:focus,
-.bmd-form-group.is-focused .form-control2 {
+.form-control:focus,
+.bmd-form-group.is-focused .form-control {
     background-size: 100% 100%, 100% 100%;
     transition-duration: 0.3s;
     box-shadow: none;
 }
 
-.form-control2::-moz-placeholder {
+.form-control::-moz-placeholder {
     color: #AAAAAA;
     font-weight: 400;
     font-size: 14px;
 }
 
-.form-control2:-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
     color: #AAAAAA;
     font-weight: 400;
     font-size: 14px;
 }
 
-.form-control2::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
     color: #AAAAAA;
     font-weight: 400;
     font-size: 14px;
 }
 
-.has-white .form-control2::-moz-placeholder {
+.has-white .form-control::-moz-placeholder {
     color: #fff;
 }
 
-.has-white .form-control2:-ms-input-placeholder {
+.has-white .form-control:-ms-input-placeholder {
     color: #fff;
 }
 
-.has-white .form-control2::-webkit-input-placeholder {
+.has-white .form-control::-webkit-input-placeholder {
     color: #fff;
 }
 
@@ -11448,40 +11448,40 @@ fieldset[disabled] .is-focused .switch label:focus {
     color: #999999;
 }
 
-.form-control2,
-.is-focused .form-control2 {
+.form-control,
+.is-focused .form-control {
     background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.form-control2:invalid {
+.form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.form-control2:read-only {
+.form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .form-control2,
-.form-control2.disabled,
-.form-control2:disabled,
-.form-control2[disabled] {
+fieldset[disabled][disabled] .form-control,
+.form-control.disabled,
+.form-control:disabled,
+.form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.form-control2.form-control2-success,
-.is-focused .form-control2.form-control2-success {
+.form-control.form-control-success,
+.is-focused .form-control.form-control-success {
     background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.form-control2.form-control2-warning,
-.is-focused .form-control2.form-control2-warning {
+.form-control.form-control-warning,
+.is-focused .form-control.form-control-warning {
     background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.form-control2.form-control2-danger,
-.is-focused .form-control2.form-control2-danger {
+.form-control.form-control-danger,
+.is-focused .form-control.form-control-danger {
     background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -11508,25 +11508,25 @@ fieldset[disabled][disabled] .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .is-focused .form-control2:valid,
-.is-focused .form-control2.is-valid,
+.was-validated .is-focused .form-control:valid,
+.is-focused .form-control.is-valid,
 .was-validated .is-focused .custom-select:valid,
 .is-focused .custom-select.is-valid {
     border-color: #999999;
 }
 
-.was-validated .is-focused .form-control2:valid:focus,
-.is-focused .form-control2.is-valid:focus,
+.was-validated .is-focused .form-control:valid:focus,
+.is-focused .form-control.is-valid:focus,
 .was-validated .is-focused .custom-select:valid:focus,
 .is-focused .custom-select.is-valid:focus {
     border-color: #999999;
     box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.25);
 }
 
-.was-validated .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .is-focused .form-control2:valid~.valid-tooltip,
-.is-focused .form-control2.is-valid~.valid-feedback,
-.is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .is-focused .form-control:valid~.valid-feedback,
+.was-validated .is-focused .form-control:valid~.valid-tooltip,
+.is-focused .form-control.is-valid~.valid-feedback,
+.is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .is-focused .custom-select:valid~.valid-tooltip,
 .is-focused .custom-select.is-valid~.valid-feedback,
@@ -11604,7 +11604,7 @@ fieldset[disabled][disabled] .form-control2,
     color: #999999;
 }
 
-.is-focused .form-control2 {
+.is-focused .form-control {
     border-color: #d2d2d2;
 }
 
@@ -11617,40 +11617,40 @@ fieldset[disabled][disabled] .form-control2,
     color: #4caf50;
 }
 
-.has-success .form-control2,
-.is-focused .has-success .form-control2 {
+.has-success .form-control,
+.is-focused .has-success .form-control {
     background-image: linear-gradient(to top, #4caf50 2px, rgba(76, 175, 80, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-success .form-control2:invalid {
+.has-success .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-success .form-control2:read-only {
+.has-success .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-success .form-control2,
-.has-success .form-control2.disabled,
-.has-success .form-control2:disabled,
-.has-success .form-control2[disabled] {
+fieldset[disabled][disabled] .has-success .form-control,
+.has-success .form-control.disabled,
+.has-success .form-control:disabled,
+.has-success .form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-success .form-control2.form-control2-success,
-.is-focused .has-success .form-control2.form-control2-success {
+.has-success .form-control.form-control-success,
+.is-focused .has-success .form-control.form-control-success {
     background-image: linear-gradient(to top, #4caf50 2px, rgba(76, 175, 80, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-success .form-control2.form-control2-warning,
-.is-focused .has-success .form-control2.form-control2-warning {
+.has-success .form-control.form-control-warning,
+.is-focused .has-success .form-control.form-control-warning {
     background-image: linear-gradient(to top, #4caf50 2px, rgba(76, 175, 80, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-success .form-control2.form-control2-danger,
-.is-focused .has-success .form-control2.form-control2-danger {
+.has-success .form-control.form-control-danger,
+.is-focused .has-success .form-control.form-control-danger {
     background-image: linear-gradient(to top, #4caf50 2px, rgba(76, 175, 80, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -11677,25 +11677,25 @@ fieldset[disabled][disabled] .has-success .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-success .is-focused .form-control2:valid,
-.has-success .is-focused .form-control2.is-valid,
+.was-validated .has-success .is-focused .form-control:valid,
+.has-success .is-focused .form-control.is-valid,
 .was-validated .has-success .is-focused .custom-select:valid,
 .has-success .is-focused .custom-select.is-valid {
     border-color: #4caf50;
 }
 
-.was-validated .has-success .is-focused .form-control2:valid:focus,
-.has-success .is-focused .form-control2.is-valid:focus,
+.was-validated .has-success .is-focused .form-control:valid:focus,
+.has-success .is-focused .form-control.is-valid:focus,
 .was-validated .has-success .is-focused .custom-select:valid:focus,
 .has-success .is-focused .custom-select.is-valid:focus {
     border-color: #4caf50;
     box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
 }
 
-.was-validated .has-success .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-success .is-focused .form-control2:valid~.valid-tooltip,
-.has-success .is-focused .form-control2.is-valid~.valid-feedback,
-.has-success .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-success .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-success .is-focused .form-control:valid~.valid-tooltip,
+.has-success .is-focused .form-control.is-valid~.valid-feedback,
+.has-success .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-success .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-success .is-focused .custom-select:valid~.valid-tooltip,
 .has-success .is-focused .custom-select.is-valid~.valid-feedback,
@@ -11773,7 +11773,7 @@ fieldset[disabled][disabled] .has-success .form-control2,
     color: #4caf50;
 }
 
-.has-success .is-focused .form-control2 {
+.has-success .is-focused .form-control {
     border-color: #4caf50;
 }
 
@@ -11786,40 +11786,40 @@ fieldset[disabled][disabled] .has-success .form-control2,
     color: #00bcd4;
 }
 
-.has-info .form-control2,
-.is-focused .has-info .form-control2 {
+.has-info .form-control,
+.is-focused .has-info .form-control {
     background-image: linear-gradient(to top, #00bcd4 2px, rgba(0, 188, 212, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-info .form-control2:invalid {
+.has-info .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-info .form-control2:read-only {
+.has-info .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-info .form-control2,
-.has-info .form-control2.disabled,
-.has-info .form-control2:disabled,
-.has-info .form-control2[disabled] {
+fieldset[disabled][disabled] .has-info .form-control,
+.has-info .form-control.disabled,
+.has-info .form-control:disabled,
+.has-info .form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-info .form-control2.form-control2-success,
-.is-focused .has-info .form-control2.form-control2-success {
+.has-info .form-control.form-control-success,
+.is-focused .has-info .form-control.form-control-success {
     background-image: linear-gradient(to top, #00bcd4 2px, rgba(0, 188, 212, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-info .form-control2.form-control2-warning,
-.is-focused .has-info .form-control2.form-control2-warning {
+.has-info .form-control.form-control-warning,
+.is-focused .has-info .form-control.form-control-warning {
     background-image: linear-gradient(to top, #00bcd4 2px, rgba(0, 188, 212, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-info .form-control2.form-control2-danger,
-.is-focused .has-info .form-control2.form-control2-danger {
+.has-info .form-control.form-control-danger,
+.is-focused .has-info .form-control.form-control-danger {
     background-image: linear-gradient(to top, #00bcd4 2px, rgba(0, 188, 212, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -11846,25 +11846,25 @@ fieldset[disabled][disabled] .has-info .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-info .is-focused .form-control2:valid,
-.has-info .is-focused .form-control2.is-valid,
+.was-validated .has-info .is-focused .form-control:valid,
+.has-info .is-focused .form-control.is-valid,
 .was-validated .has-info .is-focused .custom-select:valid,
 .has-info .is-focused .custom-select.is-valid {
     border-color: #00bcd4;
 }
 
-.was-validated .has-info .is-focused .form-control2:valid:focus,
-.has-info .is-focused .form-control2.is-valid:focus,
+.was-validated .has-info .is-focused .form-control:valid:focus,
+.has-info .is-focused .form-control.is-valid:focus,
 .was-validated .has-info .is-focused .custom-select:valid:focus,
 .has-info .is-focused .custom-select.is-valid:focus {
     border-color: #00bcd4;
     box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.25);
 }
 
-.was-validated .has-info .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-info .is-focused .form-control2:valid~.valid-tooltip,
-.has-info .is-focused .form-control2.is-valid~.valid-feedback,
-.has-info .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-info .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-info .is-focused .form-control:valid~.valid-tooltip,
+.has-info .is-focused .form-control.is-valid~.valid-feedback,
+.has-info .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-info .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-info .is-focused .custom-select:valid~.valid-tooltip,
 .has-info .is-focused .custom-select.is-valid~.valid-feedback,
@@ -11942,7 +11942,7 @@ fieldset[disabled][disabled] .has-info .form-control2,
     color: #00bcd4;
 }
 
-.has-info .is-focused .form-control2 {
+.has-info .is-focused .form-control {
     border-color: #00bcd4;
 }
 
@@ -11955,40 +11955,40 @@ fieldset[disabled][disabled] .has-info .form-control2,
     color: #fff;
 }
 
-.has-white .form-control2,
-.is-focused .has-white .form-control2 {
+.has-white .form-control,
+.is-focused .has-white .form-control {
     background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px);
 }
 
-.has-white .form-control2:invalid {
+.has-white .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px);
 }
 
-.has-white .form-control2:read-only {
+.has-white .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-white .form-control2,
-.has-white .form-control2.disabled,
-.has-white .form-control2:disabled,
-.has-white .form-control2[disabled] {
+fieldset[disabled][disabled] .has-white .form-control,
+.has-white .form-control.disabled,
+.has-white .form-control:disabled,
+.has-white .form-control[disabled] {
     background-image: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-white .form-control2.form-control2-success,
-.is-focused .has-white .form-control2.form-control2-success {
+.has-white .form-control.form-control-success,
+.is-focused .has-white .form-control.form-control-success {
     background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-white .form-control2.form-control2-warning,
-.is-focused .has-white .form-control2.form-control2-warning {
+.has-white .form-control.form-control-warning,
+.is-focused .has-white .form-control.form-control-warning {
     background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-white .form-control2.form-control2-danger,
-.is-focused .has-white .form-control2.form-control2-danger {
+.has-white .form-control.form-control-danger,
+.is-focused .has-white .form-control.form-control-danger {
     background-image: linear-gradient(to top, #fff 2px, rgba(255, 255, 255, 0) 2px), linear-gradient(to top, #FFFFFF 1px, rgba(255, 255, 255, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -12015,25 +12015,25 @@ fieldset[disabled][disabled] .has-white .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-white .is-focused .form-control2:valid,
-.has-white .is-focused .form-control2.is-valid,
+.was-validated .has-white .is-focused .form-control:valid,
+.has-white .is-focused .form-control.is-valid,
 .was-validated .has-white .is-focused .custom-select:valid,
 .has-white .is-focused .custom-select.is-valid {
     border-color: #fff;
 }
 
-.was-validated .has-white .is-focused .form-control2:valid:focus,
-.has-white .is-focused .form-control2.is-valid:focus,
+.was-validated .has-white .is-focused .form-control:valid:focus,
+.has-white .is-focused .form-control.is-valid:focus,
 .was-validated .has-white .is-focused .custom-select:valid:focus,
 .has-white .is-focused .custom-select.is-valid:focus {
     border-color: #fff;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
 }
 
-.was-validated .has-white .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-white .is-focused .form-control2:valid~.valid-tooltip,
-.has-white .is-focused .form-control2.is-valid~.valid-feedback,
-.has-white .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-white .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-white .is-focused .form-control:valid~.valid-tooltip,
+.has-white .is-focused .form-control.is-valid~.valid-feedback,
+.has-white .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-white .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-white .is-focused .custom-select:valid~.valid-tooltip,
 .has-white .is-focused .custom-select.is-valid~.valid-feedback,
@@ -12111,7 +12111,7 @@ fieldset[disabled][disabled] .has-white .form-control2,
     color: #fff;
 }
 
-.has-white .is-focused .form-control2 {
+.has-white .is-focused .form-control {
     border-color: #fff;
 }
 
@@ -12119,7 +12119,7 @@ fieldset[disabled][disabled] .has-white .form-control2,
     color: #555555;
 }
 
-.has-white .form-control2:focus {
+.has-white .form-control:focus {
     color: #fff;
 }
 
@@ -12128,40 +12128,40 @@ fieldset[disabled][disabled] .has-white .form-control2,
     color: #ff9800;
 }
 
-.has-warning .form-control2,
-.is-focused .has-warning .form-control2 {
+.has-warning .form-control,
+.is-focused .has-warning .form-control {
     background-image: linear-gradient(to top, #ff9800 2px, rgba(255, 152, 0, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-warning .form-control2:invalid {
+.has-warning .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-warning .form-control2:read-only {
+.has-warning .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-warning .form-control2,
-.has-warning .form-control2.disabled,
-.has-warning .form-control2:disabled,
-.has-warning .form-control2[disabled] {
+fieldset[disabled][disabled] .has-warning .form-control,
+.has-warning .form-control.disabled,
+.has-warning .form-control:disabled,
+.has-warning .form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-warning .form-control2.form-control2-success,
-.is-focused .has-warning .form-control2.form-control2-success {
+.has-warning .form-control.form-control-success,
+.is-focused .has-warning .form-control.form-control-success {
     background-image: linear-gradient(to top, #ff9800 2px, rgba(255, 152, 0, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-warning .form-control2.form-control2-warning,
-.is-focused .has-warning .form-control2.form-control2-warning {
+.has-warning .form-control.form-control-warning,
+.is-focused .has-warning .form-control.form-control-warning {
     background-image: linear-gradient(to top, #ff9800 2px, rgba(255, 152, 0, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-warning .form-control2.form-control2-danger,
-.is-focused .has-warning .form-control2.form-control2-danger {
+.has-warning .form-control.form-control-danger,
+.is-focused .has-warning .form-control.form-control-danger {
     background-image: linear-gradient(to top, #ff9800 2px, rgba(255, 152, 0, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -12188,25 +12188,25 @@ fieldset[disabled][disabled] .has-warning .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-warning .is-focused .form-control2:valid,
-.has-warning .is-focused .form-control2.is-valid,
+.was-validated .has-warning .is-focused .form-control:valid,
+.has-warning .is-focused .form-control.is-valid,
 .was-validated .has-warning .is-focused .custom-select:valid,
 .has-warning .is-focused .custom-select.is-valid {
     border-color: #ff9800;
 }
 
-.was-validated .has-warning .is-focused .form-control2:valid:focus,
-.has-warning .is-focused .form-control2.is-valid:focus,
+.was-validated .has-warning .is-focused .form-control:valid:focus,
+.has-warning .is-focused .form-control.is-valid:focus,
 .was-validated .has-warning .is-focused .custom-select:valid:focus,
 .has-warning .is-focused .custom-select.is-valid:focus {
     border-color: #ff9800;
     box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
 }
 
-.was-validated .has-warning .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-warning .is-focused .form-control2:valid~.valid-tooltip,
-.has-warning .is-focused .form-control2.is-valid~.valid-feedback,
-.has-warning .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-warning .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-warning .is-focused .form-control:valid~.valid-tooltip,
+.has-warning .is-focused .form-control.is-valid~.valid-feedback,
+.has-warning .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-warning .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-warning .is-focused .custom-select:valid~.valid-tooltip,
 .has-warning .is-focused .custom-select.is-valid~.valid-feedback,
@@ -12284,7 +12284,7 @@ fieldset[disabled][disabled] .has-warning .form-control2,
     color: #ff9800;
 }
 
-.has-warning .is-focused .form-control2 {
+.has-warning .is-focused .form-control {
     border-color: #ff9800;
 }
 
@@ -12297,40 +12297,40 @@ fieldset[disabled][disabled] .has-warning .form-control2,
     color: #f44336;
 }
 
-.has-danger .form-control2,
-.is-focused .has-danger .form-control2 {
+.has-danger .form-control,
+.is-focused .has-danger .form-control {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-danger .form-control2:invalid {
+.has-danger .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-danger .form-control2:read-only {
+.has-danger .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-danger .form-control2,
-.has-danger .form-control2.disabled,
-.has-danger .form-control2:disabled,
-.has-danger .form-control2[disabled] {
+fieldset[disabled][disabled] .has-danger .form-control,
+.has-danger .form-control.disabled,
+.has-danger .form-control:disabled,
+.has-danger .form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-danger .form-control2.form-control2-success,
-.is-focused .has-danger .form-control2.form-control2-success {
+.has-danger .form-control.form-control-success,
+.is-focused .has-danger .form-control.form-control-success {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-danger .form-control2.form-control2-warning,
-.is-focused .has-danger .form-control2.form-control2-warning {
+.has-danger .form-control.form-control-warning,
+.is-focused .has-danger .form-control.form-control-warning {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-danger .form-control2.form-control2-danger,
-.is-focused .has-danger .form-control2.form-control2-danger {
+.has-danger .form-control.form-control-danger,
+.is-focused .has-danger .form-control.form-control-danger {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -12357,25 +12357,25 @@ fieldset[disabled][disabled] .has-danger .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-danger .is-focused .form-control2:valid,
-.has-danger .is-focused .form-control2.is-valid,
+.was-validated .has-danger .is-focused .form-control:valid,
+.has-danger .is-focused .form-control.is-valid,
 .was-validated .has-danger .is-focused .custom-select:valid,
 .has-danger .is-focused .custom-select.is-valid {
     border-color: #f44336;
 }
 
-.was-validated .has-danger .is-focused .form-control2:valid:focus,
-.has-danger .is-focused .form-control2.is-valid:focus,
+.was-validated .has-danger .is-focused .form-control:valid:focus,
+.has-danger .is-focused .form-control.is-valid:focus,
 .was-validated .has-danger .is-focused .custom-select:valid:focus,
 .has-danger .is-focused .custom-select.is-valid:focus {
     border-color: #f44336;
     box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
 }
 
-.was-validated .has-danger .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-danger .is-focused .form-control2:valid~.valid-tooltip,
-.has-danger .is-focused .form-control2.is-valid~.valid-feedback,
-.has-danger .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-danger .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-danger .is-focused .form-control:valid~.valid-tooltip,
+.has-danger .is-focused .form-control.is-valid~.valid-feedback,
+.has-danger .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-danger .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-danger .is-focused .custom-select:valid~.valid-tooltip,
 .has-danger .is-focused .custom-select.is-valid~.valid-feedback,
@@ -12453,7 +12453,7 @@ fieldset[disabled][disabled] .has-danger .form-control2,
     color: #f44336;
 }
 
-.has-danger .is-focused .form-control2 {
+.has-danger .is-focused .form-control {
     border-color: #f44336;
 }
 
@@ -12466,40 +12466,40 @@ fieldset[disabled][disabled] .has-danger .form-control2,
     color: #e91e63;
 }
 
-.has-rose .form-control2,
-.is-focused .has-rose .form-control2 {
+.has-rose .form-control,
+.is-focused .has-rose .form-control {
     background-image: linear-gradient(to top, #e91e63 2px, rgba(233, 30, 99, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-rose .form-control2:invalid {
+.has-rose .form-control:invalid {
     background-image: linear-gradient(to top, #f44336 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-.has-rose .form-control2:read-only {
+.has-rose .form-control:read-only {
     background-image: linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
-fieldset[disabled][disabled] .has-rose .form-control2,
-.has-rose .form-control2.disabled,
-.has-rose .form-control2:disabled,
-.has-rose .form-control2[disabled] {
+fieldset[disabled][disabled] .has-rose .form-control,
+.has-rose .form-control.disabled,
+.has-rose .form-control:disabled,
+.has-rose .form-control[disabled] {
     background-image: linear-gradient(to right, #d2d2d2 0%, #d2d2d2 30%, transparent 30%, transparent 100%);
     background-repeat: repeat-x;
     background-size: 3px 1px;
 }
 
-.has-rose .form-control2.form-control2-success,
-.is-focused .has-rose .form-control2.form-control2-success {
+.has-rose .form-control.form-control-success,
+.is-focused .has-rose .form-control.form-control-success {
     background-image: linear-gradient(to top, #e91e63 2px, rgba(233, 30, 99, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjNWNiODVjIiBkPSJNMjMzLjggNjEwYy0xMy4zIDAtMjYtNi0zNC0xNi44TDkwLjUgNDQ4LjhDNzYuMyA0MzAgODAgNDAzLjMgOTguOCAzODljMTguOC0xNC4yIDQ1LjUtMTAuNCA1OS44IDguNGw3MiA5NUw0NTEuMyAyNDJjMTIuNS0yMCAzOC44LTI2LjIgNTguOC0xMy43IDIwIDEyLjQgMjYgMzguNyAxMy43IDU4LjhMMjcwIDU5MGMtNy40IDEyLTIwLjIgMTkuNC0zNC4zIDIwaC0yeiIvPjwvc3ZnPg==";
 }
 
-.has-rose .form-control2.form-control2-warning,
-.is-focused .has-rose .form-control2.form-control2-warning {
+.has-rose .form-control.form-control-warning,
+.is-focused .has-rose .form-control.form-control-warning {
     background-image: linear-gradient(to top, #e91e63 2px, rgba(233, 30, 99, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZjBhZDRlIiBkPSJNNjAzIDY0MC4ybC0yNzguNS01MDljLTMuOC02LjYtMTAuOC0xMC42LTE4LjUtMTAuNnMtMTQuNyA0LTE4LjUgMTAuNkw5IDY0MC4yYy0zLjcgNi41LTMuNiAxNC40LjIgMjAuOCAzLjggNi41IDEwLjggMTAuNCAxOC4zIDEwLjRoNTU3YzcuNiAwIDE0LjYtNCAxOC40LTEwLjQgMy41LTYuNCAzLjYtMTQuNCAwLTIwLjh6bS0yNjYuNC0zMGgtNjEuMlY1NDloNjEuMnY2MS4yem0wLTEwN2gtNjEuMlYzMDRoNjEuMnYxOTl6Ii8+PC9zdmc+";
 }
 
-.has-rose .form-control2.form-control2-danger,
-.is-focused .has-rose .form-control2.form-control2-danger {
+.has-rose .form-control.form-control-danger,
+.is-focused .has-rose .form-control.form-control-danger {
     background-image: linear-gradient(to top, #e91e63 2px, rgba(233, 30, 99, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px), "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MTIgNzkyIj48cGF0aCBmaWxsPSIjZDk1MzRmIiBkPSJNNDQ3IDU0NC40Yy0xNC40IDE0LjQtMzcuNiAxNC40LTUyIDBsLTg5LTkyLjctODkgOTIuN2MtMTQuNSAxNC40LTM3LjcgMTQuNC01MiAwLTE0LjQtMTQuNC0xNC40LTM3LjYgMC01Mmw5Mi40LTk2LjMtOTIuNC05Ni4zYy0xNC40LTE0LjQtMTQuNC0zNy42IDAtNTJzMzcuNi0xNC4zIDUyIDBsODkgOTIuOCA4OS4yLTkyLjdjMTQuNC0xNC40IDM3LjYtMTQuNCA1MiAwIDE0LjMgMTQuNCAxNC4zIDM3LjYgMCA1MkwzNTQuNiAzOTZsOTIuNCA5Ni40YzE0LjQgMTQuNCAxNC40IDM3LjYgMCA1MnoiLz48L3N2Zz4=";
 }
 
@@ -12526,25 +12526,25 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     border-radius: .2rem;
 }
 
-.was-validated .has-rose .is-focused .form-control2:valid,
-.has-rose .is-focused .form-control2.is-valid,
+.was-validated .has-rose .is-focused .form-control:valid,
+.has-rose .is-focused .form-control.is-valid,
 .was-validated .has-rose .is-focused .custom-select:valid,
 .has-rose .is-focused .custom-select.is-valid {
     border-color: #e91e63;
 }
 
-.was-validated .has-rose .is-focused .form-control2:valid:focus,
-.has-rose .is-focused .form-control2.is-valid:focus,
+.was-validated .has-rose .is-focused .form-control:valid:focus,
+.has-rose .is-focused .form-control.is-valid:focus,
 .was-validated .has-rose .is-focused .custom-select:valid:focus,
 .has-rose .is-focused .custom-select.is-valid:focus {
     border-color: #e91e63;
     box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
 }
 
-.was-validated .has-rose .is-focused .form-control2:valid~.valid-feedback,
-.was-validated .has-rose .is-focused .form-control2:valid~.valid-tooltip,
-.has-rose .is-focused .form-control2.is-valid~.valid-feedback,
-.has-rose .is-focused .form-control2.is-valid~.valid-tooltip,
+.was-validated .has-rose .is-focused .form-control:valid~.valid-feedback,
+.was-validated .has-rose .is-focused .form-control:valid~.valid-tooltip,
+.has-rose .is-focused .form-control.is-valid~.valid-feedback,
+.has-rose .is-focused .form-control.is-valid~.valid-tooltip,
 .was-validated .has-rose .is-focused .custom-select:valid~.valid-feedback,
 .was-validated .has-rose .is-focused .custom-select:valid~.valid-tooltip,
 .has-rose .is-focused .custom-select.is-valid~.valid-feedback,
@@ -12622,7 +12622,7 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     color: #e91e63;
 }
 
-.has-rose .is-focused .form-control2 {
+.has-rose .is-focused .form-control {
     border-color: #e91e63;
 }
 
@@ -12685,7 +12685,7 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bmd-form-group .form-control2,
+.bmd-form-group .form-control,
 .bmd-form-group label,
 .bmd-form-group input::placeholder {
     line-height: 1.1;
@@ -12732,36 +12732,36 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     font-size: 0.75rem;
 }
 
-.bmd-form-group .form-control2.form-control2-success,
-.bmd-form-group .form-control2.form-control2-warning,
-.bmd-form-group .form-control2.form-control2-danger {
+.bmd-form-group .form-control.form-control-success,
+.bmd-form-group .form-control.form-control-warning,
+.bmd-form-group .form-control.form-control-danger {
     background-size: 0 100%, 100% 100%, 0.9375rem 0.9375rem;
 }
 
-.bmd-form-group .form-control2.form-control2-success,
-.bmd-form-group .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-success,
-.bmd-form-group .form-control2.form-control2-warning,
-.bmd-form-group .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-warning,
-.bmd-form-group .form-control2.form-control2-danger,
-.bmd-form-group .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-danger {
+.bmd-form-group .form-control.form-control-success,
+.bmd-form-group .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-success,
+.bmd-form-group .form-control.form-control-warning,
+.bmd-form-group .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-warning,
+.bmd-form-group .form-control.form-control-danger,
+.bmd-form-group .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-danger {
     padding-right: 0;
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom, center calc(100% - 1px), center right 0.46875rem;
 }
 
-.bmd-form-group .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-success,
-.bmd-form-group .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-warning,
-.bmd-form-group .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group .form-control2.form-control2-danger {
+.bmd-form-group .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-success,
+.bmd-form-group .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-warning,
+.bmd-form-group .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group .form-control.form-control-danger {
     background-size: 100% 100%, 100% 100%, 0.9375rem 0.9375rem;
 }
 
-.bmd-form-group.bmd-form-group-sm .form-control2,
+.bmd-form-group.bmd-form-group-sm .form-control,
 .bmd-form-group.bmd-form-group-sm label,
 .bmd-form-group.bmd-form-group-sm input::placeholder {
     line-height: 1.1;
@@ -12808,36 +12808,36 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     font-size: 0.65625rem;
 }
 
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-danger {
     background-size: 0 100%, 100% 100%, 0.6875rem 0.6875rem;
 }
 
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-danger,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-danger {
     padding-right: 0;
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom, center calc(100% - 1px), center right 0.34375rem;
 }
 
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-sm .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-sm .form-control.form-control-danger {
     background-size: 100% 100%, 100% 100%, 0.6875rem 0.6875rem;
 }
 
-.bmd-form-group.bmd-form-group-lg .form-control2,
+.bmd-form-group.bmd-form-group-lg .form-control,
 .bmd-form-group.bmd-form-group-lg label,
 .bmd-form-group.bmd-form-group-lg input::placeholder {
     line-height: 1.1;
@@ -12884,36 +12884,36 @@ fieldset[disabled][disabled] .has-rose .form-control2,
     font-size: 0.9375rem;
 }
 
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-danger {
     background-size: 0 100%, 100% 100%, 1.1875rem 1.1875rem;
 }
 
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-danger,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-danger {
     padding-right: 0;
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom, center calc(100% - 1px), center right 0.59375rem;
 }
 
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-success,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-warning,
-.bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control2.form-control2-danger {
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-success:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-success,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-warning,
+.bmd-form-group.bmd-form-group-lg .form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .bmd-form-group.bmd-form-group-lg .form-control.form-control-danger {
     background-size: 100% 100%, 100% 100%, 1.1875rem 1.1875rem;
 }
 
-.form-control2,
+.form-control,
 label,
 input::placeholder {
     line-height: 1.1;
@@ -12960,37 +12960,37 @@ label {
     font-size: 0.75rem;
 }
 
-.form-control2.form-control2-success,
-.form-control2.form-control2-warning,
-.form-control2.form-control2-danger {
+.form-control.form-control-success,
+.form-control.form-control-warning,
+.form-control.form-control-danger {
     background-size: 0 100%, 100% 100%, 0.9375rem 0.9375rem;
 }
 
-.form-control2.form-control2-success,
-.form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-success,
-.form-control2.form-control2-warning,
-.form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-warning,
-.form-control2.form-control2-danger,
-.form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-danger {
+.form-control.form-control-success,
+.form-control.form-control-success:focus,
+.bmd-form-group.is-focused .form-control.form-control-success,
+.form-control.form-control-warning,
+.form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .form-control.form-control-warning,
+.form-control.form-control-danger,
+.form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .form-control.form-control-danger {
     padding-right: 0;
     background-repeat: no-repeat, no-repeat;
     background-position: center bottom, center calc(100% - 1px), center right 0.46875rem;
 }
 
-.form-control2.form-control2-success:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-success,
-.form-control2.form-control2-warning:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-warning,
-.form-control2.form-control2-danger:focus,
-.bmd-form-group.is-focused .form-control2.form-control2-danger {
+.form-control.form-control-success:focus,
+.bmd-form-group.is-focused .form-control.form-control-success,
+.form-control.form-control-warning:focus,
+.bmd-form-group.is-focused .form-control.form-control-warning,
+.form-control.form-control-danger:focus,
+.bmd-form-group.is-focused .form-control.form-control-danger {
     background-size: 100% 100%, 100% 100%, 0.9375rem 0.9375rem;
 }
 
 select,
-select.form-control2 {
+select.form-control {
     -moz-appearance: none;
     -webkit-appearance: none;
 }
@@ -13002,7 +13002,7 @@ select.form-control2 {
     }
 }
 
-.form-control2-feedback {
+.form-control-feedback {
     position: absolute;
     top: 4px;
     right: 0;
@@ -13016,12 +13016,12 @@ select.form-control2 {
     opacity: 0;
 }
 
-.has-success .form-control2-feedback {
+.has-success .form-control-feedback {
     color: #4caf50;
     opacity: 1;
 }
 
-.has-danger .form-control2-feedback {
+.has-danger .form-control-feedback {
     color: #f44336;
     opacity: 1;
 }
@@ -13085,10 +13085,10 @@ textarea {
     padding: 0 12px;
 }
 
-.form-control2[disabled],
-fieldset[disabled] .form-control2,
-.form-group .form-control2[disabled],
-fieldset[disabled] .form-group .form-control2 {
+.form-control[disabled],
+fieldset[disabled] .form-control,
+.form-group .form-control[disabled],
+fieldset[disabled] .form-group .form-control {
     background-color: transparent;
     cursor: not-allowed;
     border-bottom: 1px dotted #d2d2d2;
@@ -16439,8 +16439,8 @@ thead.thead-inverse th,
     padding-right: 15px;
 }
 
-.card-form-horizontal .form-group .form-control2,
-.card-form-horizontal .input-group .form-control2 {
+.card-form-horizontal .form-group .form-control,
+.card-form-horizontal .input-group .form-control {
     margin-bottom: 0;
 }
 
@@ -16724,7 +16724,7 @@ form .form-group label[for="inputState"] {
     top: -12px;
 }
 
-form .form-group select.form-control2 {
+form .form-group select.form-control {
     position: absolute;
     top: -5px;
 }
@@ -19388,8 +19388,8 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="purple"].lock-page .form-group .form-control2,
-.full-page[filter-color="primary"].lock-page .form-group .form-control2 {
+.full-page[filter-color="purple"].lock-page .form-group .form-control,
+.full-page[filter-color="primary"].lock-page .form-group .form-control {
     background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19407,8 +19407,8 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="blue"].lock-page .form-group .form-control2,
-.full-page[filter-color="info"].lock-page .form-group .form-control2 {
+.full-page[filter-color="blue"].lock-page .form-group .form-control,
+.full-page[filter-color="info"].lock-page .form-group .form-control {
     background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19426,8 +19426,8 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="green"].lock-page .form-group .form-control2,
-.full-page[filter-color="success"].lock-page .form-group .form-control2 {
+.full-page[filter-color="green"].lock-page .form-group .form-control,
+.full-page[filter-color="success"].lock-page .form-group .form-control {
     background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19445,8 +19445,8 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="orange"].lock-page .form-group .form-control2,
-.full-page[filter-color="warning"].lock-page .form-group .form-control2 {
+.full-page[filter-color="orange"].lock-page .form-group .form-control,
+.full-page[filter-color="warning"].lock-page .form-group .form-control {
     background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19464,8 +19464,8 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="red"].lock-page .form-group .form-control2,
-.full-page[filter-color="danger"].lock-page .form-group .form-control2 {
+.full-page[filter-color="red"].lock-page .form-group .form-control,
+.full-page[filter-color="danger"].lock-page .form-group .form-control {
     background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19482,7 +19482,7 @@ a .material-icons {
     /* Standard syntax */
 }
 
-.full-page[filter-color="rose"].lock-page .form-group .form-control2 {
+.full-page[filter-color="rose"].lock-page .form-group .form-control {
     background-image: linear-gradient(#e91e63, #e91e63), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
@@ -19557,7 +19557,7 @@ a .material-icons {
     padding: 15px 15px 0 15px;
 }
 
-.login-page .card-login .card-body .input-group .form-control2 {
+.login-page .card-login .card-body .input-group .form-control {
     padding-bottom: 10px;
     margin: 17px 0 0 0;
 }
@@ -24765,7 +24765,7 @@ svg {
     margin-bottom: 9px;
 }
 
-.fileinput .form-control2 {
+.fileinput .form-control {
     display: inline-block;
     padding-top: 7px;
     padding-bottom: 5px;
@@ -24813,7 +24813,7 @@ svg {
     vertical-align: middle;
 }
 
-.form-control2 .fileinput-filename {
+.form-control .fileinput-filename {
     vertical-align: bottom;
 }
 
@@ -27068,25 +27068,25 @@ select.selectpicker {
     width: auto !important;
 }
 
-.bootstrap-select:not([class*="col-"]):not([class*="form-control2"]):not(.input-group-btn) {
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width: 100%;
 }
 
-.bootstrap-select.form-control2 {
+.bootstrap-select.form-control {
     margin-bottom: 0;
     padding: 0;
     border: none;
 }
 
-.bootstrap-select.form-control2:not([class*="col-"]) {
+.bootstrap-select.form-control:not([class*="col-"]) {
     width: 100%;
 }
 
-.bootstrap-select.form-control2.input-group-btn {
+.bootstrap-select.form-control.input-group-btn {
     z-index: auto;
 }
 
-.bootstrap-select.form-control2.input-group-btn:not(:first-child):not(:last-child)>.btn {
+.bootstrap-select.form-control.input-group-btn:not(:first-child):not(:last-child)>.btn {
     border-radius: 0;
 }
 
@@ -27109,12 +27109,12 @@ select.selectpicker {
     margin-bottom: 0;
 }
 
-.form-group-lg .bootstrap-select.btn-group.form-control2,
-.form-group-sm .bootstrap-select.btn-group.form-control2 {
+.form-group-lg .bootstrap-select.btn-group.form-control,
+.form-group-sm .bootstrap-select.btn-group.form-control {
     padding: 0;
 }
 
-.form-inline .bootstrap-select.btn-group .form-control2 {
+.form-inline .bootstrap-select.btn-group .form-control {
     width: 100%;
 }
 
@@ -27303,7 +27303,7 @@ select.selectpicker {
     width: auto !important;
 }
 
-.bootstrap-select:not([class*="col-"]):not([class*="form-control2"]):not(.input-group-btn) {
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width: 220px;
 }
 
@@ -27313,21 +27313,21 @@ select.selectpicker {
     outline-offset: -2px;
 }
 
-.bootstrap-select.form-control2 {
+.bootstrap-select.form-control {
     margin-bottom: 0;
     padding: 0;
     border: none;
 }
 
-:not(.input-group)>.bootstrap-select.form-control2:not([class*="col-"]) {
+:not(.input-group)>.bootstrap-select.form-control:not([class*="col-"]) {
     width: 100%;
 }
 
-.bootstrap-select.form-control2.input-group-btn {
+.bootstrap-select.form-control.input-group-btn {
     z-index: auto;
 }
 
-.bootstrap-select.form-control2.input-group-btn:not(:first-child):not(:last-child)>.btn {
+.bootstrap-select.form-control.input-group-btn:not(:first-child):not(:last-child)>.btn {
     border-radius: 0;
 }
 
@@ -27350,27 +27350,27 @@ select.selectpicker {
     margin-bottom: 0;
 }
 
-.form-group-lg .bootstrap-select.form-control2,
-.form-group-sm .bootstrap-select.form-control2 {
+.form-group-lg .bootstrap-select.form-control,
+.form-group-sm .bootstrap-select.form-control {
     padding: 0;
 }
 
-.form-group-lg .bootstrap-select.form-control2 .dropdown-toggle,
-.form-group-sm .bootstrap-select.form-control2 .dropdown-toggle {
+.form-group-lg .bootstrap-select.form-control .dropdown-toggle,
+.form-group-sm .bootstrap-select.form-control .dropdown-toggle {
     height: 100%;
     font-size: inherit;
     line-height: inherit;
     border-radius: inherit;
 }
 
-.bootstrap-select.form-control2-sm .dropdown-toggle,
-.input-group-sm>.bootstrap-select.form-control2 .dropdown-toggle,
+.bootstrap-select.form-control-sm .dropdown-toggle,
+.input-group-sm>.bootstrap-select.form-control .dropdown-toggle,
 .input-group-sm>.input-group-prepend>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-sm>.input-group-append>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-sm>.input-group-prepend>.bootstrap-select.btn .dropdown-toggle,
 .input-group-sm>.input-group-append>.bootstrap-select.btn .dropdown-toggle,
-.bootstrap-select.form-control2-lg .dropdown-toggle,
-.input-group-lg>.bootstrap-select.form-control2 .dropdown-toggle,
+.bootstrap-select.form-control-lg .dropdown-toggle,
+.input-group-lg>.bootstrap-select.form-control .dropdown-toggle,
 .input-group-lg>.input-group-prepend>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-lg>.input-group-append>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-lg>.input-group-prepend>.bootstrap-select.btn .dropdown-toggle,
@@ -27380,8 +27380,8 @@ select.selectpicker {
     border-radius: inherit;
 }
 
-.bootstrap-select.form-control2-sm .dropdown-toggle,
-.input-group-sm>.bootstrap-select.form-control2 .dropdown-toggle,
+.bootstrap-select.form-control-sm .dropdown-toggle,
+.input-group-sm>.bootstrap-select.form-control .dropdown-toggle,
 .input-group-sm>.input-group-prepend>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-sm>.input-group-append>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-sm>.input-group-prepend>.bootstrap-select.btn .dropdown-toggle,
@@ -27389,8 +27389,8 @@ select.selectpicker {
     padding: 0.25rem 0.5rem;
 }
 
-.bootstrap-select.form-control2-lg .dropdown-toggle,
-.input-group-lg>.bootstrap-select.form-control2 .dropdown-toggle,
+.bootstrap-select.form-control-lg .dropdown-toggle,
+.input-group-lg>.bootstrap-select.form-control .dropdown-toggle,
 .input-group-lg>.input-group-prepend>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-lg>.input-group-append>.bootstrap-select.input-group-text .dropdown-toggle,
 .input-group-lg>.input-group-prepend>.bootstrap-select.btn .dropdown-toggle,
@@ -27398,7 +27398,7 @@ select.selectpicker {
     padding: 0.5rem 1rem;
 }
 
-.form-inline .bootstrap-select .form-control2 {
+.form-inline .bootstrap-select .form-control {
     width: 100%;
 }
 
@@ -27458,7 +27458,7 @@ select.selectpicker {
     vertical-align: middle;
 }
 
-.input-group .bootstrap-select.form-control2 .dropdown-toggle {
+.input-group .bootstrap-select.form-control .dropdown-toggle {
     border-radius: inherit;
 }
 
@@ -27682,7 +27682,7 @@ select.selectpicker {
     padding: 0 8px 4px;
 }
 
-.bs-searchbox .form-control2 {
+.bs-searchbox .form-control {
     margin-bottom: 0;
     width: 100%;
     float: none;
@@ -27921,13 +27921,13 @@ select.selectpicker {
     background-image: none;
 }
 
-.bootstrap-tagsinput.form-control2 input::-moz-placeholder {
+.bootstrap-tagsinput.form-control input::-moz-placeholder {
     color: #777;
     opacity: 1;
 }
 
-.bootstrap-tagsinput.form-control2 input:-ms-input-placeholder,
-.bootstrap-tagsinput.form-control2 input::-webkit-input-placeholder {
+.bootstrap-tagsinput.form-control input:-ms-input-placeholder,
+.bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
     color: #777;
 }
 
@@ -28100,10 +28100,10 @@ select.selectpicker {
     .navbar .navbar-collapse .navbar-nav>li.button-container {
         padding: 15px;
     }
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control2"]):not(.input-group-btn) {
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
         width: -webkit-fill-available !important;
     }
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control2"]):not(.input-group-btn) .dropdown-menu.show {
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) .dropdown-menu.show {
         min-width: auto;
         left: auto;
     }
@@ -28625,7 +28625,7 @@ select.selectpicker {
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
     }
-    .form-group.form-search .form-control2 {
+    .form-group.form-search .form-control {
         font-size: 1.7em;
         height: 37px;
         width: 78%;
@@ -29001,7 +29001,7 @@ select.selectpicker {
     .social-line .btn {
         margin: 0 0 10px 0;
     }
-    .subscribe-line .form-control2 {
+    .subscribe-line .form-control {
         margin: 0 0 10px 0;
     }
     .social-line.pull-right {
@@ -29013,7 +29013,7 @@ select.selectpicker {
     .social-area.pull-right {
         float: none !important;
     }
-    .form-control2+.form-control2-feedback {
+    .form-control+.form-control-feedback {
         margin-top: -8px;
     }
     .navbar-toggle:hover,
@@ -29058,7 +29058,7 @@ select.selectpicker {
     }
 }
 
-.register-page .bootstrap-select:not([class*="col-"]):not([class*="form-control2"]):not(.input-group-btn) {
+.register-page .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
     width:calc(100% - 56px) !important;
 }
 

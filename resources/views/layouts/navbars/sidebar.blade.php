@@ -82,6 +82,12 @@
               </a>
             </li>
               @endcan
+                <li class="nav-item{{ $activePage == 'providers' ? ' active' : '' }}">
+                    <a class="nav-link" href="{{ route('listaPR') }}">
+                        <span class="sidebar-mini"> UM </span>
+                        <span class="sidebar-normal"> {{ __('Proveedores') }} </span>
+                    </a>
+                </li>
             @can('listaU')
                 <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
                   <a class="nav-link" href="{{ route('listaR') }}">
@@ -96,10 +102,10 @@
 
 
 
-      <li class="nav-item{{ $activePage == 'icons' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('icons') }}">
+      <li class="nav-item{{ $activePage == 'products' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('listaP') }}">
           <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Icons') }}</p>
+          <p>{{ __('Productos') }}</p>
         </a>
       </li>
 

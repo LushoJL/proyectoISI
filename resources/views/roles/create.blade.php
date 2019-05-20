@@ -29,19 +29,19 @@
                   <div class="col-sm-6">
                       <div class="form-group">
                           <label for="user">Nombre del rol</label>
-                          <input type="text" name="name" class="form-control2" v-model="newRole.name">
+                          <input type="text" name="name" class="form-control" v-model="newRole.name">
                       </div>
                       <br>
                       <div class="form-group">
                           <label for="user">Url amigable</label>
-                          <input type="text" name="slug" class="form-control2 form-control2-alternative" v-model="newRole.slug">
+                          <input type="text" name="slug" class="form-control form-control-alternative" v-model="newRole.slug">
                       </div>
                   </div>
 
                   <div class="col-sm-6">
                       <div class="form-group">
                           <label for="user">Descripcion</label>
-                          <textarea name="description" id="" cols="10" rows="6" class="form-control2 form-control2-alternative" v-model="newRole.description"></textarea>
+                          <textarea name="description" id="" cols="10" rows="6" class="form-control form-control-alternative" v-model="newRole.description"></textarea>
 
                       </div>
                   </div>

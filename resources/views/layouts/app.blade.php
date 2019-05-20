@@ -34,8 +34,7 @@
         @endguest
 
         <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-{{--        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>--}}
-
+       <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
 
         <script src="{{ asset('material') }}/js/bootstrap-vue.min.js"></script>
@@ -52,9 +51,9 @@
         <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
         <script src="{{ asset('material') }}/js/plugins/jquery.bootstrap-wizard2.js"></script>
         <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker2.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-selectpicker.js"></script>
         <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-        <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker2.min.js"></script>
+        <script src="{{ asset('material') }}/js/plugins/bootstrap-datetimepicker.min.js"></script>
 
         <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
         <script src="{{ asset('material') }}/js/plugins/bootstrap-tagsinput2.js"></script>
@@ -68,23 +67,48 @@
         <script src="{{ asset('material') }}/js/plugins/nouislider2.min.js"></script>
         <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
         <script src="{{ asset('material') }}/js/nose2.js"></script>
+
         <!-- Library for adding dinamically elements -->
         <script src="{{ asset('material') }}/js/plugins/arrive2.min.js"></script>
+
         <!--  Google Maps Plugin    -->
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'"></script>
+
         <!-- Chartist JS -->
         <script src="{{ asset('material') }}/js/plugins/chartist2.min.js"></script>
+
         <!--  Notifications Plugin    -->
         <script src="{{ asset('material') }}/js/plugins/bootstrap-notify2.js"></script>
+
         <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="{{ asset('material') }}/js/material-dashboard2.js" type="text/javascript"></script>
+
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
         <script src="{{ asset('material') }}/demo/demo2.js"></script>
+
         <script src="{{ asset('material') }}/js/settings.js"></script>
+
         <script src="{{ asset('material') }}/js/application2.js"></script>
 
         <script src="{{ asset('material') }}/js/jquery.sharrre2.js"></script>
 
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker4').datetimepicker();
+            });
+            $(function () {
+                $('#datetimepicker3').datetimepicker();
+            });
+        </script>
+        <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $('[data-toggle="popover"]').popover();
+
+            });
+
+        </script>
         @stack('js')
 
     </body>

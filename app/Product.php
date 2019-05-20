@@ -8,11 +8,15 @@ class Product extends Model
 {
     protected $table = 'products';
     protected $fillable = [
+        'barcode',//codigo de barras
         'name',
         'description',
         'price',
+        'photo',
         'brand_id',
-        'category_id'
+        'category_id',
+        'maximum',
+        'minimum',
     ];
     public function brand(){
         return $this->belongsTo(Brand::class);

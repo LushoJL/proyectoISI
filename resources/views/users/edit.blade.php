@@ -42,7 +42,7 @@
                   <label class="col-sm-2 col-form-label">Nombre</label>
                   <div class="col-sm-7">
                     <div class="form-group bmd-form-group is-filled">
-                      <input class="form-control2" name="name"  type="text"  value="{{$users->name}}" required="true" aria-required="true">
+                      <input class="form-control" name="name"  type="text"  value="{{$users->name}}" required="true" aria-required="true">
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                   <label class="col-sm-2 col-form-label">Correo electronico</label>
                   <div class="col-sm-7">
                     <div class="form-group bmd-form-group is-filled">
-                      <input class="form-control2" name="email" type="email" value="{{$users->email}}" required="">
+                      <input class="form-control" name="email" type="email" value="{{$users->email}}" required="">
                     </div>
                   </div>
                 </div>
