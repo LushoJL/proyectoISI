@@ -29182,9 +29182,6 @@ new Vue({
             'date_purchase':'',
             'expiration_date':'',
             'stock':'',
-
-
-
         },
         providers:[],
         newProvider:{
@@ -29292,6 +29289,12 @@ new Vue({
                 this.errors = error.response.data.errors;
                 toastr.success('algo salio mal');
             })
+        },
+        modalCategory(){
+          $('#createCategory').modal('show')
+        },
+        modalBrand(){
+            $('#createBrand').modal('show')
         },
         storeBrand(){
             var url = 'brand';

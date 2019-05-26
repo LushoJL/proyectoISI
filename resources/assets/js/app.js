@@ -184,6 +184,12 @@ new Vue({
                 toastr.success('algo salio mal');
             })
         },
+        modalCategory(){
+          $('#createCategory').modal('show')
+        },
+        modalBrand(){
+            $('#createBrand').modal('show')
+        },
         storeBrand(){
             var url = 'brand';
             axios.post(url,{
@@ -351,16 +357,6 @@ new Vue({
 
                 }
             })
-
-
-
-
-
-
-
-
-
-
         },
         getUserRole: function () {
             var url = 'roldelusuarioenvujsmmm';

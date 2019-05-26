@@ -29,7 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -40,8 +40,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product=Product::create($request->all());
-        return;
+
+        Product::create($request->all());
+        return view('products.index');
     }
 
     /**
