@@ -1,8 +1,8 @@
 
 <form method="POST" enctype="multipart/form-data" action="{{route('product.store')}}">
-    {{ csrf_field()}}
-    {{method_field('POST')}}
-<div class="modal fade " id="createProduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+{{ csrf_field()}}
+{{method_field('POST')}}
+<div class="modal fade " id="purchases" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      data-backdrop="static" data-keyboard="false">
 
     <div class="modal-dialog modal-xl" role="document">
@@ -65,7 +65,7 @@
                                             <input type="text" class="form-control" name="price" id="exampleInput2">
                                         </div>
 
-{{--                                        lista de categorias--}}
+                                        {{--                                        lista de categorias--}}
                                         <div class="row">
                                             <div class="col-sm-7">
                                                 <div class="form-group">
@@ -77,11 +77,11 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <button class="btn btn-info btn-md btn-block" type="button" data-toggle="modal" data-target="#createCategory">
-                                                  +
+                                                    +
                                                 </button>
                                             </div>
                                         </div>
-{{--                                        lista de marcas--}}
+                                        {{--                                        lista de marcas--}}
                                         <div class="row">
                                             <div class="col-sm-7">
                                                 <div class="form-group">
@@ -94,7 +94,7 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <button class="btn btn-info btn-md btn-block" type="button" data-toggle="modal" data-target="#createBrand">
-                                                   +
+                                                    +
                                                 </button>
                                             </div>
                                         </div>
@@ -131,26 +131,26 @@
                                         </div>
                                     </div>
                                 </div>
-{{--                                imagen--}}
+                                {{--                                imagen--}}
 
 
-                                    <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-                                        <div class="fileinput-new thumbnail img-raised">
-                                            <img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" width="100" height="170">
-                                        </div>
-                                        <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
-                                        <div>
+                                <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail img-raised">
+                                        <img src="https://epicattorneymarketing.com/wp-content/uploads/2016/07/Headshot-Placeholder-1.png" width="100" height="170">
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                    <div>
                                     <span class="btn btn-raised btn-round btn-rose btn-file">
                                        <span class="fileinput-new">Foto</span>
                                        <span class="fileinput-exists">Cambiar</span>
                                        <input type="file" name="photo" />
                                     </span>
-                                            <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput">
-                                                <i class="fa fa-times"></i> Eliminar</a>
-                                        </div>
+                                        <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput">
+                                            <i class="fa fa-times"></i> Eliminar</a>
                                     </div>
+                                </div>
 
-{{--fin imagen--}}
+                                {{--fin imagen--}}
 
                             </div>
                         </div>

@@ -358,6 +358,28 @@ new Vue({
                 }
             })
         },
+        deleteProduct(product){
+
+            var url='product/'+product.id;
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: '¡No podrás revertir esto.!',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '¡Sí, bórralo!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.value) {
+                    axios.delete(url).then(response => {
+                        this.getProducts();
+                     toastr.success('EL producto se borro satisfactoriamente')
+                    });
+
+                }
+            })
+        },
         getUserRole: function () {
             var url = 'roldelusuarioenvujsmmm';
             axios.get(url).then(response => {

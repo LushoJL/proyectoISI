@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
     /**
@@ -41,7 +41,15 @@ class ProductController extends Controller
     public function store(Request $request)
     {
 
-        Product::create($request->all());
+        $product=Product::create($request->all());
+        //image
+
+        if ($request->file('photo')){
+            $path = Storage::disk('public')->put('image/product',$request->file('photo'));
+
+            $product->fill(['photo'=> asset($path)])->save();
+
+        }
         return view('products.index');
     }
 
@@ -85,8 +93,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $Product = Product::findOrFail($id);
+        $Product->delete();
+        return;
     }
 }

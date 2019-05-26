@@ -85,22 +85,23 @@
                                         </td>
 
                                         <td class="td-actions text-right">
-                                            <a rel="tooltip" class="btn btn-info btn-link" href="#">
+                                            <button type="button" class="btn btn-success btn-link" data-toggle="modal" data-target="#purchases">
+                                                <i class="material-icons">shopping_cart</i>
+                                                <div class="ripple-container"></div>
+                                            </button>
+
+                                        </td>
+                                        <td class="td-actions text-right">
+
+
+                                            <a class="btn btn-info btn-link" href="#" >
                                                 <i class="material-icons">remove_red_eye</i>
                                                 <div class="ripple-container"></div>
                                             </a>
                                         </td>
                                         <td class="td-actions text-right">
 
-
-                                            <a class="btn btn-success btn-link" href="#" >
-                                                <i class="material-icons">edit</i>
-                                                <div class="ripple-container"></div>
-                                            </a>
-                                        </td>
-                                        <td class="td-actions text-right">
-
-                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteRole(product)">
+                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteProduct(product)">
                                                 <i class="material-icons">delete</i>
                                                 <div class="ripple-container"></div>
                                             </button>
@@ -115,9 +116,14 @@
                 </div>
             </div>
         </div>
+{{--        modal de crear producto--}}
         @include('products.create')
+{{--        modal de crear marcas--}}
         @include('brands.create')
+{{--        modal de crear categorias--}}
         @include('categories.create')
+{{--        modal de crear una compra--}}
+        @include('purchases.create')
     </div>
 
 @endsection
