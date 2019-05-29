@@ -26,19 +26,16 @@
                                     </div>
                                 </div>
                             @endif
-
-
                             <div class="row">
                                 <div class="col-12 text-right">
                                     <button type="button" class="btn btn-success btn-link"  data-toggle="modal" data-target="#createUser">
                                         Agregar nuevo rol
                                         <div class="ripple-container"></div>
                                     </button>
-
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" border="1px">
                                     <thead class=" text-primary">
                                     <th>
                                         id
@@ -46,14 +43,15 @@
                                     <th>
                                         Nombre
                                     </th>
-
+                                    <th>
+                                        Rol
+                                    </th>
                                     <th class="text-center" colspan="3">
                                         Acciones
                                     </th>
 
                                     </thead>
                                     <tbody>
-
                                     <tr v-for="usuario in usuarios">
                                         <td>
                                             @{{ usuario.id }}
@@ -61,7 +59,10 @@
                                         <td>
                                             @{{ usuario.name }}
                                         </td>
-
+                                        <td v-for="role in roles" v-if="usuario.id==role.id">
+                                            @{{ role.name }}
+                                        </td>
+                                        <td v-else="usuario.id==role.id">No tiene rol</td>
                                         <td class="td-actions text-right">
                                             <a rel="tooltip" class="btn btn-info btn-link" href="#">
                                                 <i class="material-icons">remove_red_eye</i>
@@ -87,6 +88,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>

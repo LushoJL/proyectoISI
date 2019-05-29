@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Expiration;
 use App\Purchase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
 {
@@ -35,7 +38,26 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dato = DB::table('purchases')->where('date_purchase', $request->date_purchase)->first();
+
+        if ($dato->date_purchase==$request->date_purchase && $dato->product_id==$request->product_id){
+                DB::table('purchases')->where('id', $dato->id)->update(['quantity'=>$dato->quantity+$request->quantity]);
+        }else{
+            $compra=Purchase::create([
+                'quantity'=>$request->quantity,
+                'date_purchase'=>$request->date_purchase,
+                'product_id'=>$request->product_id,
+                'provider_id'=>$request->provider_id,
+                'user_id'=>auth()->id(),
+            ]);
+
+        }
+        $fecha_vencimiento=Expiration::create([
+            'expiration_date'=>$request->expiration_date,
+            'stock'=>$request->quantity,
+            'product_id'=>$request->product_id,
+        ]);
+       return;
     }
 
     /**

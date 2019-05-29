@@ -85,7 +85,7 @@
                                         </td>
 
                                         <td class="td-actions text-right">
-                                            <button type="button" class="btn btn-success btn-link" data-toggle="modal" data-target="#purchases">
+                                            <button type="button" class="btn btn-success btn-link" v-on:click.prevent="shopingProduct(product)">
                                                 <i class="material-icons">shopping_cart</i>
                                                 <div class="ripple-container"></div>
                                             </button>
@@ -110,20 +110,22 @@
                                     </tr>
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {{--        modal de crear una compra--}}
+        @include('purchases.create')
 {{--        modal de crear producto--}}
         @include('products.create')
 {{--        modal de crear marcas--}}
         @include('brands.create')
 {{--        modal de crear categorias--}}
         @include('categories.create')
-{{--        modal de crear una compra--}}
-        @include('purchases.create')
+
     </div>
 
 @endsection

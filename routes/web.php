@@ -69,6 +69,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('category', 'CategoryController');
     Route::resource('product', 'ProductController');
     Route::resource('provider', 'ProviderController');
+    Route::resource('purchase','PurchaseController');
 	Route::put('photo/{user}','UserController@photo')->name('user.photo');
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);

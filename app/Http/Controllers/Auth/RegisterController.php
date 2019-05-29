@@ -77,6 +77,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
         $concatenar=substr($data['last_name'],0,3);
 
         return User::create([

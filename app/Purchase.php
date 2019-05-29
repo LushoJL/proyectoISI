@@ -9,9 +9,11 @@ class Purchase extends Model
     protected $table='purchases';
     protected $fillable=[
         'quantity',
+        'date_purchase',
         'product_id',
         'user_id',
         'provider_id'
+
     ];
     public function product(){
         return $this->belongsTo(Product::class);
