@@ -12,25 +12,25 @@
 								<li>
 									<div>
 										<h3>02</h3>
-										<span>Days</span>
+										<span>Dias</span>
 									</div>
 								</li>
 								<li>
 									<div>
 										<h3>10</h3>
-										<span>Hours</span>
+										<span>Horas</span>
 									</div>
 								</li>
 								<li>
 									<div>
 										<h3>34</h3>
-										<span>Mins</span>
+										<span>Minutos</span>
 									</div>
 								</li>
 								<li>
 									<div>
 										<h3>60</h3>
-										<span>Secs</span>
+										<span>Segundos</span>
 									</div>
 								</li>
 							</ul>
