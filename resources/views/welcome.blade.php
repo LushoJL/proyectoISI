@@ -1,10 +1,10 @@
 @extends('inicio/app')
 @section('content')
-	<!-- HOT DEAL SECTION -->
+	<!-- SECCION DE ACUERDO CALIENTE -->
 		<div id="hot-deal" class="section">
-			<!-- container -->
+			<!-- envase -->
 			<div class="container">
-				<!-- row -->
+				<!-- fila -->
 				<div class="row">
 					<div class="col-md-12">
 						<div class="hot-deal">
@@ -34,25 +34,25 @@
 									</div>
 								</li>
 							</ul>
-							<h2 class="text-uppercase">hot deal this week</h2>
-							<p>New Collection Up to 50% OFF</p>
-							<a class="primary-btn cta-btn" href="{{asset('estilos')}}/#">Shop now</a>
+							<h2 class="text-uppercase">OFERTA CALIENTE ESTA SEMANA</h2>
+							<p>Nueva coleccion hasta el 50% de descuento</p>
+							<a class="primary-btn cta-btn" href="{{asset('estilos')}}/#">Compra ahora</a>
 						</div>
 					</div>
 				</div>
-				<!-- /row -->
+				<!-- /fila -->
 			</div>
-			<!-- /container -->
+			<!-- /envase -->
 		</div>
-		<!-- /HOT DEAL SECTION -->
+		<!-- SECCION DE ACUERDO CALIENTE -->
 
-		<!-- SECTION -->
+		<!-- SECCION -->
 		<div class="section">
-			<!-- container -->
+			<!-- envase -->
 			<div class="container">
-				<!-- row -->
+				<!-- fila -->
 				<div class="row">
-					<!-- shop -->
+					<!-- tienda -->
 					<div class="col-md-3 col-xs-4">
 						<div class="shop">
 							<div class="shop-img">
@@ -64,9 +64,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- /shop -->
+					<!-- /tienda -->
 
-					<!-- shop -->
+					<!-- tienda -->
 					<div class="col-md-3 col-xs-4">
 						<div class="shop">
 							<div class="shop-img">
@@ -78,9 +78,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- /shop -->
+					<!-- /tienda -->
 
-					<!-- shop -->
+					<!-- tienda -->
 					<div class="col-md-3 col-xs-4">
 						<div class="shop">
 							<div class="shop-img">
@@ -92,8 +92,8 @@
 							</div>
 						</div>
 					</div>
-					<!-- /shop -->
-					<!-- shop -->
+					<!-- /tienda -->
+					<!-- tienda -->
 					<div class="col-md-3 col-xs-4">
 						<div class="shop">
 							<div class="shop-img">
@@ -105,19 +105,19 @@
 							</div>
 						</div>
 					</div>
-					<!-- /shop -->
+					<!-- /tienda -->
 				</div>
-				<!-- /row -->
+				<!-- /fila -->
 			</div>
-			<!-- /container -->
+			<!-- /envase -->
 		</div>
-		<!-- /SECTION -->
+		<!-- /SECCION -->
 
-		<!-- SECTION -->
+		<!-- SECCION -->
 		<div class="section">
-			<!-- container -->
+			<!-- envase -->
 			<div class="container">
-				<!-- row -->
+				<!-- fila -->
 				<div class="row">
 
 					<!-- section title -->
@@ -134,16 +134,16 @@
 							</div>
 						</div>
 					</div>
-					<!-- /section title -->
+					<!-- /seccion titulo -->
 
-					<!-- Products tab & slick -->
+					<!-- Fichas de productos y mancha -->
 					<div class="col-md-12">
 						<div class="row">
 							<div class="products-tabs">
-								<!-- tab -->
+								<!-- lengüeta -->
 								<div id="tab1" class="tab-pane active">
 									<div class="products-slick" data-nav="#slick-nav-1">
-										<!-- product -->
+										<!-- producto -->
 										<div class="product">
 											<div class="product-img">
 												<img src="{{asset('estilos')}}/./img/prod2.jpg" alt="">
@@ -164,23 +164,23 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">añadir a la lista de deseos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">añadir a comprar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">vista rapida</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> añadir a la cesta</button>
 											</div>
 										</div>
-										<!-- /product -->
+										<!-- /producto -->
 
-										<!-- product -->
+										<!-- producto -->
 										<div class="product">
 											<div class="product-img">
 												<img src="{{asset('estilos')}}/./img/carne1.jpg" alt="">
 												<div class="product-label">
-													<span class="new">NEW</span>
+													<span class="new">NUEVO</span>
 												</div>
 											</div>
 											<div class="product-body">
@@ -195,18 +195,18 @@
 													<i class="fa fa-star-o"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">añadir a la lista de deseos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">añadir a comprar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">vista rapida</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> añadir a la cesta</button>
 											</div>
 										</div>
-										<!-- /product -->
+										<!-- /producto -->
 
-										<!-- product -->
+										<!-- producto -->
 										<div class="product">
 											<div class="product-img">
 												<img src="{{asset('estilos')}}/./img/golosina1.jpg" alt="">
@@ -221,18 +221,18 @@
 												<div class="product-rating">
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">añadir a la lista de deseos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">añadir a comprar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">vista rapida</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> añadir a la cesta</button>
 											</div>
 										</div>
-										<!-- /product -->
+										<!-- /producto -->
 
-										<!-- product -->
+										<!-- producto -->
 										<div class="product">
 											<div class="product-img">
 												<img src="{{asset('estilos')}}/./img/bebida1.jpg" alt="">
@@ -249,18 +249,18 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">añadir a la lista de deseos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">añadir a comprar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">vista rapida</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> añadir a la cesta</button>
 											</div>
 										</div>
-										<!-- /product -->
+										<!-- /producto -->
 
-										<!-- product -->
+										<!-- producto -->
 										<div class="product">
 											<div class="product-img">
 												<img src="{{asset('estilos')}}/./img/cerveza1.jpg" alt="">
@@ -277,29 +277,29 @@
 													<i class="fa fa-star"></i>
 												</div>
 												<div class="product-btns">
-													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+													<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">añadir a la lista de deseos</span></button>
+													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">añadir a comprar</span></button>
+													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">vista rapida</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> añadir a la cesta</button>
 											</div>
 										</div>
-										<!-- /product -->
+										<!-- /producto -->
 									</div>
 									<div id="slick-nav-1" class="products-slick-nav"></div>
 								</div>
-								<!-- /tab -->
+								<!-- /lengúeta -->
 							</div>
 						</div>
 					</div>
-					<!-- Products tab & slick -->
+					<!-- Fichas de productos y mancha -->
 				</div>
-				<!-- /row -->
+				<!-- /fila -->
 			</div>
-			<!-- /container -->
+			<!-- /envase -->
 		</div>
-		<!-- /SECTION -->
+		<!-- /SECCION -->
 @endsection
 	
