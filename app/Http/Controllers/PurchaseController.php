@@ -36,22 +36,33 @@ class PurchaseController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //aqui se guarda las compras y el stock con sus fechas de vencimiento
+
     public function store(Request $request)
     {
-        $dato = DB::table('purchases')->where('date_purchase', $request->date_purchase)->first();
+        //hacemos la consulta en la tabla de compras para saber si el producto compramos en la misma fecha
+        $dato = DB::table('purchases')->where([['date_purchase', '=',$request->date_purchase],['product_id', '=',$request->product_id]])->first();
 
-        if ($dato->date_purchase==$request->date_purchase && $dato->product_id==$request->product_id){
-                DB::table('purchases')->where('id', $dato->id)->update(['quantity'=>$dato->quantity+$request->quantity]);
+        //preguntamos si la consulta no encuentra nada
+        if ($dato!=null){
+            //si el valor no es nulo, actualizamos la tabla cantidad de compra de la tabla compras
+            DB::table('purchases')->where('id', $dato->id)->update(['quantity'=>$dato->quantity+$request->quantity]);
+
         }else{
-            $compra=Purchase::create([
-                'quantity'=>$request->quantity,
-                'date_purchase'=>$request->date_purchase,
-                'product_id'=>$request->product_id,
-                'provider_id'=>$request->provider_id,
-                'user_id'=>auth()->id(),
-            ]);
+            //si es null, guardamos la nueva compra
 
-        }
+        $compra=Purchase::create([
+            'quantity'=>$request->quantity,
+            'date_purchase'=>$request->date_purchase,
+            'product_id'=>$request->product_id,
+            'user_id'=>auth()->id(),
+            'provider_id'=>$request->provider_id
+
+        ]);
+
+     }
+
+       // guardamos el stock y su fecha de vencimiento
         $fecha_vencimiento=Expiration::create([
             'expiration_date'=>$request->expiration_date,
             'stock'=>$request->quantity,

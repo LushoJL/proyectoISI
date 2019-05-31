@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
@@ -12,10 +13,18 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+//muestra la lista de los productos
     public function lista(){
         return view('products.index');
     }
+
+    //calcula el stock de cada producto
+    public function stock($id){
+        //consulta
+        $price = DB::table('expirations')->where('product_id', 1)->sum('stock');
+    }
+
+    //trae todos los datos de la base de datos
     public function index()
     {
       $product=Product::get();

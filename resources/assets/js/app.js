@@ -4,11 +4,13 @@ new Vue({
     created() {
 
         this.getRoles();
+        this.getExpirations();
         this.getusuarios();
         this.getBrands();
         this.getCategories();
         this.getProducts();
         this.getProviders();
+        this.getPurchases();
     },
     data: {
 
@@ -99,6 +101,9 @@ new Vue({
             'minimum':'',
         },//llenar datos de un producto para editar u otra cosa
 
+        //fecha de vencimiento
+        expirations:[], //muestra todos los productos del stock
+
         //compras
         newPurchases:{
             'quantity':'',
@@ -107,6 +112,7 @@ new Vue({
             'product_id':'',
             'provider_id':''
         },//llena datos para agregar nueva compra
+        purchases:[],//llena toda las compras
 
         //proveedores
         providers:[],//llena datos del controlador para listar proveedores
@@ -157,6 +163,11 @@ new Vue({
 
           //  return !/^([0-9])*$/.test(this.userId)
           //  return this.userId.length > 4 && this.userId.length < 13
+        },
+        sumar(stock){
+            var suma=0;
+            suma+=stocks;
+            return suma;
         }
     },
     methods: {
@@ -256,6 +267,7 @@ new Vue({
                 this.roles=response.data
             });
         },//carga todos los roles del data roles:[]
+
         deleteRole(role) {
             var url ='role/'+ role.id;
 
@@ -340,12 +352,27 @@ new Vue({
             })
         },//borra un producto
 
+        //fecha de vencimiento
+        getExpirations(){
+            var url ='expiration';
+            axios.get(url).then(response=>{
+                this.expirations=response.data
+            });
+        },
+
         //compras
+        getPurchases(){
+            var url='purchases';
+            axios.get(url).then(response=>{
+                this.purchases=response.data
+            })
+        },//llena datos a purchases[]
         shopingProduct(product) {
             this.fillProduct.id   = product.id;
             this.newPurchases.product_id = product.id;
             $('#purchases').modal('show');
         },//abre un modal para la compra de un producto
+
         storePurchase(){
             var url='purchase';
             axios.post(url,{
@@ -353,12 +380,16 @@ new Vue({
                 'date_purchase':this.newPurchases.date_purchase,
                 'expiration_date':this.newPurchases.expiration_date,
                 'product_id':this.newPurchases.product_id,
-                'provider_id':this.newPurchases.product_id
+                'provider_id':this.newPurchases.provider_id,
             }).then(response=>{
+                this.getExpirations();
                 this.getProducts();
                 this.newPurchases='';
                 $('#purchases').modal('hide');
                 toastr.success('Nueva compra realizada');
+            }).catch(error=>{
+                this.errors = error.response.data.errors;
+                toastr.success('algo salio mal');
             })
 
             },//almacena o guarda la compra

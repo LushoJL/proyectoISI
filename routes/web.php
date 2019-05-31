@@ -70,12 +70,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('product', 'ProductController');
     Route::resource('provider', 'ProviderController');
     Route::resource('purchase','PurchaseController');
+    Route::resource('expiration','ExpirationController');
 	Route::put('photo/{user}','UserController@photo')->name('user.photo');
     Route::resource('role', 'RoleController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::get('profile/miperfil', 'ProfileController@show')->name('profile.show');
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-	Route::get('/roldelusuarioenvujsmmm','EspicialController@userRole')->name('user_role');
+	Route::get('/pruebas','EspicialController@userRole')->name('user_role');
 });
 

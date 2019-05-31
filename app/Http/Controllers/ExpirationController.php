@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Expiration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ExpirationController extends Controller
 {
@@ -14,9 +15,17 @@ class ExpirationController extends Controller
      */
     public function index()
     {
-        //
-    }
+        //lista todos los datos de fecha de vencimiento
+        $espiration=Expiration::get();
+        return $espiration;
 
+    }
+    public function index_stock($valor){
+        //el numero maximo de productos que hay
+        $max=DB::table('expirations')->max('product_id');
+        $sumar = DB::table('expirations')->where('product_id', $max)->sum('stock');
+        return $sumar;
+    }
     /**
      * Show the form for creating a new resource.
      *

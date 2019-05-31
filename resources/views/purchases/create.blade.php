@@ -26,6 +26,7 @@
                 </div>
                 <div class="col-sm-6">
                     <select v-model="newPurchases.provider_id" class="form-control">
+                        <option value="" disabled selected>--elija su proveedor</option>
                         <option v-for="provider in providers" v-bind:value="provider.id">@{{ provider.name }}</option>
                     </select>
                 </div>

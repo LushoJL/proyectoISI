@@ -80,8 +80,8 @@
                                         <td>
                                             @{{ product.price }}
                                         </td>
-                                        <td>
-                                            0
+                                        <td v-for="expiration in expirations" v-if="expiration.product_id === product.id">
+                                            <span>@{{expiration.stock+0}}</span>
                                         </td>
 
                                         <td class="td-actions text-right">
@@ -110,7 +110,9 @@
                                     </tr>
                                     </tbody>
                                 </table>
-
+<pre>
+    @{{ $data}}
+</pre>
                             </div>
                         </div>
                     </div>
