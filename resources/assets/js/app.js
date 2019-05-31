@@ -11,6 +11,7 @@ new Vue({
         this.getProducts();
         this.getProviders();
         this.getPurchases();
+        this.getStocks();
     },
     data: {
 
@@ -100,6 +101,7 @@ new Vue({
             'maximum':'',
             'minimum':'',
         },//llenar datos de un producto para editar u otra cosa
+        stocks:[],//el stock de cada producto
 
         //fecha de vencimiento
         expirations:[], //muestra todos los productos del stock
@@ -351,6 +353,12 @@ new Vue({
                 }
             })
         },//borra un producto
+        getStocks(){
+            var url='stock';
+                axios.get(url).then(response=>{
+                this.stocks=response.data
+            })
+        },
 
         //fecha de vencimiento
         getExpirations(){
@@ -362,10 +370,10 @@ new Vue({
 
         //compras
         getPurchases(){
-            var url='purchases';
+            var url='purchase';
             axios.get(url).then(response=>{
                 this.purchases=response.data
-            })
+            });
         },//llena datos a purchases[]
         shopingProduct(product) {
             this.fillProduct.id   = product.id;
@@ -475,6 +483,8 @@ new Vue({
                 this.categories=response.data
             });
         },//carga todas las categorias del data categories[]
+
+        //reportes
 
 
 

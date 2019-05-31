@@ -19,9 +19,18 @@ class ProductController extends Controller
     }
 
     //calcula el stock de cada producto
-    public function stock($id){
-        //consulta
-        $price = DB::table('expirations')->where('product_id', 1)->sum('stock');
+    public function stock(){
+        //consulta para saber cual es id mas alto del producto
+        $max=DB::table('expirations')->max('product_id');
+
+        for ($i=1;$i<=$max;$i++){
+            $stock = DB::table('expirations')->where('product_id', $i)->sum('stock');
+            $resul[$i]=[
+              'produc_id'   =>$i,
+              'stock'       =>$stock
+            ];
+        }
+        return $resul;
     }
 
     //trae todos los datos de la base de datos

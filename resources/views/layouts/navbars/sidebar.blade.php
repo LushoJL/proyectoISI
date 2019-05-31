@@ -109,12 +109,43 @@
         </a>
       </li>
 
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('notifications') }}">
-          <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
-        </a>
-      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <li class="nav-item {{ $activePage == 'history-purchase' ? ' active' : '' }}">
+            <a class="nav-link show" data-toggle="collapse" href="#report" aria-expanded="true">
+                <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+                <p>Reportes
+                    <b class="caret"></b>
+                </p>
+            </a>
+            <div class="collapse {{$activePage == 'purchase'? ' show' : ''}}" id="report">
+                <ul class="nav">
+
+                        <li class="nav-item{{ $activePage == 'history-purchase' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('listaCOM') }}">
+                                <span class="sidebar-mini"> UM </span>
+                                <span class="sidebar-normal"> {{ __('Historial de Compras') }} </span>
+                            </a>
+                        </li>
+
+                </ul>
+            </div>
+        </li>
+
 
     </ul>
   </div>

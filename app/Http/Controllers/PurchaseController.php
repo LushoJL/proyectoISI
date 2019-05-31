@@ -15,9 +15,13 @@ class PurchaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function lista(){
+        return view('purchases.index');
+    }
     public function index()
     {
-        //
+        $compras=Purchase::get();
+        return $compras;
     }
 
     /**
