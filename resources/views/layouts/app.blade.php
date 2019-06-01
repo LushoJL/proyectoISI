@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ __('Material Dashboard Laravel - Free Frontend Preset for Laravel') }}</title>
         <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+{{--        <link href="{{ asset('material') }}/css/query.dataTables.css" rel="stylesheet" />--}}
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -32,11 +32,11 @@
         @guest()
             @include('layouts.page_templates.guest')
         @endguest
-
-        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-       <script src="{{ asset('material') }}/js/plugins/jquery.dataTables2.min.js"></script>
+        <script src="https://cdn.zinggrid.com/zinggrid.min.js"></script>
         <script src="{{ asset('js/app.js') }}"></script>
 
+{{--        <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->--}}
+{{--        <script src="{{ asset('material') }}/js/plugins/jquery.dataTables.js"></script>--}}
         <script src="{{ asset('material') }}/js/bootstrap-vue.min.js"></script>
         <!--   Core JS Files   -->
         <script src="{{ asset('material') }}/js/core/popper2.min.js"></script>
@@ -100,6 +100,26 @@
                 $('#datetimepicker3').datetimepicker();
             });
         </script>
+{{--        <script>--}}
+{{--            $(document).ready(function() {--}}
+{{--                $('#datatables').fadeIn(1100);--}}
+{{--                $('#datatables').DataTable({--}}
+{{--                    "pagingType": "full_numbers",--}}
+{{--                    "lengthMenu": [--}}
+{{--                        [10, 25, 50, -1],--}}
+{{--                        [10, 25, 50, "All"]--}}
+{{--                    ],--}}
+{{--                    responsive: true,--}}
+{{--                    language: {--}}
+{{--                        search: "_INPUT_",--}}
+{{--                        searchPlaceholder: "Search users",--}}
+{{--                    },--}}
+{{--                    "columnDefs": [--}}
+{{--                        { "orderable": false, "targets": 5 },--}}
+{{--                    ],--}}
+{{--                });--}}
+{{--            });--}}
+{{--        </script>--}}
         <script type="text/javascript">
 
             $(document).ready(function(){

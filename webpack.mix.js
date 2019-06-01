@@ -13,9 +13,11 @@ let  mix  = require('laravel-mix');
 
 
 mix.scripts([
+
     'resources/assets/js/jquery.js',
     'resources/assets/js/bootstrap.js',
     'resources/assets/js/toastr.js',
+    'resources/assets/js/jquery.dataTables.js',
     'resources/assets/js/vue.js',
     'resources/assets/js/axios.js',
     'resources/assets/js/app.js',
@@ -24,4 +26,5 @@ mix.scripts([
     .styles([
         'resources/assets/css/bootstrap.css',
         'resources/assets/css/toastr.css',
+        'resources/assets/css/jquery.dataTables.css',
     ], 'public/css/app.css');

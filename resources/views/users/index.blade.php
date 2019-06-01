@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table" border="1px">
+                                <table class="table" id="">
                                     <thead class=" text-primary">
                                     <th>
                                         id

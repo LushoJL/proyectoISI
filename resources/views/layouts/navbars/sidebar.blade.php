@@ -50,6 +50,49 @@
             </li>
           </ul>
         </div>
+
+
+
+
+<ul class="nav">
+
+          <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
+              <a class="nav-link show" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+                  <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+                  <p>Usuario y Roles
+                      <b class="caret"></b>
+                  </p>
+              </a>
+              <div class="collapse {{$activePage == 'user-management' || $activePage == 'roles' ? ' show' : ''}}" id="laravelExample">
+                  <ul class="nav">
+
+                      @can('listaU')
+                          <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
+                              <a class="nav-link" href="{{ route('listaU') }}">
+                                  <span class="sidebar-mini"> UM </span>
+                                  <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                              </a>
+                          </li>
+                      @endcan
+                      <li class="nav-item{{ $activePage == 'providers' ? ' active' : '' }}">
+                          <a class="nav-link" href="{{ route('listaPR') }}">
+                              <span class="sidebar-mini"> UM </span>
+                              <span class="sidebar-normal"> {{ __('Proveedores') }} </span>
+                          </a>
+                      </li>
+                      @can('listaU')
+                          <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
+                              <a class="nav-link" href="{{ route('listaR') }}">
+                                  <span class="sidebar-mini"> UM </span>
+                                  <span class="sidebar-normal"> {{ __('Roles') }} </span>
+                              </a>
+                          </li>
+                      @endcan
+                  </ul>
+              </div>
+          </li>
+
+</ul>
       </div>
     </div>
 
@@ -64,50 +107,21 @@
       </li>
 
 
-      <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
-        <a class="nav-link show" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
-          <p>Usuario y Roles
-            <b class="caret"></b>
-          </p>
-        </a>
-        <div class="collapse {{$activePage == 'user-management' || $activePage == 'roles' ? ' show' : ''}}" id="laravelExample">
-          <ul class="nav">
-
-            @can('listaU')
-            <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('listaU') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
-              </a>
-            </li>
-              @endcan
-                <li class="nav-item{{ $activePage == 'providers' ? ' active' : '' }}">
-                    <a class="nav-link" href="{{ route('listaPR') }}">
-                        <span class="sidebar-mini"> UM </span>
-                        <span class="sidebar-normal"> {{ __('Proveedores') }} </span>
-                    </a>
-                </li>
-            @can('listaU')
-                <li class="nav-item{{ $activePage == 'roles' ? ' active' : '' }}">
-                  <a class="nav-link" href="{{ route('listaR') }}">
-                    <span class="sidebar-mini"> UM </span>
-                    <span class="sidebar-normal"> {{ __('Roles') }} </span>
-                  </a>
-                </li>
-            @endcan
-          </ul>
-        </div>
-      </li>
-
-
-
+{{--nav productos--}}
       <li class="nav-item{{ $activePage == 'products' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('listaP') }}">
           <i class="material-icons">bubble_chart</i>
           <p>{{ __('Productos') }}</p>
         </a>
       </li>
+{{--nav ventas--}}
+        <li class="nav-item{{ $activePage == 'sales' ? ' active' : '' }}">
+            <a class="nav-link" href="{{ route('listaVen') }}">
+                <i class="material-icons">bubble_chart</i>
+                <p>{{ __('Ventas') }}</p>
+            </a>
+        </li>
+
 
 
 

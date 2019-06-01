@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table" id="datatables">
                                     <thead class=" text-primary">
                                     <th>
                                         Nombre
@@ -80,8 +80,8 @@
                                         <td>
                                             @{{ product.price }}
                                         </td>
-                                        <td v-for="expiration in expirations" v-if="expiration.product_id === product.id">
-                                            <span>@{{expiration.stock+0}}</span>
+                                        <td v-for="stock in stocks" v-if="stock.produc_id === product.id">
+                                            <span>@{{ stock.stock }}</span>
                                         </td>
 
                                         <td class="td-actions text-right">
@@ -110,9 +110,6 @@
                                     </tr>
                                     </tbody>
                                 </table>
-<pre>
-    @{{ $data}}
-</pre>
                             </div>
                         </div>
                     </div>

@@ -46,7 +46,7 @@ class UsersTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        factory(User::class, 5)->create();
+        factory(User::class, 60)->create();
 
     /*    DB::table('users')->insert([
             'name' => 'Alan Espejo',

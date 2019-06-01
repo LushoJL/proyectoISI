@@ -12,6 +12,7 @@ new Vue({
         this.getProviders();
         this.getPurchases();
         this.getStocks();
+
     },
     data: {
 
@@ -171,6 +172,8 @@ new Vue({
             suma+=stocks;
             return suma;
         }
+
+
     },
     methods: {
 
@@ -178,7 +181,8 @@ new Vue({
         getusuarios() {
             var urlUsers = 'user';
             axios.get(urlUsers).then(response => {
-                this.usuarios=response.data
+                this.usuarios=response.data;
+
             });
         },//carga todos los usuarios del data usuarios[]
         editUser(user){
@@ -298,11 +302,13 @@ new Vue({
             })
         }, //elimina el rol
 
+
         //productos
         getProducts(){
             var url ='product';
             axios.get(url).then(response=>{
-                this.products=response.data
+                this.products=response.data;
+
             });
         },//carga todos los productos del data products[]
         storeProduct(){
@@ -392,6 +398,7 @@ new Vue({
             }).then(response=>{
                 this.getExpirations();
                 this.getProducts();
+                this.getStocks();
                 this.newPurchases='';
                 $('#purchases').modal('hide');
                 toastr.success('Nueva compra realizada');

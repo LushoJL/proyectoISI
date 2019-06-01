@@ -6,6 +6,8 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Collection as Collection;
+
 class ProductController extends Controller
 {
     /**
@@ -25,18 +27,23 @@ class ProductController extends Controller
 
         for ($i=1;$i<=$max;$i++){
             $stock = DB::table('expirations')->where('product_id', $i)->sum('stock');
-            $resul[$i]=[
-              'produc_id'   =>$i,
-              'stock'       =>$stock
-            ];
+            if ($stock){
+                $resul[$i]=[
+                    'produc_id'   =>$i,
+                    'stock'       =>$stock
+                ];
+            }
+
         }
-        return $resul;
+        $collection = Collection::make($resul);
+        return $collection;
     }
 
     //trae todos los datos de la base de datos
     public function index()
     {
       $product=Product::get();
+
       return $product;
     }
 

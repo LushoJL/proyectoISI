@@ -40,12 +40,20 @@
                                 <table class="table">
                                     <thead class=" text-primary">
                                     <th>
-                                        id
+                                        Producto
                                     </th>
                                     <th>
-                                        Nombre
+                                        Cantidad comprada
                                     </th>
-
+                                    <th>
+                                        Fecha de compra
+                                    </th>
+                                    <th>
+                                        Proveedor
+                                    </th>
+                                    <th>
+                                        Usuario
+                                    </th>
                                     <th class="text-center" colspan="3">
                                         Acciones
                                     </th>
@@ -54,12 +62,22 @@
                                     <tbody>
 
                                     <tr v-for="purchase in purchases">
-                                        <td>
-                                            @{{ purchase.id }}
+                                        <td v-for="product in products" v-if="product.id===purchase.product_id">
+                                            @{{ product.name }}
                                         </td>
                                         <td>
-                                            @{{ purchase.name }}
+                                            @{{ purchase.quantity }}
                                         </td>
+                                        <td>
+                                            @{{ purchase.date_purchase }}
+                                        </td>
+                                        <td v-for="provider in providers" v-if="provider.id===purchase.provider_id">
+                                            @{{ provider.name }}
+                                        </td>
+                                        <td v-for="provider in providers" v-if="provider.id===purchase.provider_id">
+                                            @{{ provider.name }}
+                                        </td>
+
 
                                         <td class="td-actions text-right">
                                             <a rel="tooltip" class="btn btn-info btn-link" href="#">
@@ -88,7 +106,7 @@
                                 </table>
                                 <pre>
                                     @{{
-                                    $data
+                                    $data.products
                                     }}
                                 </pre>
                             </div>
