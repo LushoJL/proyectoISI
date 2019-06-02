@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Caffeinated\Shinobi\Models\Role;
+use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 
@@ -14,9 +16,30 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\View\View
      */
-    public function index(User $model)
+
+    public function __construct()
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        $this->middleware('permission:users.create')->only('create', 'store');
+        $this->middleware('permission:listaU')->only('lista');
+        $this->middleware('permission:users.edit')->only('edit','update');
+        $this->middleware('permission:users.show')->only('show');
+        $this->middleware('permission:users.destroy')->only('destroy');
+
+    }
+
+
+    public function lista()
+    {
+        //muestra la vista de lista de usuarios
+        $roles=Role::get();
+        return view('users.index',compact('roles'));
+
+    }
+    public function index()
+    {
+        //manda datos del modelo user
+        $users=User::get();
+        return $users;
     }
 
     /**
@@ -49,11 +72,16 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\View\View
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        return view('users.edit', compact('user'));
+        $users = User::findOrFail($id);
+        return view('users.edit', compact('users'));
     }
-
+    public function show($id)
+    {
+        $users = User::findOrFail($id);
+        return view('profile.show');
+    }
     /**
      * Update the specified user in storage
      *
@@ -61,14 +89,22 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\RedirectResponse
      */
+    public function photo(Request $request, $id){
+       $user =User::findOrFail($id);
+       $user->photo= $request->file('photo')->store('public');
+       $user->update();
+
+        return back();
+    }
     public function update(UserRequest $request, User  $user)
     {
+
         $user->update(
             $request->merge(['password' => Hash::make($request->get('password'))])
                 ->except([$request->get('password') ? '' : 'password']
         ));
 
-        return redirect()->route('user.index')->withStatus(__('User successfully updated.'));
+        return ;
     }
 
     /**
@@ -81,6 +117,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('user.index')->withStatus(__('User successfully deleted.'));
+        return;
     }
 }

@@ -2,21 +2,37 @@
 
 namespace App;
 
+use Caffeinated\Shinobi\Traits\ShinobiTrait;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, ShinobiTrait;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+    protected $table = 'users';
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'last_name',
+        'ci',
+        'birthdate',
+        'address',
+        'nick',
+        'photo',
+        'phone',
+        'gender',
+        'civil_status',
+        'country',
+        'nationality',
+        'email',
+        'password',
+        'state',
     ];
 
     /**
@@ -36,4 +52,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function purchase(){
+        return $this->hasMany(Purchase::class);
+    }
+
 }

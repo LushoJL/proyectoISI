@@ -18,6 +18,9 @@ class ProfileController extends Controller
         return view('profile.edit');
     }
 
+    public function show(){
+        return view('profile.show');
+    }
     /**
      * Update the profile
      *
@@ -26,6 +29,7 @@ class ProfileController extends Controller
      */
     public function update(ProfileRequest $request)
     {
+
         auth()->user()->update($request->all());
 
         return back()->withStatus(__('Profile successfully updated.'));
