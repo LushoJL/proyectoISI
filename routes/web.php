@@ -59,6 +59,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('lista-roles',function (){
         return view('roles.index');
     })->name('role');
+    //rutas de listas
     Route::get('lista-usuarios','UserController@lista')->name('listaU');
     Route::get('lista-roles','RoleController@lista')->name('listaR');
     Route::get('lista-productos','ProductController@lista')->name('listaP');
@@ -66,6 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('lista-compras','PurchaseController@lista')->name('listaCOM');
     Route::get('Ventas','SaleController@lista')->name('listaVen');
 
+    //rutas para el crud
 	Route::resource('user', 'UserController');
     Route::resource('brand', 'BrandController');
     Route::resource('category', 'CategoryController');
