@@ -181,10 +181,11 @@
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
+						  
 						   <li><a href="">Aceite y Vinagre</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+						   <li><a href="">Arroz y Granos</a></li>
+						   <li><a href="">Azúcar</a></li>
+						   <li><a href="">Cereales y Avena</a></li>
 						  </ul>
 						</li>
 						
@@ -195,10 +196,11 @@
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
-						   <li><a href="">laptop 1</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+			
+						   <li><a href="">Cerdo</a></li>
+						   <li><a href="">Aves</a></li>
+						   <li><a href="">Res</a></li>
+						   <li><a href="">lPescados</a></li>
 						  </ul>
 						</li>
 						
@@ -210,10 +212,11 @@
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
+
 						   <li><a href="{{route('refrescos.leches')}}">LECHES LIQUIDAS</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+						   <li><a href="">Crema de leche</a></li>
+						   <li><a href="">Fiambres y embutidos</a></li>
+						   <li><a href="">Frutas y verduras</a></li>
 						  </ul>
 						</li>
 
@@ -225,10 +228,11 @@
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
-						   <li><a href="">laptop 1</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+
+						   <li><a href="">Carnes y Pollo</a></li>
+						   <li><a href="">Frutas y verduras</a></li>
+						   <li><a href="">Helados</a></li>
+						   <li><a href="">Hielo</a></li>
 						  </ul>
 						</li>
 
@@ -236,14 +240,13 @@
 						<li class="dropdown">
 
 						  <a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						    Congelado y Gasiosa
+						    Chocolate y golosina
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
-						   <li><a href="">laptop 1</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+						   <li><a href="">Chocolate</a></li>
+						   <li><a href="">Golosina</a></li>
+						   
 						  </ul>
 						</li>
 
@@ -255,10 +258,11 @@
 						    <span class="caret"></span>
 						  </a>
 						  <ul class="dropdown-menu" aria-labelledby="dLabel">
-						   <li><a href="">laptop 1</a></li>
-						   <li><a href="">laptop 2</a></li>
-						   <li><a href="">laptop 3</a></li>
-						   <li><a href="">laptop 4</a></li>
+				
+						   <li><a href="">Masas y Tortillas</a></li>
+						   <li><a href="">Pan embolsado</a></li>
+						   <li><a href="">Pastelería</a></li>
+						   <li><a href="">Pan fresco</a></li>
 						  </ul>
 						</li>
 					</ul>
