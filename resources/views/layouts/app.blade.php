@@ -30,6 +30,7 @@
 
         <!--   Core JS Files   -->
         <script src="{{ asset('material') }}/js/core/jquery.min.js"></script>
+        @stack('carrito')
         <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
         <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
         <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
