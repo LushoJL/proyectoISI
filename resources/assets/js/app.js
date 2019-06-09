@@ -15,6 +15,13 @@ new Vue({
 
     },
     data: {
+        //ventas
+        insertProduct:'',
+        insertCant:'',
+        Newventa:[
+            {product: 'producto', quantity:'cantidad'}
+        ],
+
 
         pagination:{
             'total'         :0,
@@ -176,6 +183,12 @@ new Vue({
 
     },
     methods: {
+
+        //ventas
+        NewsVenta(){
+            this.Newventa.push({product: this.insertProduct, quantity:this.insertCant});
+            this.insertProduct='';
+        },
 
         //usuarios
         getusuarios() {

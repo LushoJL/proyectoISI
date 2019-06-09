@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Sale;
+use App\Client;
 use Illuminate\Http\Request;
 
-class SaleController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function lista(){
-        return view('sales.index');
-    }
     public function index()
     {
         //
@@ -44,10 +41,10 @@ class SaleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sale  $sale
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show(Sale $sale)
+    public function show(Client $client)
     {
         //
     }
@@ -55,10 +52,10 @@ class SaleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Sale  $sale
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sale $sale)
+    public function edit(Client $client)
     {
         //
     }
@@ -67,10 +64,10 @@ class SaleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sale  $sale
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sale $sale)
+    public function update(Request $request, Client $client)
     {
         //
     }
@@ -78,10 +75,10 @@ class SaleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sale  $sale
+     * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sale $sale)
+    public function destroy(Client $client)
     {
         //
     }

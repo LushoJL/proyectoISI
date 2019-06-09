@@ -65,7 +65,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('lista-productos','ProductController@lista')->name('listaP');
     Route::get('lista-proveedor','ProviderController@lista')->name('listaPR');
     Route::get('lista-compras','PurchaseController@lista')->name('listaCOM');
-    Route::get('Ventas','SaleController@lista')->name('listaVen');
+    Route::get('lista-Ventas','SaleController@lista')->name('listaVen');
 
     //rutas para el crud
 	Route::resource('user', 'UserController');
