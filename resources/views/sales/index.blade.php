@@ -8,7 +8,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-
                         <div class="card-body">
                             @if (session('status'))
                                 <div class="row">
@@ -22,15 +21,12 @@
                                     </div>
                                 </div>
                             @endif
-
-
                             <div class="row">
                                 <div class="col-12 text-left">
                                     <button type="button" class="btn btn-success "  data-toggle="modal" data-target="#createSale">
                                         Nueva venta
                                         <div class="ripple-container"></div>
                                     </button>
-
                                 </div>
                             </div>
                             <div class="table-responsive">

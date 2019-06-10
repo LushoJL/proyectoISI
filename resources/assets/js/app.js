@@ -18,10 +18,18 @@ new Vue({
         //ventas
         insertProduct:'',
         insertCant:'',
-        Newventa:[
-            {product: 'producto', quantity:'cantidad'}
-        ],
+        ventId:1,
+        Newventa:[],
 
+        //clientes
+        fillclient:{
+            'ci':'',
+            'name':'',
+            'last_name':'',
+            'birthdate':'',
+            'phone':'',
+            'email':''
+        },
 
         pagination:{
             'total'         :0,
@@ -180,14 +188,24 @@ new Vue({
             return suma;
         }
 
-
     },
     methods: {
 
         //ventas
         NewsVenta(){
-            this.Newventa.push({product: this.insertProduct, quantity:this.insertCant});
+
+            if (this.insertCant!='')
+                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:this.insertCant});
+            else
+                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:1});
+
             this.insertProduct='';
+            this.insertCant='';
+        },
+        deletevent:function(index){
+            console.log(index);
+            console.log(this.Newventa);
+            this.Newventa.splice(index,1);
         },
 
         //usuarios
