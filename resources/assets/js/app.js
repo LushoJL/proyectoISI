@@ -151,52 +151,17 @@ new Vue({
 
     },
     computed:{
-
+        prueba(){
+            var suma=0;
+            for (i=0;i<this.Newventa.length;i++){
+                suma=suma+i;
+            }
+            return suma;
+        }
     },
     methods: {
         pruebitas(){
-            /*var autos = [/*{
-                "Modelo": "Mazda",
-                "Referencia": "Mazda 6",
-                "Precio": 73710
-            },
-                {
-                "Modelo": "Audi",
-                "Referencia": "R8",
-                "Precio": 73710
-            },
-                {
-                    "Modelo": "Toyota",
-                    "Referencia": "R8",
-                    "Precio": 73710
-                },
-                {
-                    "Modelo": "Nissan",
-                    "Referencia": "R8",
-                    "Precio": 73710
-                ];*/
 
-        /*    var precioDescuento = 1;
-            var modelo = "toyoyu";
-
-            autos.map(function(dato){
-                if(dato.Modelo == modelo){
-                    dato.Precio = precioDescuento;
-                    alert('llega aqui')
-                }else{
-                    alert('no hay nada')
-                }
-
-                return dato;
-            });
-
-            console.log(autos)*/
-            var firstArray = ['hol'];
-            if (this.Newventa.length > 0){
-                alert('true')
-            }else{
-               alert('false')
-            }
         },
         //ventas
         NewsVenta(){
