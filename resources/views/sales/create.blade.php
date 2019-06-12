@@ -12,7 +12,7 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('CREAR NUEVO ROL') }}</b></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('REALIZAR NUEVA VENTA') }}</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -57,6 +57,7 @@
                                     <datalist id="products">
                                         <option v-for="produc in products" v-bind:value="produc.barcode" >@{{ produc.name }}</option>
                                     </datalist>
+
                                 </div>
                                 <div class="col-sm-4">
                                     <input type="number" class="form-control" v-model="insertCant">
@@ -84,53 +85,54 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">CI/NIT</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.ci">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="">Nombre</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.name">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">Apellidos</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.last_name">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="">Fecha de Nacimiento</label>
-                                    <input type="text" class="form-control">
+                                    <input type="date" class="form-control" v-model="fillclient.birthdate">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">Telefono</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.phone">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="">Correo Electronico</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.email">
                                 </div>
                             </div>
+
                         </div>
                         <div class="tab-pane" id="link3" aria-expanded="false">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">CI/NIT</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.ci">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="">No de venta</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" >
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">Nombre</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.name">
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="">Apellidos</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" v-model="fillclient.last_name">
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -148,13 +150,13 @@
                                         <td>
                                             @{{ venta.quantity }}
                                         </td>
-                                        <td>
-                                            @{{ venta.product }}
+                                        <td v-for="product in products" v-if="product.barcode===venta.product">
+                                            @{{ product.name }}
                                         </td>
-                                        <td v-for="product in products" v-if="product.name===venta.product">
+                                        <td v-for="product in products" v-if="product.barcode===venta.product">
                                             @{{ product.price }}
                                         </td>
-                                        <td v-for="product in products" v-if="product.name===venta.product">
+                                        <td v-for="product in products" v-if="product.barcode===venta.product">
                                             @{{ venta.quantity *product.price}} <b>Bs</b>
                                         </td>
                                     </tr>

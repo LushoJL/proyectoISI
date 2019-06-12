@@ -44594,14 +44594,73 @@ new Vue({
 
     },
     methods: {
+        pruebitas(){
+            /*var autos = [/*{
+                "Modelo": "Mazda",
+                "Referencia": "Mazda 6",
+                "Precio": 73710
+            },
+                {
+                "Modelo": "Audi",
+                "Referencia": "R8",
+                "Precio": 73710
+            },
+                {
+                    "Modelo": "Toyota",
+                    "Referencia": "R8",
+                    "Precio": 73710
+                },
+                {
+                    "Modelo": "Nissan",
+                    "Referencia": "R8",
+                    "Precio": 73710
+                ];*/
 
+        /*    var precioDescuento = 1;
+            var modelo = "toyoyu";
+
+            autos.map(function(dato){
+                if(dato.Modelo == modelo){
+                    dato.Precio = precioDescuento;
+                    alert('llega aqui')
+                }else{
+                    alert('no hay nada')
+                }
+
+                return dato;
+            });
+
+            console.log(autos)*/
+            var firstArray = ['hol'];
+            if (this.Newventa.length > 0){
+                alert('true')
+            }else{
+               alert('false')
+            }
+        },
         //ventas
         NewsVenta(){
-
-            if (this.insertCant!='')
-                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:this.insertCant});
-            else
-                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:1});
+            if (this.insertCant==''){
+                this.insertCant=1;
+            }
+            var x="cambio";
+            var y=this.insertProduct;
+            var z=this.insertCant;
+           if (this.Newventa.length>0) {
+                this.Newventa.map(function (dato) {
+                    if (dato.product==y){
+                        dato.quantity=parseInt(dato.quantity)+parseInt(z);
+                        x="nada"
+                    }
+                    return dato;
+                });
+            }else{
+                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+                x="nada"
+            }
+            if (x=="cambio"){
+                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+            }
 
             this.insertProduct='';
             this.insertCant='';

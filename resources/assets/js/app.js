@@ -18,6 +18,7 @@ new Vue({
         //ventas
         insertProduct:'',
         insertCant:'',
+        totalvent:'',
         ventId:1,
         Newventa:[],
 
@@ -146,58 +147,81 @@ new Vue({
 
         //otros
         errors: '',//lista los errores de validacion
-        offset:3, //para el listado de tablas
 
 
     },
     computed:{
-        isActived() {
-            return this.pagination.current_page;
-        } ,
-        pagesNumber () {
-            if (!this.pagination.to){
-                return[];
-            }
-            var from = this.pagination.current_page - this.offset; //TODO OFSSET
-            if (from<1){
-                from =1;
-            }
-            var to=from +(this.offset*2);//TODO
-
-            if (to >=this.pagination.last_page){
-                to=this.pagination.last_page;
-            }
-            var pagesArray=[];
-            while(from<=to){
-                pagesArray.push(from);
-                from++;
-            }
-            return pagesArray;
-        },
-        validation() {
-            if (/^([a-zA-Z])*$/.test(this.userId))
-                return true;
-            return false;
-
-          //  return !/^([0-9])*$/.test(this.userId)
-          //  return this.userId.length > 4 && this.userId.length < 13
-        },
-        sumar(stock){
-            var suma=0;
-            suma+=stocks;
-            return suma;
-        }
 
     },
     methods: {
+        pruebitas(){
+            /*var autos = [/*{
+                "Modelo": "Mazda",
+                "Referencia": "Mazda 6",
+                "Precio": 73710
+            },
+                {
+                "Modelo": "Audi",
+                "Referencia": "R8",
+                "Precio": 73710
+            },
+                {
+                    "Modelo": "Toyota",
+                    "Referencia": "R8",
+                    "Precio": 73710
+                },
+                {
+                    "Modelo": "Nissan",
+                    "Referencia": "R8",
+                    "Precio": 73710
+                ];*/
 
+        /*    var precioDescuento = 1;
+            var modelo = "toyoyu";
+
+            autos.map(function(dato){
+                if(dato.Modelo == modelo){
+                    dato.Precio = precioDescuento;
+                    alert('llega aqui')
+                }else{
+                    alert('no hay nada')
+                }
+
+                return dato;
+            });
+
+            console.log(autos)*/
+            var firstArray = ['hol'];
+            if (this.Newventa.length > 0){
+                alert('true')
+            }else{
+               alert('false')
+            }
+        },
         //ventas
         NewsVenta(){
+            if (this.insertCant==''){
+                this.insertCant=1;
+            }
+            var x="cambio";
+            var y=this.insertProduct;
+            var z=this.insertCant;
+           if (this.Newventa.length>0) {
+                this.Newventa.map(function (dato) {
+                    if (dato.product==y){
+                        dato.quantity=parseInt(dato.quantity)+parseInt(z);
 
-            if (this.insertCant!='')
-                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:this.insertCant});
-            else
-                this.Newventa.push({id:this.ventId++ ,product: this.insertProduct, quantity:1});
+                        x="nada"
+                    }
+                    return dato;
+                });
+            }else{
+                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+                x="nada"
+            }
+            if (x=="cambio"){
+                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+            }
 
             this.insertProduct='';
             this.insertCant='';
