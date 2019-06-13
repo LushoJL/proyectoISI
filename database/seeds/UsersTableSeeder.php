@@ -1,5 +1,6 @@
 <?php
 use App\User;
+use App\Client;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Caffeinated\Shinobi\Models\Role;
@@ -80,6 +81,14 @@ class UsersTableSeeder extends Seeder
         DB::table('role_user')->insert([
             'role_id' =>'1',
             'user_id' =>'1'
+        ]);
+        Client::create([
+            'ci'=>'N/A',
+            'name'=>'N/A',
+            'last_name'=>'N/A',
+            'birthdate'=>'N/A',
+            'phone'=>'N/A',
+            'email'=>'N/A'
         ]);
     }
 }

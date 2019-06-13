@@ -18,7 +18,7 @@ new Vue({
         //ventas
         insertProduct:'',
         insertCant:'',
-        totalvent:'',
+        totalvent:[],
         ventId:1,
         Newventa:[],
 
@@ -150,19 +150,26 @@ new Vue({
 
 
     },
+
     computed:{
-        prueba(){
-            var suma=0;
-            for (i=0;i<this.Newventa.length;i++){
-                suma=suma+i;
-            }
-            return suma;
-        }
+      sumar(){
+
+            var resul=0;
+            //
+            //   for (indice in this.Newventa){
+            //       resul= parseInt( this.products.map(function (dato) {
+            //           if (this.Newventa[indice]['products']==dato.barcode){
+            //               return dato.price;
+            //           }
+            //       }))
+            //   }
+            //
+            // return resul;
+
+      }
     },
     methods: {
-        pruebitas(){
 
-        },
         //ventas
         NewsVenta(){
             if (this.insertCant==''){
@@ -181,20 +188,39 @@ new Vue({
                     return dato;
                 });
             }else{
-                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+                this.Newventa.push({ product: this.insertProduct, quantity: this.insertCant});
                 x="nada"
             }
             if (x=="cambio"){
-                this.Newventa.push({id: this.ventId++, product: this.insertProduct, quantity: this.insertCant});
+                this.Newventa.push({product: this.insertProduct, quantity: this.insertCant});
             }
 
             this.insertProduct='';
             this.insertCant='';
         },
         deletevent:function(index){
-            console.log(index);
-            console.log(this.Newventa);
+            console.log(this.Newventa[index].product);
             this.Newventa.splice(index,1);
+        },
+
+        //guardar ventas
+        StoreSale(){
+            var url ='sale';
+            axios.post(url, {
+                'sales':this.Newventa,
+                'ci':this.fillclient.ci,
+                'name':this.fillclient.name,
+                'last_name':this.fillclient.last_name,
+                'birthdate':this.fillclient.birthdate,
+                'phone':this.fillclient.phone,
+                'email':this.fillclient.email,
+                'total':this.Newventa.length,
+            }).then(response=>{
+                $('#createSale').modal('hide');
+                toastr.success('Nuevo Usuario creada con éxito');
+            }).catch(error => {
+                console.log(error.response)
+            });
         },
 
         //usuarios

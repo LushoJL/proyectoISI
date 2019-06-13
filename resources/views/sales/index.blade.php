@@ -29,7 +29,7 @@
                                     </button>
                                 </div>
                                 <div class="col-6 text-left">
-                                    <button type="button" class="btn btn-success" @click.prevent="pruebitas()" >
+                                    <button type="button" class="btn btn-success" @click.prevent="prueba()" >
                                         Nueva venta
                                         <div class="ripple-container"></div>
                                     </button>

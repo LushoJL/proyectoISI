@@ -1,29 +1,19 @@
 <!-- Modal -->
-
-
-<form method="post" v-on:submit.prevent="">
-
-    <div class="modal fade " id="createSale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-         data-backdrop="static" data-keyboard="false">
-
+<form method="post" v-on:submit.prevent="StoreSale">
+    <div class="modal fade " id="createSale" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-
-
             <div class="modal-content">
-
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('REALIZAR NUEVA VENTA') }}</b></h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('REALIZAR UNA SALIDA') }}</b></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
-
                 <div class="modal-body">
                     <ul class="nav nav-pills nav-pills-primary" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist" aria-expanded="true">
-                                Ventas
+                                Salida
                             </a>
                         </li>
                         <li class="nav-item">
@@ -79,7 +69,9 @@
 
                               </li>
                             </ul>
-
+                            <pre>
+                                @{{ sumar }}
+                            </pre>
                         </div>
                         <div class="tab-pane" id="link2" aria-expanded="false">
                             <div class="row">
@@ -157,7 +149,8 @@
                                             @{{ product.price }}
                                         </td>
                                         <td v-for="product in products" v-if="product.barcode===venta.product">
-                                            @{{ venta.quantity *product.price}} <b>Bs</b>
+
+                                            @{{ venta.quantity*product.price}} <b>Bs</b>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -166,7 +159,9 @@
                                     <tr>
                                         <th colspan="3">Total</th>
 
-                                        <th></th>
+                                        <th>
+                                            @{{ sumar }}
+                                        </th>
                                     </tr>
                                     </tfoot>
                                 </table>

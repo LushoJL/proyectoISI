@@ -15,12 +15,12 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('quantity');
-            $table->string('client_id');
-            $table->string('product_id');
-            $table->date('date_sale');
-            $table->string('price');
-            $table->string('state');
+            $table->string('quantity')->nullable();
+            $table->unsignedInteger('client_id')->default('1');
+            $table->unsignedInteger('product_id')->default('1');
+            $table->date('date_sale')->nullable();
+            $table->string('price')->nullable();
+            $table->string('state')->nullable();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
