@@ -67,6 +67,11 @@ class SaleController extends Controller
                         'price'=>$datoproduct->price * $dato['quantity'],
                         'state'=>'vendido'
                     ]);
+                    $stock= DB::table('expirations')->where('product_id',$datoproduct->id)
+                        ->where('expiration_date','>=', NOW())
+                        ->orderBy('expiration_date','asc')->first();
+                    DB::table('expirations')->where('id',$stock->id)->update(['stock'=>$stock->stock-$dato['quantity']]);
+
                 }
 
             }else{
@@ -82,6 +87,11 @@ class SaleController extends Controller
                         'price'=>$datoproduct->price * $dato['quantity'],
                         'state'=>'vendido'
                     ]);
+                    $stock= DB::table('expirations')->where('product_id',$datoproduct->id)
+                        ->where('expiration_date','>=', NOW())
+                        ->orderBy('expiration_date','asc')->first();
+                    DB::table('expirations')->where('id',$stock->id)->update(['stock'=>$stock->stock-$dato['quantity']]);
+
                 }
 
             }
@@ -96,6 +106,11 @@ class SaleController extends Controller
                     'price'=>$datoproduct->price * $dato['quantity'],
                     'state'=>'vendido'
                 ]);
+                $stock= DB::table('expirations')->where('product_id',$datoproduct->id)
+                    ->where('expiration_date','>=', NOW())
+                    ->orderBy('expiration_date','asc')->first();
+                DB::table('expirations')->where('id',$stock->id)->update(['stock'=>$stock->stock-$dato['quantity']]);
+
             }
         }
 

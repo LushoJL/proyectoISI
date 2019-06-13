@@ -10,7 +10,7 @@
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('Registrar Nuevo Producto') }}</b></h5>
+                <h5 class="modal-title" id="exampleModalLabel"><b>{{ __('Registrar Nueva Entrada') }}</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -52,9 +52,6 @@
 
             </div>
 
-<pre>
-    @{{ $data.newPurchases }}
-</pre>
             <div class="modal-footer">
 
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">CERRAR</button>

@@ -47,7 +47,7 @@
 
                                 <div class="tab-content tab-space">
                                     <div class="tab-pane active" id="tablesalida" aria-expanded="true">
-                                        hola mundo
+                                       No hay datos
                                     </div>
                                     <div class="tab-pane" id="history" aria-expanded="false">
                                        @include('sales.historysale')

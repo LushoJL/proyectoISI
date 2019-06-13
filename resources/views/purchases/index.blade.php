@@ -104,11 +104,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                                <pre>
-                                    @{{
-                                    $data.products
-                                    }}
-                                </pre>
+
                             </div>
                         </div>
                     </div>
