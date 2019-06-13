@@ -12,23 +12,23 @@
                 <div class="modal-body">
                     <ul class="nav nav-pills nav-pills-primary" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#link1" role="tablist" aria-expanded="true">
+                            <a class="nav-link active" data-toggle="tab" href="#salida" role="tablist" aria-expanded="true">
                                 Salida
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#link2" role="tablist" aria-expanded="false">
+                            <a class="nav-link" data-toggle="tab" href="#client" role="tablist" aria-expanded="false">
                                 Datos del cliente
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#link3" role="tablist" aria-expanded="false">
+                            <a class="nav-link" data-toggle="tab" href="#datella" role="tablist" aria-expanded="false">
                                 Detalles de Venta
                             </a>
                         </li>
                     </ul>
                     <div class="tab-content tab-space">
-                        <div class="tab-pane active" id="link1" aria-expanded="true">
+                        <div class="tab-pane active" id="salida" aria-expanded="true">
 
                             <div class="row">
                                 <div class="col-sm-4">
@@ -73,7 +73,7 @@
                                 @{{ sumar }}
                             </pre>
                         </div>
-                        <div class="tab-pane" id="link2" aria-expanded="false">
+                        <div class="tab-pane" id="client" aria-expanded="false">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">CI/NIT</label>
@@ -106,7 +106,7 @@
                             </div>
 
                         </div>
-                        <div class="tab-pane" id="link3" aria-expanded="false">
+                        <div class="tab-pane" id="datella" aria-expanded="false">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="">CI/NIT</label>

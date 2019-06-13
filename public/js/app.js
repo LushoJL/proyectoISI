@@ -44416,6 +44416,7 @@ new Vue({
         this.getProviders();
         this.getPurchases();
         this.getStocks();
+        this.getSales();
 
     },
     data: {
@@ -44425,6 +44426,7 @@ new Vue({
         totalvent:[],
         ventId:1,
         Newventa:[],
+        sales:[],
 
         //clientes
         fillclient:{
@@ -44601,10 +44603,17 @@ new Vue({
 
             this.insertProduct='';
             this.insertCant='';
+
         },
         deletevent:function(index){
             console.log(this.Newventa[index].product);
             this.Newventa.splice(index,1);
+        },
+        getSales(){
+          var url = 'sale';
+          axios.get(url).then(response=>{
+              this.sales=response.data;
+          });
         },
 
         //guardar ventas
@@ -44620,8 +44629,10 @@ new Vue({
                 'email':this.fillclient.email,
                 'total':this.Newventa.length,
             }).then(response=>{
+                this.Newventa=[];
+                this.getSales();
                 $('#createSale').modal('hide');
-                toastr.success('Nuevo Usuario creada con éxito');
+                toastr.success('Nuevo Salida realizada');
             }).catch(error => {
                 console.log(error.response)
             });

@@ -19,7 +19,18 @@ class SaleController extends Controller
     }
     public function index()
     {
-        //
+
+
+        $datos = DB::table('sales')
+            ->join('products', 'products.id', '=', 'sales.product_id')
+            ->join('clients', 'clients.id', '=', 'sales.client_id')
+            ->select('sales.id','sales.quantity','sales.date_sale','sales.price','sales.state',
+                'products.barcode','products.name',
+                'clients.ci as client')->orderBy('sales.id', 'desc')
+            ->get();
+
+
+        return $datos;
     }
 
     /**

@@ -28,88 +28,33 @@
                                         <div class="ripple-container"></div>
                                     </button>
                                 </div>
-                                <div class="col-6 text-left">
-                                    <button type="button" class="btn btn-success" @click.prevent="prueba()" >
-                                        Nueva venta
-                                        <div class="ripple-container"></div>
-                                    </button>
+                            </div>
+                            <div class="row">
+                                <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tablesalida" role="tablist" aria-expanded="true">
+                                            Salida
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#history" role="tablist" aria-expanded="false">
+                                           Historial de Salida
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                                <div class="tab-content tab-space">
+                                    <div class="tab-pane active" id="tablesalida" aria-expanded="true">
+                                        hola mundo
+                                    </div>
+                                    <div class="tab-pane" id="history" aria-expanded="false">
+                                       @include('sales.historysale')
+                                    </div>
+
                                 </div>
-                            </div>
-                            <div class="table-responsive">
-{{--                                <table class="table" id="datatables">--}}
-{{--                                    <thead class=" text-primary">--}}
-{{--                                    <th>--}}
-{{--                                        Nombre--}}
-{{--                                    </th>--}}
-{{--                                    <th>--}}
-{{--                                        Descripcion--}}
-{{--                                    </th>--}}
-{{--                                    <th>--}}
-{{--                                        Marca--}}
-{{--                                    </th>--}}
-{{--                                    <th>--}}
-{{--                                        Categoria--}}
-{{--                                    </th>--}}
-{{--                                    <th>--}}
-{{--                                        Precio--}}
-{{--                                    </th>--}}
-{{--                                    <th>--}}
-{{--                                        Stock--}}
-{{--                                    </th>--}}
-{{--                                    <th class="text-center" colspan="3">--}}
-{{--                                        Acciones--}}
-{{--                                    </th>--}}
 
-{{--                                    </thead>--}}
-{{--                                    <tbody>--}}
-
-{{--                                    <tr v-for="product in products">--}}
-{{--                                        <td>--}}
-{{--                                            @{{ product.name }}--}}
-{{--                                        </td>--}}
-{{--                                        <td>--}}
-{{--                                            @{{ product.description }}--}}
-{{--                                        </td>--}}
-{{--                                        <td v-for="brand in brands" v-if="product.brand_id===brand.id">--}}
-{{--                                            @{{ brand.name }}--}}
-{{--                                        </td>--}}
-{{--                                        <td v-for="category in categories" v-if="product.category_id===category.id">--}}
-{{--                                            @{{ category.name }}--}}
-{{--                                        </td>--}}
-{{--                                        <td>--}}
-{{--                                            @{{ product.price }}--}}
-{{--                                        </td>--}}
-{{--                                        <td v-for="stock in stocks" v-if="stock.produc_id === product.id">--}}
-{{--                                            <span>@{{ stock.stock }}</span>--}}
-{{--                                        </td>--}}
-
-{{--                                        <td class="td-actions text-right">--}}
-{{--                                            <button type="button" class="btn btn-success btn-link" v-on:click.prevent="shopingProduct(product)">--}}
-{{--                                                <i class="material-icons">shopping_cart</i>--}}
-{{--                                                <div class="ripple-container"></div>--}}
-{{--                                            </button>--}}
-
-{{--                                        </td>--}}
-{{--                                        <td class="td-actions text-right">--}}
-
-
-{{--                                            <a class="btn btn-info btn-link" href="#" >--}}
-{{--                                                <i class="material-icons">remove_red_eye</i>--}}
-{{--                                                <div class="ripple-container"></div>--}}
-{{--                                            </a>--}}
-{{--                                        </td>--}}
-{{--                                        <td class="td-actions text-right">--}}
-
-{{--                                            <button type="button" class="btn btn-danger btn-link" v-on:click.prevent="deleteProduct(product)">--}}
-{{--                                                <i class="material-icons">delete</i>--}}
-{{--                                                <div class="ripple-container"></div>--}}
-{{--                                            </button>--}}
-
-{{--                                        </td>--}}
-{{--                                    </tr>--}}
-{{--                                    </tbody>--}}
-{{--                                </table>--}}
-                            </div>
                         </div>
                     </div>
                 </div>
